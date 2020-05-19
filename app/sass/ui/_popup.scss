@@ -1,0 +1,574 @@
+.popup-wrapper {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.popup-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $overlay;
+  cursor: pointer;
+}
+.popup-container {
+  position: relative;
+  width: 100%;
+  max-width: 624px;
+  height: 100%;
+  overflow-y: scroll;
+  margin: 0 auto;
+  background-color: $white;
+  z-index: 1;
+  .btn--close-popup {
+    position: absolute;
+    top: 22px;
+    right: 22px;
+    z-index: 10;
+  }
+}
+.popup-container--video {
+  max-width: 100%;
+  @media screen and (max-width: $mobile-bp) {
+    font-size: 13px;
+    line-height: 20px;
+    padding: 10px;
+  }
+}
+.popup-inner {
+  display: none;
+  width: 100%;
+  &.js-show-popup {
+    display: block;
+  }
+}
+.popup-inner--video {
+  display: block;
+  height: 100%;
+}
+.popup-head {
+  padding: 48px 48px 38px 48px;
+  background-color: $gray1;
+  @media screen and (max-width: $mobile-bp) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px;
+  }
+}
+.popup-img-wrapper {
+  max-width: 100%;
+  margin-bottom: 84px;
+  @media screen and (max-width: $mobile-bp) {
+    margin-bottom: 25px;
+  }
+}
+.popup-title {
+  color: $black;
+  @media screen and (max-width: $mobile-bp) {
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 30px;
+  }
+}
+.popup-text {
+  padding: 54px 48px 40px 48px;
+  font-size: 18px;
+  line-height: 26px;
+  color: $deepblack;
+  @media screen and (max-width: $mobile-bp) {
+    padding: 25px 25px 35px 25px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+.popup-subtitle {
+  margin-top: 60px;
+  color: $black;
+  @media screen and (max-width: $mobile-bp) {
+    font-size: 13px;
+  }
+}
+.popup-video {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+}
+.btn-wrapper--popup {
+  padding: 0 40px 48px 40px;
+  @media screen and (max-width: $mobile-bp) {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 25px 32px 25px;
+  }
+  .btn {
+    margin-right: 32px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+.popup-video-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.popup-video-wrapper {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  width: 100%;
+  max-height: 100%;
+  max-width: 100%;
+}
+.btn--close-popup--video {
+  position: absolute;
+  right: 24px;
+  top: 24px;
+  z-index: 1;
+  @media screen and (max-width: $mobile-bp) {
+    right: 12px;
+    top: 12px;
+  }
+}
+
+// promocode
+.popup-container--promocode {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 48px;
+  background-color: $white;
+  border-radius: 8px;
+  @media screen and (max-width: $mobile-bp) {
+    bottom: 0;
+    top: auto;
+    left: 0;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    width: 100%;
+    padding: 32px 20px;
+    border: 1px solid $gray2;
+    box-shadow: 0px 16px 50px rgba(0, 0, 0, 0.2);
+    transform: translate(0, 0);
+  }
+  .btn--close-popup {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+  }
+  .promocode-popup-title {
+    color: $deepblack;
+    margin-bottom: 30px;
+    @media screen and (max-width: $mobile-bp) {
+      margin-bottom: 24px;
+      text-align: center;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+  .btn--primary--promocode-popup {
+    width: 100%;
+  }
+  .promocode-popup-form {
+    display: flex;
+    @media screen and (max-width: $mobile-bp) {
+      flex-direction: column;
+    }
+  }
+  .text-input-wrapper--promocode {
+    min-width: 272px;
+    margin-right: 24px;
+    @media screen and (max-width: $mobile-bp) {
+      margin-right: 0;
+      margin-bottom: 24px;
+    }
+  }
+  .text-input--promocode {
+    width: 100%;
+  }
+}
+// test resalt
+.popup-container--test-resalt {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $white;
+  border-radius: 8px;
+  width: 521px;
+  padding: 54px 32px 32px 32px;
+  max-height: 100%;
+  overflow-y: scroll;
+  @media screen and (max-width: $mobile-bp) {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(0, 0);
+    width: 100%;
+    border-radius: 0px;
+    overflow-y: auto;
+    height: 100%;
+    padding: 72px 20px 32px 20px;
+  }
+  &::before {
+    display: none;
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #f2f2f2;
+    @media screen and (max-width: $mobile-bp) {
+      display: block;
+    }
+  }
+}
+.btn--close-popup--test-resalt {
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  @media screen and (max-width: $mobile-bp) {
+    right: 12px;
+    top: 12px;
+  }
+}
+.test-resalt-popup-title {
+  margin-bottom: 32px;
+  @media screen and (max-width: $mobile-bp) {
+    margin-bottom: 40px;
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 36px;
+    text-align: center;
+  }
+}
+.test-resalt-popup-date {
+  display: flex;
+  margin-bottom: 32px;
+  @media screen and (max-width: $mobile-bp) {
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+}
+.test-resalt-popup-date-title {
+  max-width: 128px;
+  margin-right: 6px;
+  font-size: 14px;
+  line-height: 20px;
+  color: $black;
+  @media screen and (max-width: $mobile-bp) {
+    flex-basis: 100%;
+    min-width: 100%;
+    margin-bottom: 20px;
+    padding-top: 6px;
+  }
+}
+.text-input--test-resalt {
+  width: 100%;
+}
+.text-input-wrapper--test-resalt {
+  width: 100%;
+  margin-bottom: 24px;
+}
+.simple-select-wrapper-inner {
+  display: flex;
+  justify-content: flex-end;
+  @media screen and (max-width: $mobile-bp) {
+    justify-content: start;
+  }
+}
+.simple-select-wrapper--test-resalt-date {
+  flex-basis: 176px;
+  margin-right: 16px;
+  @media screen and (max-width: $mobile-bp) {
+    flex-basis: auto;
+    flex-grow: 2;
+  }
+}
+.simple-select-wrapper--test-resalt-time {
+  flex-basis: 128px;
+  @media screen and (max-width: $mobile-bp) {
+    flex-basis: auto;
+    flex-grow: 1;
+  }
+}
+.ui-timepicker-standard {
+  font-family: $mainfamily;
+  font-size: 16px;
+  background-color: $white;
+  color: $black;
+  border: 1px solid $gray2;
+  padding: 0;
+  box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transform: translate(0, 8px);
+  .ui-state-hover {
+    background-color: $gray1;
+    border: 1px solid transparent;
+  }
+}
+.simple-textarea--test-resalt {
+  display: block;
+  width: 100%;
+  min-height: 160px;
+  margin-bottom: 24px;
+}
+.btn--primary--test-resalt {
+  width: 100%;
+}
+
+// popup course
+.popup-container--course {
+  position: relative;
+  width: 100%;
+  max-width: 624px;
+  height: 100%;
+  margin: 0 auto;
+  background-color: $white;
+  z-index: 1;
+  @media screen and (max-width: $mobile-bp) {
+    max-width: 100%;
+  }
+}
+.popup-inner--course {
+  height: 100%;
+}
+.popup-inner--course-wrapper {
+  position: relative;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.btn--close-popup--course {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  background-image: url("data:image/svg+xml,%3Csvg fill='none' height='16' viewBox='0 0 15 16' width='15' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23fff'%3E%3Cpath d='m13.9365.00018961-13.9365 14.80741039 1.06333 1.1298 13.93657-14.80743z'/%3E%3Cpath d='m15 14.8074-13.93652-14.8074-1.06333744 1.12978 13.93655744 14.80742z'/%3E%3C/g%3E%3C/svg%3E");
+  z-index: 3;
+  @media screen and (max-width: $mobile-bp) {
+    right: 20px;
+    top: 20px;
+  }
+}
+.popup-head--course {
+  display: flex;
+  align-items: flex-end;
+  padding: 32px 48px;
+  position: relative;
+  width: 100%;
+  height: 312px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  @media screen and (max-width: $mobile-bp) {
+    height: 240px;
+    padding: 20px 22px;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    );
+    z-index: 1;
+  }
+}
+.popup-title--course {
+  position: relative;
+  z-index: 2;
+  color: $gray1;
+  @media screen and (max-width: $mobile-bp) {
+    font-size: 32px;
+    line-height: 30px;
+  }
+}
+.popup-text--course {
+  padding: 54px 48px 110px 48px;
+  color: $black;
+  @media screen and (max-width: $mobile-bp) {
+    padding: 25px 15px 90px 25px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+.btn-wrapper--course {
+  position: absolute;
+  width: 100%;
+  bottom: 24px;
+  left: 0;
+  padding: 0 48px;
+  @media screen and (max-width: $mobile-bp) {
+    padding: 0 20px;
+  }
+}
+.btn--primary--course {
+  width: 100%;
+
+  @media screen and (max-width: $mobile-bp) {
+    padding: 10px;
+    font-size: 13px;
+    line-height: 20px;
+  }
+}
+
+.popup-mail {
+  position: fixed;
+  right: 24px;
+  bottom: 32px;
+  width: 432px;
+  background-color: $white;
+  border-radius: 8px;
+  padding: 30px 24px 24px 24px;
+  @media screen and (max-width: $mobile-bp) {
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+}
+.popup-mail-close {
+  position: absolute;
+  right: 18px;
+  top: 18px;
+  width: 12px;
+  height: 12px;
+}
+.popup-mail-label {
+  display: flex;
+}
+.popup-mail-label-text {
+  font-size: 18px;
+  line-height: 26px;
+  color: $deepblack;
+  margin-bottom: 28px;
+  @media screen and (max-width: $mobile-bp) {
+    font-size: 16px;
+  }
+}
+.popup-mail-label-img {
+  display: block;
+  width: 96px;
+  height: 96px;
+  flex: 0 0 auto;
+}
+.popup-mail-input-wrapper {
+  display: flex;
+  @media screen and (max-width: $mobile-bp) {
+    flex-direction: column;
+  }
+}
+.popup-mail-input {
+  margin-right: 24px;
+  flex-grow: 1;
+  @media screen and (max-width: $mobile-bp) {
+    margin-right: 0;
+    margin-bottom: 12px;
+  }
+}
+.popup-mail-button {
+  min-width: auto;
+}
+.popup-mail-button--success {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 26px 20px;
+  background-image: url("data:image/svg+xml,%3Csvg fill='none' height='20' viewBox='0 0 26 20' width='26' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m22.5859.585938-13.56996 13.585962-5.602-5.58596-2.828002 2.82796 8.434002 8.414 16.39496-16.41396z' fill='%23fff'/%3E%3C/svg%3E");
+  transition: color $base-duration $base-timing,
+    background-color $base-duration $base-timing;
+  span {
+    opacity: 0;
+  }
+  &:disabled {
+    background-color: #60ca2e;
+  }
+}
+
+.popup-container--course-done {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 48px 48px 40px 48px;
+  background-color: $white;
+  border-radius: 8px;
+  @media screen and (max-width: $mobile-bp) {
+    bottom: 0;
+    top: auto;
+    left: 0;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    width: 100%;
+    padding: 55px 20px 60px 20px;
+    transform: translate(0, 0);
+  }
+  .btn--close-popup {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+  }
+  .course-done-popup-icon {
+    display: table;
+    margin: 0 auto 28px auto;
+    @media screen and (max-width: $mobile-bp) {
+      margin: 0 auto 20px auto;
+    }
+    img {
+      display: block;
+      width: 69px;
+      height: auto;
+      @media screen and (max-width: $mobile-bp) {
+        width: 40px;
+      }
+    }
+  }
+  .course-done-popup-title {
+    margin-bottom: 4px;
+    color: $deepblack;
+    text-align: center;
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 36px;
+    @media screen and (max-width: $mobile-bp) {
+      margin-bottom: 12px;
+    }
+  }
+  .course-done-popup-text {
+    margin-bottom: 56px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 26px;
+    color: $black;
+    @media screen and (max-width: $mobile-bp) {
+      color: $gray4;
+      margin-bottom: 42px;
+    }
+  }
+  .btn--primary--course-done--popup {
+    width: 100%;
+    text-align: center;
+  }
+}
