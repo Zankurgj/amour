@@ -169,6 +169,9 @@ input[type='submit'] {
     font-weight: normal;
     background-color: $averagegray;
   }
+  &:hover {
+    color: $white;
+  }
 }
 .btn-primary--icon {
   display: flex;
@@ -209,36 +212,31 @@ input[type='submit'] {
 }
 
 .btn-change-color {
-  @extend .visually-hidden;
-  &:checked {
-    & + .btn-change-color-inner {
-      border-color: $gold;
-      .btn-change-color-text {
-        display: block;
-      }
-    }
-  }
-}
-.btn-change-color-inner {
   position: relative;
-  cursor: pointer;
-  border: solid 2px transparent;
-}
-.btn-change-color-text {
-  display: none;
-  position: absolute;
-  top: -29px;
-  left: 0;
-  font-family: $subfamily;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 18px;
-}
-.btn-change-color-img {
-  display: block;
   width: 58px;
   height: 78px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  border: solid 2px transparent;
+  &.active,
+  &:active {
+    border-color: $gold;
+  }
+}
+.btn-size {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: $gray;
+  font-family: $subfamily;
+  text-decoration: underline;
+}
+.btn-link-gray {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: $subfamily;
+  color: $gray;
+  text-decoration: underline;
 }

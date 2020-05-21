@@ -114,6 +114,7 @@
     </header>
 
     <div class="product-page">
+      <div class="scroll-parent-container">
       <nav
         aria-label="Breadcrumb"
         class="breadcrumb product-page-breadcrumb container"
@@ -167,46 +168,24 @@
               />
             </div>
           </div>
+          <div class="product-about-buy-color-text product-about-buy-color-text--mobile">
+            <span class="buy-color-text-sub">Цвет: </span><span class="buy-color-text-inner">Голубой</span>
+          </div>
           <ul class="product-about-buy-color product-about-buy-color--mobile">
             <li>
-              <input
-                type="radio"
-                id="color4"
-                name="colorMobile"
-                value="color1"
-                class="btn-change-color"
-                checked
-              />
-              <label for="color4" class="btn-change-color-inner">
-                <span class="btn-change-color-text">Голубой</span>
-                <span class="btn-change-color-img" data-rjs="2" style="background-image: url('./images/dest/img/product-color1.png');"></span>
-              </label>
+              <button class="btn-change-color active" data-rjs="2" style="background-image: url('./images/dest/img/product-color1.png');">
+                <span class="visually-hidden">выбор цвета</span>
+              </button>
             </li>
             <li>
-              <input
-                type="radio"
-                id="color5"
-                name="colorMobile"
-                value="color2"
-                class="btn-change-color"
-              />
-              <label for="color5" class="btn-change-color-inner">
-                <span class="btn-change-color-text">Белый</span>
-                <span class="btn-change-color-img" data-rjs="2" style="background-image: url('./images/dest/img/product-color2.png');"></span>
-              </label>
+              <button class="btn-change-color" data-rjs="2" style="background-image: url('./images/dest/img/product-color1.png');">
+                <span class="visually-hidden">выбор цвета</span>
+              </button>
             </li>
             <li>
-              <input
-                type="radio"
-                id="color6"
-                name="colorMobile"
-                value="color3"
-                class="btn-change-color"
-              />
-              <label for="color6" class="btn-change-color-inner">
-                <span class="btn-change-color-text">Черный</span>
-                <span class="btn-change-color-img" data-rjs="2" style="background-image: url('./images/dest/img/product-color3.png');"></span>
-              </label>
+              <button class="btn-change-color" data-rjs="2" style="background-image: url('./images/dest/img/product-color1.png');">
+                <span class="visually-hidden">выбор цвета</span>
+              </button>
             </li>
           </ul>
           <div class="product-about-description">
@@ -219,7 +198,27 @@
           </div>
         </section>
         <section class="product-about container">
-          <!-- <div class="product-about-buy">
+          <div class="product-about-item-text-wrapper">
+            <div class="product-about-item-text">
+              <p>
+                <strong>Модель</strong> – 179cm/5'10" , на ней одежда размера 38
+              </p>
+            </div>
+            <div class="product-about-item-text">
+              <p>
+                <strong>Состав</strong> – Материал верха: Хлопок 100% Подкладка:
+                Полиэстер 100%
+              </p>
+            </div>
+            <div class="product-about-item-text">
+              <p>
+                <strong>Рекомендации по уходу:</strong>
+                Деликатная стирка при температуре воды до 30°C. Не отбеливать.
+                Гладить при температуре утюга до 110°C
+              </p>
+            </div>
+          </div>
+          <div class="product-about-buy">
             <div class="product-about-buy-text">
               <h2 class="product-about-buy-title">
                 Костюм Amour (голубой)
@@ -237,46 +236,24 @@
                 <span class="visually-hidden">понравилось</span>
               </button>
             </div>
+            <div class="product-about-buy-color-text product-about-buy-color-text--desktop">
+              <span class="buy-color-text-inner">Голубой</span>
+            </div>
             <ul class="product-about-buy-color product-about-buy-color--desktop">
               <li>
-                <input
-                  type="radio"
-                  id="color1"
-                  name="color"
-                  value="color1"
-                  class="btn-change-color"
-                  checked
-                />
-                <label for="color1" class="btn-change-color-inner">
-                  <span class="btn-change-color-text">Голубой</span>
-                  <span class="btn-change-color-img" data-rjs="2" style="background-image: url('./images/dest/img/product-color1.png');"></span>
-                </label>
+                <button class="btn-change-color active" data-rjs="2" style="background-image: url('./images/dest/img/product-color1.png');">
+                  <span class="visually-hidden">выбор цвета</span>
+                </button>
               </li>
               <li>
-                <input
-                  type="radio"
-                  id="color2"
-                  name="color"
-                  value="color2"
-                  class="btn-change-color"
-                />
-                <label for="color2" class="btn-change-color-inner">
-                  <span class="btn-change-color-text">Белый</span>
-                  <span class="btn-change-color-img" data-rjs="2" style="background-image: url('./images/dest/img/product-color2.png');"></span>
-                </label>
+                <button class="btn-change-color" data-rjs="2" style="background-image: url('./images/dest/img/product-color1.png');">
+                  <span class="visually-hidden">выбор цвета</span>
+                </button>
               </li>
               <li>
-                <input
-                  type="radio"
-                  id="color3"
-                  name="color"
-                  value="color3"
-                  class="btn-change-color"
-                />
-                <label for="color3" class="btn-change-color-inner">
-                  <span class="btn-change-color-text">Черный</span>
-                  <span class="btn-change-color-img" data-rjs="2" style="background-image: url('./images/dest/img/product-color3.png');"></span>
-                </label>
+                <button class="btn-change-color" data-rjs="2" style="background-image: url('./images/dest/img/product-color1.png');">
+                  <span class="visually-hidden">выбор цвета</span>
+                </button>
               </li>
             </ul>
             <div class="product-about-buy-btns">
@@ -296,133 +273,13 @@
                 <span class="text-disabled">В корзинe</span>
               </button>
             </div>
-          </div> -->
-
-          <div class="product-about-item-text">
-            <p>
-              <strong>Модель</strong> – 179cm/5'10" , на ней одежда размера 38
-            </p>
+            <button class="btn-size product-about-buy-btn-size" onclick="onShowPopUpSize()">
+              <span>Выбрать размер</span>
+            </button>
           </div>
-          <div class="product-about-item-text">
-            <p>
-              <strong>Состав</strong> – Материал верха: Хлопок 100% Подкладка:
-              Полиэстер 100%
-            </p>
-          </div>
-          <div class="product-about-item-text">
-            <p>
-              <strong>Рекомендации по уходу:</strong>
-              Деликатная стирка при температуре воды до 30°C. Не отбеливать.
-              Гладить при температуре утюга до 110°C
-            </p>
-          </div>
-          <article class="popup-about-check product-about-check-block">
-            <div class="container popup-about-check-container">
-              <button
-                class="btn-close btn-close-check-block"
-                onclick="hideCheckPopup()"
-              >
-                <svg class="svg-icon btn-close-check-block-icon">
-                  <use
-                    xlink:href="./images/sprites/svg/sprite.symbol.svg#close"
-                  ></use>
-                </svg>
-                <span class="visually-hidden">закрыть</span>
-              </button>
-              <p class="product-about-check-subtitle">
-                Товар добавлен в корзину
-              </p>
-              <h4 class="product-about-check-title">
-                Костюм Amour (голубой) 32 EU (XXS)
-              </h4>
-              <div class="product-about-check-bottom">
-                <span class="product-about-check-price">10 000 ₽</span>
-                <a href="#" class="link-gold product-about-check-link"
-                  >перейти к покупке</a
-                >
-              </div>
-            </div>
-          </article>
         </section>
-        <div class="product-about-buy">
-          <div class="product-about-buy-text">
-            <h2 class="product-about-buy-title">
-              Костюм Amour (голубой)
-            </h2>
-            <span class="product-about-buy-price">2 000 ₽</span>
-            <button
-              class="btn-heart btn-heart--big product-about-btn-heart"
-              onclick="onAddLike(this)"
-            >
-              <svg class="svg-icon btn-heart-icon--big">
-                <use
-                  xlink:href="./images/sprites/svg/sprite.symbol.svg#heart"
-                ></use>
-              </svg>
-              <span class="visually-hidden">понравилось</span>
-            </button>
-          </div>
-          <ul class="product-about-buy-color product-about-buy-color--desktop">
-            <li>
-              <input
-                type="radio"
-                id="color1"
-                name="color"
-                value="color1"
-                class="btn-change-color"
-                checked
-              />
-              <label for="color1" class="btn-change-color-inner">
-                <span class="btn-change-color-text">Голубой</span>
-                <span class="btn-change-color-img" data-rjs="2" style="background-image: url('./images/dest/img/product-color1.png');"></span>
-              </label>
-            </li>
-            <li>
-              <input
-                type="radio"
-                id="color2"
-                name="color"
-                value="color2"
-                class="btn-change-color"
-              />
-              <label for="color2" class="btn-change-color-inner">
-                <span class="btn-change-color-text">Белый</span>
-                <span class="btn-change-color-img" data-rjs="2" style="background-image: url('./images/dest/img/product-color2.png');"></span>
-              </label>
-            </li>
-            <li>
-              <input
-                type="radio"
-                id="color3"
-                name="color"
-                value="color3"
-                class="btn-change-color"
-              />
-              <label for="color3" class="btn-change-color-inner">
-                <span class="btn-change-color-text">Черный</span>
-                <span class="btn-change-color-img" data-rjs="2" style="background-image: url('./images/dest/img/product-color3.png');"></span>
-              </label>
-            </li>
-          </ul>
-          <div class="product-about-buy-btns">
-            <a href="#" class="btn btn-gold product-about-fastbuy-btn"
-              >Быстрая покупка</a
-            >
-            <button
-              class="btn-primary btn-primary--icon product-about-basket-btn"
-              onclick="onAddBasket(this)"
-            >
-              <svg class="svg-icon btn-basket-icon">
-                <use
-                  xlink:href="./images/sprites/svg/sprite.symbol.svg#add-basket"
-                ></use>
-              </svg>
-              <span class="text-active">В корзину</span>
-              <span class="text-disabled">В корзинe</span>
-            </button>
-          </div>
-        </div>
       </div>
+    </div>
       <div class="container--product-recommend container">
         <section class="product-recommend">
           <h2 class="product-recommend-title">Сочетается с</h2>
@@ -600,9 +457,158 @@
         </div>
       </div>
     </footer>
+    <article class="popup-about-check product-about-check-block">
+      <div class="container popup-about-check-container">
+        <button
+          class="btn-close btn-close-check-block"
+          onclick="hideCheckPopup()"
+        >
+          <svg class="svg-icon btn-close-check-block-icon">
+            <use
+              xlink:href="./images/sprites/svg/sprite.symbol.svg#close"
+            ></use>
+          </svg>
+          <span class="visually-hidden">закрыть</span>
+        </button>
+        <p class="product-about-check-subtitle">
+          Товар добавлен в корзину
+        </p>
+        <h4 class="product-about-check-title">
+          Костюм Amour (голубой) 32 EU (XXS)
+        </h4>
+        <div class="product-about-check-bottom">
+          <span class="product-about-check-price">10 000 ₽</span>
+          <a href="#" class="link-gold product-about-check-link"
+            >перейти к покупке</a
+          >
+        </div>
+      </div>
+    </article>
+
+    <article class="popup-about-size popup-block" id="popup1" >
+      <div class="popup-overlay popup-overlay--popup-about" onclick="onClosePopUpSize()"></div>
+      <div class="popup-content popup-content--popup-about">
+        <button
+          class="btn-close btn-popup-close btn-popup-close--popup-about"
+          onclick="onClosePopUpSize()"
+        >
+          <svg class="svg-icon btn-popup-close-icon">
+            <use
+              xlink:href="./images/sprites/svg/sprite.symbol.svg#close"
+            ></use>
+          </svg>
+          <span class="visually-hidden">закрыть</span>
+        </button>
+
+        <div class="btn-link-gray--popup-about-wrapper">
+          <a href="#" class="btn btn-link-gray btn-link-gray--popup-about">Таблица размеров</a>
+        </div>
+        <div class="popup-tabs">
+          <div class="popup-tabs-btn-wrapper">
+            <input
+                  type="radio"
+                  id="tab1"
+                  name="tabs"
+                  value="tab1"
+                  class="btn-tab-change"
+                  onchange="changeTabs('tab1')"
+                  checked
+                />
+            <label for="tab1" class="btn-tab-change-label"> Выберите размер </label>
+            <input
+                  type="radio"
+                  id="tab2"
+                  name="tabs"
+                  value="tab2"
+                  class="btn-tab-change"
+                  onchange="changeTabs('tab2')"
+                />
+            <label for="tab2" class="btn-tab-change-label">Выберите длину </label>
+          </div>
+          <div class="popup-tabs-item-wrapper">
+            <div class="popup-tabs-item popup-tabs-item--show" data-tabIndex="tab1">
+              <div class="popup-tabs-item-inner">
+              <input
+                  type="radio"
+                  id="size1"
+                  name="size"
+                  value="size1"
+                  class="btn-tab-size"
+                  onchange="changeTabSize(this)"
+                />
+              <label for="size1" class="btn-tab-size-label">32 EU &#183 XXS<span class="btn-tab-size-label-text">&#183 нет в наличии</span></label>
+
+              <input
+                  type="radio"
+                  id="size2"
+                  name="size"
+                  value="size2"
+                  class="btn-tab-size"
+                  onchange="changeTabSize(this)"
+                />
+              <label for="size2" class="btn-tab-size-label">34 EU &#183 XS <span class="btn-tab-size-label-text">&#183 нет в наличии</span></label>
+
+              <input
+                  type="radio"
+                  id="size3"
+                  name="size"
+                  value="size3"
+                  class="btn-tab-size"
+                  disabled
+                  onchange="changeTabSize(this)"  
+                />
+              <label for="size3" class="btn-tab-size-label">36 EU &#183 S<span class="btn-tab-size-label-text">&#183 нет в наличии</span></label>
+              <p class="btn-tab-size-text-item">* Данная модель представлена в длинах по внутреннему шву </p>
+            </div>
+            <div class="tab-size-btn-wrapper" id="tab1-btn-wrapper">
+              <button class="btn-primary btn-primary-tab-size" onclick="onChangeTabsItem(this)">
+                Выбрать длину
+              </button>
+            </div>
+          </div>
+          <div class="popup-tabs-item" data-tabIndex="tab2">
+            <div class="popup-tabs-item-inner">
+            <input
+                type="radio"
+                id="length1"
+                name="length"
+                value="length"
+                class="btn-tab-size"
+                onchange="changeTabLength(this)"
+              />
+            <label for="length1" class="btn-tab-size-label">32 EU &#183 XXS<span class="btn-tab-size-label-text">&#183 нет в наличии</span></label>
+
+            <input
+                type="radio"
+                id="length2"
+                name="length"
+                value="length2"
+                class="btn-tab-size"
+                onchange="changeTabLength(this)"
+              />
+            <label for="length2" class="btn-tab-size-label">34 EU &#183 XS <span class="btn-tab-size-label-text">&#183 нет в наличии</span></label>
+
+            <input
+                type="radio"
+                id="length3"
+                name="length"
+                value="length3"
+                class="btn-tab-size"
+                disabled
+                onchange="changeTabLength(this)"  
+              />
+            <label for="length3" class="btn-tab-size-label">36 EU &#183 S<span class="btn-tab-size-label-text">&#183 нет в наличии</span></label>
+            <p class="btn-tab-size-text-item">* Данная модель представлена в длинах по внутреннему шву </p>
+          </div>
+          <div class="tab-size-btn-wrapper" id="tab2-btn-wrapper">
+            <a href="#" class="btn btn-primary btn-primary-tab-size">
+              Добавить в корзину
+            </a>
+          </div>
+        </div>
+        </div>
+      </div>
+    </article>
     <script src="js/app.min.js"></script>
-    <script>
-      // var sticky = new Sticky('.product-about-buy');
-    </script>
   </body>
 </html>

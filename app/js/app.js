@@ -44,38 +44,40 @@ document.addEventListener('DOMContentLoaded', function () {
     ],
   });
 
-  $(window)
-    .on('resize', () => {
-      let init = $('.lk-course-wrapper').data('init-slider');
-      if (window.innerWidth < 1000) {
-        if (!init) {
-          $('.lk-course-wrapper')
-            .slick({
-              infinite: false,
-              slidesToShow: 1,
-              slidesToScroll: 1,
-              dots: false,
-              arrows: false,
-              mobileFirst: true,
-              variableWidth: true,
-              responsive: [
-                {
-                  breakpoint: 1000,
-                  settings: 'unslick',
-                },
-              ],
-            })
-            .data({ 'init-slider': true });
-        }
-      } else {
-        if (init) {
-          $('.lk-course-wrapper')
-            .slick('unslick')
-            .data({ 'init-slider': false });
-        }
-      }
-    })
-    .trigger('resize');
+  // $(window)
+  //   .on('resize', () => {
+  //     let init = $('.lk-course-wrapper').data('init-slider');
+  //     if (window.innerWidth < 1000) {
+  //       if (!init) {
+  //         $('.lk-course-wrapper')
+  //           .slick({
+  //             infinite: false,
+  //             slidesToShow: 1,
+  //             slidesToScroll: 1,
+  //             dots: false,
+  //             arrows: false,
+  //             mobileFirst: true,
+  //             variableWidth: true,
+  //             responsive: [
+  //               {
+  //                 breakpoint: 1000,
+  //                 settings: 'unslick',
+  //               },
+  //             ],
+  //           })
+  //           .data({ 'init-slider': true });
+  //       }
+  //     } else {
+  //       if (init) {
+  //         $('.lk-course-wrapper')
+  //           .slick('unslick')
+  //           .data({ 'init-slider': false });
+  //       }
+  //     }
+  //   })
+  //   .trigger('resize');
+
+  getScroll();
 });
 
 // вспомогательные функции
@@ -98,14 +100,15 @@ const renewScroll = () => {
   });
 };
 
-const changeTabs = (el) => {
-  const tabIndex = el.value;
-  const tabsEl = document.querySelectorAll('.lk-reserve-tab-wrapper');
-  const activetab = document.querySelector('.lk-reserve-tab-wrapper--show');
+const changeTabs = (index) => {
+  console.log(index);
+  const tabIndex = index;
+  const tabsEl = document.querySelectorAll('.popup-tabs-item');
+  const activetab = document.querySelector('.popup-tabs-item--show');
   for (const tab of tabsEl) {
     if (tab.getAttribute('data-tabIndex') === tabIndex) {
-      activetab.classList.remove('lk-reserve-tab-wrapper--show');
-      tab.classList.add('lk-reserve-tab-wrapper--show');
+      activetab.classList.remove('popup-tabs-item--show');
+      tab.classList.add('popup-tabs-item--show');
     }
   }
 };
@@ -131,4 +134,59 @@ const hideCheckPopup = () => {
 };
 const onAddLike = (el) => {
   el.classList.toggle('btn-heart--full');
+};
+
+const getScroll = () => {
+  const parent = document.querySelector('.scroll-parent-container');
+  if (parent) {
+    const fixedEl = document.querySelector('.product-about-buy');
+    const parentElementHeight = parent.offsetHeight + 64 - window.screen.height;
+    changeScrollClass(parentElementHeight, fixedEl);
+    window.onscroll = () => {
+      changeScrollClass(parentElementHeight, fixedEl);
+    };
+  }
+};
+
+const changeScrollClass = (parentElementHeight, fixedEl) => {
+  if (getScrollVal(parentElementHeight)) {
+    fixedEl.classList.remove('fixed-mobile');
+  } else {
+    fixedEl.classList.add('fixed-mobile');
+  }
+};
+
+const getScrollVal = (parentElementHeight) => {
+  return (
+    Math.round(
+      this.pageYOffset ||
+        (document.documentElement && document.documentElement.scrollTop) ||
+        (document.body && document.body.scrollTop)
+    ) >= parentElementHeight
+  );
+};
+
+const changeTabSize = (el) => {
+  document
+    .querySelector('#tab1-btn-wrapper')
+    .classList.add('tab-size-btn-wrapper--show');
+};
+
+const onChangeTabsItem = (el) => {
+  el.classList.remove('tab-size-btn-wrapper--show');
+  document.querySelector('#tab1').setAttribute('checked', 'false');
+  document.querySelector('#tab2').setAttribute('checked', 'checked');
+  changeTabs('tab2');
+};
+
+const changeTabLength = (el) => {
+  document
+    .querySelector('#tab2-btn-wrapper')
+    .classList.add('tab-size-btn-wrapper--show');
+};
+const onClosePopUpSize = () => {
+  document.querySelector('#popup1').classList.remove('popup-block--show');
+};
+const onShowPopUpSize = () => {
+  document.querySelector('#popup1').classList.add('popup-block--show');
 };

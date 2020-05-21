@@ -29,6 +29,7 @@ $laptop-bg: 1366px;
 
 @include font('lato', bold, 700, '../fonts/Lato-Bold');
 @include font('lato', normal, 400, '../fonts/Lato-Regular');
+@include font('lato', semibold, 600, '../fonts/Lato-SemiBold');
 @include font('lato', thin, 200, '../fonts/Lato-Thin');
 
 @include font('orchidea', bold, 700, '../fonts/OrchideaPro-Bold');
