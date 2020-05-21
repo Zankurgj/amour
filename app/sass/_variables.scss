@@ -1,20 +1,21 @@
 // colors
-$accent: #2462f2;
-$sec: #73859c;
-$sec2: #98a4b2;
-$gray1: #fafafc;
-$gray2: #e6e6e6;
-$gray4: #777777;
-$black: #444444;
-$deepblack: #000000;
+$black: #000;
+$gray: #8c8c8c;
+$averagegray: #bdbdbd;
+$lightgray: #d6d6d6;
+$neutral: #efefef;
 $white: #fff;
-$error: #ff5050;
-$overlay: rgba(53, 78, 120, 0.3);
+$gold: #cc9933;
+$err: #ff3333;
+$attention: #ff6161;
+$accent: #2f80ed;
 
-$fontsize: 19px; // Body Font Size
-$textcolor: $deepblack; // Text Color
-$mainfamily: roboto, sans-serif; // Main Font Family
-$highwaySansPro: highwaySansPro, sans-serif;
+$fontsize: 16px; // Body Font Size
+$textcolor: $black; // Text Color
+$lato: lato, sans-serif;
+$orchidea: orchidea, sans-serif;
+$mainfamily: $orchidea, sans-serif; // Main Font Family
+$subfamily: $lato;
 
 $base-duration: 0.3s;
 $base-timing: ease-in-out;

@@ -1,0 +1,42 @@
+.breadcrumb-item-wrapper {
+  display: flex;
+}
+
+.breadcrumb-item {
+  &::after {
+    content: '–';
+    color: $black;
+    margin: 0 4px;
+  }
+  &:last-child {
+    &::after {
+      display: none;
+    }
+  }
+  a,
+  span {
+    color: $black;
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+.breadcrumb-arrow-back {
+  display: block;
+  margin-right: 20px;
+  @media screen and (min-width: $tablet-bp) {
+    display: none;
+  }
+  a {
+    color: $averagegray;
+    &:hover {
+      color: $lightgray;
+    }
+  }
+  &::after {
+    display: none;
+  }
+}
+.breadcrumb-arrow-back-icon {
+  width: 18px;
+  height: 18px;
+}

@@ -14,42 +14,9 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: $highwaySansPro;
-  color: $deepblack;
-}
-h1 {
-  font-weight: normal;
-  font-size: 60px;
-  line-height: 72px;
-}
-h2 {
-  font-weight: 300;
-  font-size: 43px;
-  line-height: 48px;
-}
-h3 {
-  font-weight: 300;
-  font-size: 32px;
-  line-height: 36px;
-}
-h4 {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 24px;
-}
-.caption {
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 16px;
-}
-.subtitle {
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 20px;
-}
-.micro {
-  font-size: 11px;
-  line-height: 16px;
+  margin-bottom: 0;
+  font-family: $mainfamily;
+  color: $black;
 }
 p {
   margin: 0;
