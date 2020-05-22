@@ -1,7 +1,7 @@
 .main-footer {
   position: relative;
   padding: 0 0 110px 0;
-  background: url('../images/dest/img/footer-bg.png') center no-repeat;
+  background: url('../images/dest/img/footer-bg.png') center bottom -60px no-repeat;
   background-size: cover;
   @media screen and (min-width: $tablet-bp) {
     background: none;

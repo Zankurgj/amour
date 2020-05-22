@@ -1,0 +1,8 @@
+.mp-page {
+  @media screen and (min-width: $tablet-bp) {
+    overflow-x: hidden;
+  }
+}
+.container-mp {
+  padding: 64px 0 45px 0;
+}

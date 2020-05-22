@@ -43,40 +43,6 @@ document.addEventListener('DOMContentLoaded', function () {
       },
     ],
   });
-
-  // $(window)
-  //   .on('resize', () => {
-  //     let init = $('.lk-course-wrapper').data('init-slider');
-  //     if (window.innerWidth < 1000) {
-  //       if (!init) {
-  //         $('.lk-course-wrapper')
-  //           .slick({
-  //             infinite: false,
-  //             slidesToShow: 1,
-  //             slidesToScroll: 1,
-  //             dots: false,
-  //             arrows: false,
-  //             mobileFirst: true,
-  //             variableWidth: true,
-  //             responsive: [
-  //               {
-  //                 breakpoint: 1000,
-  //                 settings: 'unslick',
-  //               },
-  //             ],
-  //           })
-  //           .data({ 'init-slider': true });
-  //       }
-  //     } else {
-  //       if (init) {
-  //         $('.lk-course-wrapper')
-  //           .slick('unslick')
-  //           .data({ 'init-slider': false });
-  //       }
-  //     }
-  //   })
-  //   .trigger('resize');
-
   getScroll();
 });
 
@@ -189,4 +155,48 @@ const onClosePopUpSize = () => {
 };
 const onShowPopUpSize = () => {
   document.querySelector('#popup1').classList.add('popup-block--show');
+};
+
+const initMpSlider = () => {
+  const sliderSelector = document.querySelector(
+    '.product-recommend-slider--mp'
+  );
+  setMpSliderWidth(sliderSelector);
+  $('.product-recommend-slider--mp').slick({
+    infinite: false,
+    dots: false,
+    arrows: false,
+    slidesToShow: 1,
+    variableWidth: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          variableWidth: true,
+          infinite: false,
+          arrows: false,
+        },
+      },
+    ],
+  });
+  window.addEventListener('resize', () => {
+    setMpSliderWidth(sliderSelector);
+  });
+};
+
+const setMpSliderWidth = (sliderSelector) => {
+  const mobileBp = 1024;
+  if (window.innerWidth >= mobileBp) {
+    sliderSelector.style.width = `${getMpSliderWidth(sliderSelector)}px`;
+  } else {
+    sliderSelector.style.width = 'auto';
+  }
+};
+
+const getMpSliderWidth = (sliderSelector) => {
+  const distanceLeft = sliderSelector.getBoundingClientRect().left;
+  const distanceRight = window.innerWidth - distanceLeft;
+  return distanceRight;
 };

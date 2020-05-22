@@ -384,6 +384,18 @@
     display: block;
   }
 }
+.product-recommend-item-preorder-wrapper {
+  position: relative;
+}
+.product-recommend-item-preorder {
+  position: absolute;
+  left: 0;
+  top: -19px;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 19px;
+  color: $gold;
+}
 .product-recommend-item-title {
   margin-bottom: 6px;
   font-size: 12px;
