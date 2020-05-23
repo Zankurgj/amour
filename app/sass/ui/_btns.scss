@@ -24,7 +24,7 @@ input[type='submit'] {
   &.btn-hamburger--active {
     .btn-hamburger-icon {
       &::before {
-        transform: scaleX(0.5) translate(0, 7px) rotate(-28deg);
+        transform: scaleX(0.5) translate(-1px, 7px) rotate(-28deg);
       }
       &::after {
         transform: scaleX(0.5) translate(-2px, -7px) rotate(28deg);
