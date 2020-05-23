@@ -24,13 +24,23 @@
     min-width: 0;
   }
 }
-.product-about {
+.product-about-wrapper {
+  position: relative;
   margin-bottom: 34px;
+  padding: 0;
   @media screen and (min-width: $tablet-bp) {
+    flex-basis: 33.33%;
+  }
+}
+.product-about {
+  @media screen and (min-width: $tablet-bp) {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
     display: flex;
     flex-direction: column-reverse;
     justify-content: flex-end;
-    flex-basis: 33.33%;
     min-width: 0;
     padding: 0 40px;
   }
@@ -521,6 +531,10 @@
 }
 .btn-link-gray--popup-about-wrapper {
   margin-bottom: 30px;
+  padding-left: 24px;
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-image: url("data:image/svg+xml,%3Csvg fill='none' height='17' viewBox='0 0 16 17' width='16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m11.2811.688772-11.2811 11.311228s3.00807 3.0161 4.9355 4.9487c2.76486-2.7723 7.0799-7.09878 7.0799-7.09878l3.4951-3.50444c.39-.39104.39-1.02505 0-1.41609zm3.6046 4.939658-9.95918 9.98567-3.59553-3.6051.66651-.6683 1.12773 1.1307.661-.6627-1.12772-1.1308.66651-.6682 1.79775 1.8025.66101-.6628-1.79775-1.80251.66651-.66829 1.12772 1.13073.661-.66277-1.12772-1.13073.66652-.66829 1.79775 1.80255.661-.66277-1.79775-1.80254.66651-.66829 1.12772 1.13072.66101-.66276-1.12772-1.13073.66651-.66829 1.79771 1.80254.661-.66276-1.7977-1.80255.66651-.66829 1.12769 1.13073.661-.66277-1.1277-1.13073.6665-.66829z' fill='%238c8c8c'/%3E%3C/svg%3E");
 }
 .btn-tab-change {
   @extend .visually-hidden;
@@ -549,6 +563,12 @@
     height: 2px;
     width: 100%;
     background-color: $averagegray;
+  }
+  @media screen and (min-width: $tablet-bp) {
+    font-size: 16px;
+  }
+  @media screen and (min-width: $laptop-bg) {
+    font-size: 18px;
   }
 }
 .popup-tabs-item {
