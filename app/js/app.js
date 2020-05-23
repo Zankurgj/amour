@@ -263,8 +263,8 @@ const changeSlideColor = (el) => {
   $(el).addClass('active');
   const id = el.getAttribute('data-productId');
   const costSelector = document.querySelector('#productCost');
-  const colorSelector = document.querySelector('#productColorMobile');
-  const colorSelectorMobile = document.querySelector('#productColorTitle');
+  const colorSelector = document.querySelector('#productColor');
+  const colorSelectorMobile = document.querySelector('#productColorMobile');
   const colorTitleSelector = document.querySelector('#productColorTitle');
 
   const productItem = products[+id];
