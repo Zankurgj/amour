@@ -144,46 +144,48 @@
       </nav>
       <div class="product-wrapper">
         <section class="product-gallery container container--product-gallery">
-          <div class="product-gallery-slider">
-            <!-- Для отображения изображения в пагинации, нужно к слайду добавить "data-image" атрибут с урлом -->
-            <div class="product-gallery-slider-item" data-image="./images/dest/img/product-gal-img.jpg">
-              <img
-                src="./images/dest/img/product-gal-img.jpg"
-                alt="product"
-                data-rjs="2"
-              />
-            </div>
-            <div class="product-gallery-slider-item" data-image="./images/dest/img/product-gal-img.jpg">
-              <img
-                src="./images/dest/img/product-gal-img.jpg"
-                alt="product"
-                data-rjs="2"
-              />
-            </div>
-            <div class="product-gallery-slider-item" data-image="./images/dest/img/product-gal-img.jpg">
-              <img
-                src="./images/dest/img/product-gal-img.jpg"
-                alt="product"
-                data-rjs="2"
-              />
+          <div class="product-gallery-slider-wrapper">
+            <div class="product-gallery-slider">
+              <!-- Для отображения изображения в пагинации, нужно к слайду добавить "data-image" атрибут с урлом -->
+              <div class="product-gallery-slider-item" data-image="./images/dest/img/product-gal-img.jpg">
+                <img
+                  src="./images/dest/img/product-gal-img.jpg"
+                  alt="product"
+                  data-rjs="2"
+                />
+              </div>
+              <div class="product-gallery-slider-item" data-image="./images/dest/img/product-gal-img.jpg">
+                <img
+                  src="./images/dest/img/product-gal-img.jpg"
+                  alt="product"
+                  data-rjs="2"
+                />
+              </div>
+              <div class="product-gallery-slider-item" data-image="./images/dest/img/product-gal-img.jpg">
+                <img
+                  src="./images/dest/img/product-gal-img.jpg"
+                  alt="product"
+                  data-rjs="2"
+                />
+              </div>
             </div>
           </div>
           <div class="product-about-buy-color-text product-about-buy-color-text--mobile">
-            <span class="buy-color-text-sub">Цвет: </span><span class="buy-color-text-inner">Голубой</span>
+            <span class="buy-color-text-sub">Цвет: </span><span class="buy-color-text-inner" id="productColorMobile">Голубой</span>
           </div>
           <ul class="product-about-buy-color product-about-buy-color--mobile">
             <li>
-              <button class="btn-change-color active" data-rjs="2" style="background-image: url('./images/dest/img/product-color1.png');">
+              <button class="btn-change-color js-btn-change active" data-rjs="2" style="background-image: url('./images/dest/img/product-color1.png');" data-productId="1" onclick="changeSlideColor(this)">
                 <span class="visually-hidden">выбор цвета</span>
               </button>
             </li>
             <li>
-              <button class="btn-change-color" data-rjs="2" style="background-image: url('./images/dest/img/product-color1.png');">
+              <button class="btn-change-color js-btn-change" data-rjs="2" style="background-image: url('./images/dest/img/product-color1.png');" data-productId="2" onclick="changeSlideColor(this)">
                 <span class="visually-hidden">выбор цвета</span>
               </button>
             </li>
             <li>
-              <button class="btn-change-color" data-rjs="2" style="background-image: url('./images/dest/img/product-color1.png');">
+              <button class="btn-change-color js-btn-change" data-rjs="2" style="background-image: url('./images/dest/img/product-color1.png');" data-productId="3" onclick="changeSlideColor(this)">
                 <span class="visually-hidden">выбор цвета</span>
               </button>
             </li>
@@ -241,17 +243,17 @@
             </div>
             <ul class="product-about-buy-color product-about-buy-color--desktop">
               <li>
-                <button class="btn-change-color-desktop active" style="background-color: #5F6EAE; border-color: #5F6EAE;" data-productId="1" onclick="changeSlideColor(this)">
+                <button class="js-btn-change btn-change-color-desktop active" style="background-color: #5F6EAE; border-color: #5F6EAE;" data-productId="1" onclick="changeSlideColor(this)">
                   <span class="visually-hidden">выбор цвета</span>
                 </button>
               </li>
               <li>
-                <button class="btn-change-color-desktop" style="background-color: #ffffff; border-color: #000;" data-productId="2"  onclick="changeSlideColor(this)">
+                <button class="js-btn-change btn-change-color-desktop" style="background-color: #ffffff; border-color: #000;" data-productId="2"  onclick="changeSlideColor(this)">
                   <span class="visually-hidden">выбор цвета</span>
                 </button>
               </li>
               <li>
-                <button class="btn-change-color-desktop" style="background-color: #8C8C8C; border-color: #8C8C8C;" data-productId="3" onclick="changeSlideColor(this)">
+                <button class="js-btn-change btn-change-color-desktop" style="background-color: #8C8C8C; border-color: #8C8C8C;" data-productId="3" onclick="changeSlideColor(this)">
                   <span class="visually-hidden">выбор цвета</span>
                 </button>
               </li>

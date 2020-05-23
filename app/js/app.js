@@ -259,15 +259,18 @@ const products = {
 };
 
 const changeSlideColor = (el) => {
-  $('.btn-change-color-desktop').removeClass('active');
+  $('.js-btn-change').removeClass('active');
   $(el).addClass('active');
   const id = el.getAttribute('data-productId');
   const costSelector = document.querySelector('#productCost');
-  const colorSelector = document.querySelector('#productColor');
+  const colorSelector = document.querySelector('#productColorMobile');
+  const colorSelectorMobile = document.querySelector('#productColorTitle');
   const colorTitleSelector = document.querySelector('#productColorTitle');
+
   const productItem = products[+id];
   costSelector.innerHTML = productItem.cost;
   colorSelector.innerHTML = productItem.color;
+  colorSelectorMobile.innerHTML = productItem.color;
   colorTitleSelector.innerHTML = productItem.color;
   $('.product-gallery-slider').slick('removeSlide', null, null, true);
   for (image of productItem.images) {
