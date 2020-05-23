@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 const spoilerToogle = (el) => {
   $(el).toggleClass('spoiler--opened');
-  var animateEL = $(el).children('.spoiler-text-wrapper');
+  var animateEL = $(el).siblings('.spoiler-content');
   animateEL.slideToggle(200);
 };
 
@@ -83,6 +83,7 @@ const onShowMenu = (el) => {
   el.classList.toggle('btn-hamburger--active');
   const menu = document.querySelector('.main-header-nav');
   menu.classList.toggle('main-header-nav--show');
+  bodyStopScroll();
 };
 
 const onAddBasket = (el) => {
@@ -199,4 +200,29 @@ const getMpSliderWidth = (sliderSelector) => {
   const distanceLeft = sliderSelector.getBoundingClientRect().left;
   const distanceRight = window.innerWidth - distanceLeft;
   return distanceRight;
+};
+
+// фильтр
+const onSetFilter = (valueFilter) => {
+  const btnfilter = document.querySelector('.btn-primary--catalog-nav-footer');
+  btnfilter.disabled = false;
+  const textFild1 = document.querySelector('.catalog-nav-footer-btn-text');
+  const textFild2 = document.querySelector('.catalog-nav-footer-text-field');
+  const itemQuantity = 23;
+  const textTeplate1 = `Показать ${itemQuantity} товаров`;
+  const textTeplate2 = `показано товаров ${itemQuantity}`;
+  btnfilter.classList.add('have-item');
+  textFild1.innerHTML = textTeplate1;
+  textFild2.innerHTML = textTeplate2;
+};
+
+const onToggleCatalogMenu = () => {
+  document
+    .querySelector('.catalog-nav-wrapper')
+    .classList.toggle('catalog-nav-wrapper--show');
+  bodyStopScroll();
+};
+
+const bodyStopScroll = () => {
+  document.querySelector('body').classList.toggle('body-stop-sroll');
 };

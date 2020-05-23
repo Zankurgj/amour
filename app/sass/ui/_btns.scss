@@ -163,14 +163,14 @@ input[type='submit'] {
   font-size: 16px;
   line-height: 32px;
   color: $white;
+  &:hover {
+    color: $white;
+  }
   &:disabled,
   &.disabled {
     color: $neutral;
     font-weight: normal;
     background-color: $averagegray;
-  }
-  &:hover {
-    color: $white;
   }
 }
 .btn-primary--icon {
@@ -251,4 +251,24 @@ input[type='submit'] {
   &:hover {
     color: $white;
   }
+}
+
+.btn-pagin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  color: $gray;
+  &.active {
+    color: $averagegray;
+  }
+  &:disabled,
+  .disabled {
+    color: $lightgray;
+  }
+}
+.btn-pagin-icon {
+  width: 6px;
+  height: 12px;
 }

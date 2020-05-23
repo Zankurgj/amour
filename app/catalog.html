@@ -112,314 +112,562 @@
         </a>
       </div>
     </header>
+    <div class="catalog-page">
+      <div class="container container-catalog">
+        <div class="catalog-header">
+          <div class="catalog-header-btn-block">
+            <a href="#" class="catalog-header-back">
+              <svg class="svg-icon catalog-header-back-icon">
+                <use
+                  xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow-back"
+                ></use>
+              </svg>
+              <span class="visually-hidden">назад</span>
+            Каталог</a>
+          <button class="btn-show-filter" onclick="onToggleCatalogMenu()">
+            Фильтр и сортировка
+            <svg class="svg-icon btn-show-filter-icon">
+              <use
+                xlink:href="./images/sprites/svg/sprite.symbol.svg#filter"
+              ></use>
+            </svg>
+          </button>
+          </div>
+          <div class="catalog-nav-wrapper">
+            <div class="catalog-nav-overlay" onclick="onToggleCatalogMenu()"></div>
+            <div class="catalog-nav">
+              <div class="catalog-nav-head">
+                <button class="btn-catalog-nav-head" onclick="onToggleCatalogMenu()">
+                  Фильтр и сортировка
+                </button>
+              </div>
+              <ul class="catalog-nav-filter-block">
+                <li>
+                  <button class="btn-spoiler-catalog" onclick="spoilerToogle(this)">
+                    Сортировать по
+                    <svg class="svg-icon btn-spoiler-catalog-icon">
+                      <use
+                        xlink:href="./images/sprites/svg/sprite.symbol.svg#spoiler-arrow"
+                      ></use>
+                    </svg>
+                  </button>
+                  <ul class="spoiler-content">
+                    <li>
+                      <label class="custom-checkbox-wrapper custom-checkbox-wrapper--catalog-nav">
+                        <input type="checkbox" class="custom-checkbox" onchange="onSetFilter('value')">
+                        <span class="custom-checkbox-check"></span>
+                        <span class="custom-checkbox-text">В наличии</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="custom-checkbox-wrapper custom-checkbox-wrapper--catalog-nav">
+                        <input type="checkbox" class="custom-checkbox" onchange="onSetFilter('value')">
+                        <span class="custom-checkbox-check"></span>
+                        <span class="custom-checkbox-text">В наличии</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="custom-checkbox-wrapper custom-checkbox-wrapper--catalog-nav">
+                        <input type="checkbox" class="custom-checkbox" onchange="onSetFilter('value')">
+                        <span class="custom-checkbox-check"></span>
+                        <span class="custom-checkbox-text">В наличии</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="custom-checkbox-wrapper custom-checkbox-wrapper--catalog-nav">
+                        <input type="checkbox" class="custom-checkbox" onchange="onSetFilter('value')">
+                        <span class="custom-checkbox-check"></span>
+                        <span class="custom-checkbox-text">В наличии</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="custom-checkbox-wrapper custom-checkbox-wrapper--catalog-nav">
+                        <input type="checkbox" class="custom-checkbox" onchange="onSetFilter('value')">
+                        <span class="custom-checkbox-check"></span>
+                        <span class="custom-checkbox-text">В наличии</span>
+                      </label>
+                    </li>
+                  </ul>
+                </li>
 
-      <main class="mp-page">
-        <div class="container container-mp">
-          <div class="mp-page-row">
-            
-            <div class="mp-page-column">
-              <div class="frame-item" data-rjs="2" style="background-image: url('./images/dest/img/frame-image1.jpg');">
-                <div class="frame-item-mark">
-                  <span>NEW</span>
-                </div>
-                <div class="frame-item-inner">
-                  <h2 class="frame-item-title">Новинки этого лета</h2>
-                  <p class="frame-item-text">доступны по предзаказу</p>
-                  <a href="#" class="btn btn-white frame-item-btn-white">Перейти в каталог</a>
+                <li>
+                  <button class="btn-spoiler-catalog" onclick="spoilerToogle(this)">
+                    Сортировать по
+                    <svg class="svg-icon btn-spoiler-catalog-icon">
+                      <use
+                        xlink:href="./images/sprites/svg/sprite.symbol.svg#spoiler-arrow"
+                      ></use>
+                    </svg>
+                  </button>
+                  <ul class="spoiler-content">
+                    <li>
+                      <label class="custom-checkbox-wrapper custom-checkbox-wrapper--catalog-nav">
+                        <input type="checkbox" class="custom-checkbox" onchange="onSetFilter('value')">
+                        <span class="custom-checkbox-check"></span>
+                        <span class="custom-checkbox-text">В наличии</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="custom-checkbox-wrapper custom-checkbox-wrapper--catalog-nav">
+                        <input type="checkbox" class="custom-checkbox" onchange="onSetFilter('value')">
+                        <span class="custom-checkbox-check"></span>
+                        <span class="custom-checkbox-text">В наличии</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="custom-checkbox-wrapper custom-checkbox-wrapper--catalog-nav">
+                        <input type="checkbox" class="custom-checkbox" onchange="onSetFilter('value')">
+                        <span class="custom-checkbox-check"></span>
+                        <span class="custom-checkbox-text">В наличии</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="custom-checkbox-wrapper custom-checkbox-wrapper--catalog-nav">
+                        <input type="checkbox" class="custom-checkbox" onchange="onSetFilter('value')">
+                        <span class="custom-checkbox-check"></span>
+                        <span class="custom-checkbox-text">В наличии</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="custom-checkbox-wrapper custom-checkbox-wrapper--catalog-nav">
+                        <input type="checkbox" class="custom-checkbox" onchange="onSetFilter('value')">
+                        <span class="custom-checkbox-check"></span>
+                        <span class="custom-checkbox-text">В наличии</span>
+                      </label>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <button class="btn-spoiler-catalog" onclick="spoilerToogle(this)">
+                    Сортировать по
+                    <svg class="svg-icon btn-spoiler-catalog-icon">
+                      <use
+                        xlink:href="./images/sprites/svg/sprite.symbol.svg#spoiler-arrow"
+                      ></use>
+                    </svg>
+                  </button>
+                  <ul class="spoiler-content">
+                    <li>
+                      <label class="custom-checkbox-wrapper custom-checkbox-wrapper--catalog-nav">
+                        <input type="checkbox" class="custom-checkbox" onchange="onSetFilter('value')">
+                        <span class="custom-checkbox-check"></span>
+                        <span class="custom-checkbox-text">В наличии</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="custom-checkbox-wrapper custom-checkbox-wrapper--catalog-nav">
+                        <input type="checkbox" class="custom-checkbox" onchange="onSetFilter('value')">
+                        <span class="custom-checkbox-check"></span>
+                        <span class="custom-checkbox-text">В наличии</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="custom-checkbox-wrapper custom-checkbox-wrapper--catalog-nav">
+                        <input type="checkbox" class="custom-checkbox" onchange="onSetFilter('value')">
+                        <span class="custom-checkbox-check"></span>
+                        <span class="custom-checkbox-text">В наличии</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="custom-checkbox-wrapper custom-checkbox-wrapper--catalog-nav">
+                        <input type="checkbox" class="custom-checkbox" onchange="onSetFilter('value')">
+                        <span class="custom-checkbox-check"></span>
+                        <span class="custom-checkbox-text">В наличии</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="custom-checkbox-wrapper custom-checkbox-wrapper--catalog-nav">
+                        <input type="checkbox" class="custom-checkbox" onchange="onSetFilter('value')">
+                        <span class="custom-checkbox-check"></span>
+                        <span class="custom-checkbox-text">В наличии</span>
+                      </label>
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <button class="btn-spoiler-catalog" onclick="spoilerToogle(this)">
+                    Сортировать по
+                    <svg class="svg-icon btn-spoiler-catalog-icon">
+                      <use
+                        xlink:href="./images/sprites/svg/sprite.symbol.svg#spoiler-arrow"
+                      ></use>
+                    </svg>
+                  </button>
+                  <ul class="spoiler-content">
+                    <li>
+                      <label class="custom-checkbox-wrapper custom-checkbox-wrapper--catalog-nav">
+                        <input type="checkbox" class="custom-checkbox" onchange="onSetFilter('value')">
+                        <span class="custom-checkbox-check"></span>
+                        <span class="custom-checkbox-text">В наличии</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="custom-checkbox-wrapper custom-checkbox-wrapper--catalog-nav">
+                        <input type="checkbox" class="custom-checkbox" onchange="onSetFilter('value')">
+                        <span class="custom-checkbox-check"></span>
+                        <span class="custom-checkbox-text">В наличии</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="custom-checkbox-wrapper custom-checkbox-wrapper--catalog-nav">
+                        <input type="checkbox" class="custom-checkbox" onchange="onSetFilter('value')">
+                        <span class="custom-checkbox-check"></span>
+                        <span class="custom-checkbox-text">В наличии</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="custom-checkbox-wrapper custom-checkbox-wrapper--catalog-nav">
+                        <input type="checkbox" class="custom-checkbox" onchange="onSetFilter('value')">
+                        <span class="custom-checkbox-check"></span>
+                        <span class="custom-checkbox-text">В наличии</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="custom-checkbox-wrapper custom-checkbox-wrapper--catalog-nav">
+                        <input type="checkbox" class="custom-checkbox" onchange="onSetFilter('value')">
+                        <span class="custom-checkbox-check"></span>
+                        <span class="custom-checkbox-text">В наличии</span>
+                      </label>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <label class="custom-checkbox-wrapper custom-checkbox-wrapper--catalog-nav">
+                    <input type="checkbox" class="custom-checkbox" onchange="onSetFilter('value')">
+                    <span class="custom-checkbox-check"></span>
+                    <span class="custom-checkbox-text">В наличии</span>
+                  </label>
+                </li>
+              </ul>
+              <div class="catalog-nav-footer">
+                <button class="btn-primary btn-primary--catalog-nav-footer" disabled onclick="onToggleCatalogMenu()">
+                  <span class="catalog-nav-footer-btn-text">Выберите  фильтр</span>
+                </button>
+                <div class="catalog-nav-footer-text-field"></div>
+                <div class="catalog-nav-footer-grid">
+
+                  <button class="catalog-nav-footer-grid-change">
+                    <span class="visually-hidden">1 колонка</span>
+                    <svg class="svg-icon btn-catalog-nav-footer-grid-icon">
+                      <use
+                        xlink:href="./images/sprites/svg/sprite.symbol.svg#grid1col"
+                      ></use>
+                    </svg>
+                  </button>
+
+                  <button class="catalog-nav-footer-grid-change active">
+                    <span class="visually-hidden">2 колонки</span>
+                    <svg class="svg-icon btn-catalog-nav-footer-grid-icon">
+                      <use
+                      xlink:href="./images/sprites/svg/sprite.symbol.svg#grid2col"
+                      ></use>
+                    </svg>
+                  </button>
+
                 </div>
               </div>
             </div>
-
-            <div class="mp-page-column">
-              <div class="frame-item" data-rjs="2" style="background-image: url('./images/dest/img/frame-image2.jpg');">
-                <div class="frame-item-mark">
-                  <span>TOPFIVE</span>
-                </div>
-                <div class="frame-item-inner">
-                  <h2 class="frame-item-title">ТОП 5  Деним</h2>
-                  <p class="frame-item-text">подборка редакторов Vogue Russia</p>
-                  <a href="#" class="btn btn-white frame-item-btn-white">Смотреть подборку</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="mp-page-column">
-              <div class="frame-item" data-rjs="2" style="background-image: url('./images/dest/img/frame-image2.jpg');">
-                <div class="frame-item-mark">
-                  <span>TOPFIVE</span>
-                </div>
-                <div class="frame-item-inner">
-                  <h2 class="frame-item-title">ТОП 5  Деним</h2>
-                  <p class="frame-item-text">подборка редакторов Vogue Russia</p>
-                  <a href="#" class="btn btn-white frame-item-btn-white">Смотреть подборку</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="mp-page-column mp-page-column--slider">
-              <h3 class="mp-slider-title">Рекомендации стилистов</h3>
-              <div class="product-recommend-slider--mp">
-                <a class="product-recommend-item product-recommend-item--mp" href="#">
-                  <div class="product-recommend-item-img product-recommend-item-img--mp">
-                    <img
-                      src="./images/dest/img/recommend-img1.jpg"
-                      alt="recommend image"
-                      data-rjs="2"
-                    />
-                  </div>
-                  <div class="product-recommend-item-preorder-wrapper">
-                    <p class="product-recommend-item-preorder">Предзаказ</p>
-                  </div>
-                  <h4 class="product-recommend-item-title product-recommend-item-title--mp">
-                    <strong>Кофта</strong> Lorem ipsum dolor sitLorem ipsum dolor
-                    sit
-                  </h4>
-                  <div class="product-recommend-item-price product-recommend-item-price--mp">
-                    <span class="price-item price-item--discount">10 000 ₽</span>
-                    <span class="price-item price-item--old">15 000 ₽</span>
-                  </div>
-                  <div class="product-recommend-item-color product-recommend-item-color--mp">
-                    <div
-                      class="color-item product-recommend-color-item"
-                      style="background-color: #000000;"
-                    ></div>
-                    <div
-                      class="color-item product-recommend-color-item"
-                      style="background-color: #8c8c8c;"
-                    ></div>
-                    <div
-                      class="color-item color-item--border product-recommend-color-item"
-                      style="background-color: #ffffff; border-color: #000000;"
-                    ></div>
-                  </div>
-                </a>
-    
-                <a class="product-recommend-item product-recommend-item--mp" href="#">
-                  <div class="product-recommend-item-img product-recommend-item-img--mp">
-                    <img
-                      src="./images/dest/img/recommend-img2.jpg"
-                      alt="recommend image"
-                      data-rjs="2"
-                    />
-                  </div>
-                  <h4 class="product-recommend-item-title product-recommend-item-title--mp">
-                    <strong>Кофта</strong> с объёмными пл
-                  </h4>
-                  <div class="product-recommend-item-price product-recommend-item-price--mp">
-                    <span class="price-item">10 000 ₽</span>
-                  </div>
-                  <div class="product-recommend-item-color product-recommend-item-color--mp">
-                    <div
-                      class="color-item product-recommend-color-item"
-                      style="background-color: #000000;"
-                    ></div>
-                    <div
-                      class="color-item product-recommend-color-item"
-                      style="background-color: #8c8c8c;"
-                    ></div>
-                    <div
-                      class="color-item color-item--border product-recommend-color-item"
-                      style="background-color: #ffffff; border-color: #000000;"
-                    ></div>
-                  </div>
-                </a>
-    
-                <a class="product-recommend-item product-recommend-item--mp" href="#">
-                  <div class="product-recommend-item-img product-recommend-item-img--mp">
-                    <img
-                      src="./images/dest/img/recommend-img1.jpg"
-                      alt="recommend image"
-                      data-rjs="2"
-                    />
-                  </div>
-                  <h4 class="product-recommend-item-title product-recommend-item-title--mp">
-                    <strong>Кофта</strong> с объёмными пл
-                  </h4>
-                  <div class="product-recommend-item-price product-recommend-item-price--mp">
-                    <span class="price-item price-item--discount">10 000 ₽</span>
-                    <span class="price-item price-item--old">15 000 ₽</span>
-                  </div>
-                  <div class="product-recommend-item-color product-recommend-item-color--mp">
-                    <div
-                      class="color-item product-recommend-color-item"
-                      style="background-color: #000000;"
-                    ></div>
-                    <div
-                      class="color-item product-recommend-color-item"
-                      style="background-color: #8c8c8c;"
-                    ></div>
-                    <div
-                      class="color-item color-item--border product-recommend-color-item"
-                      style="background-color: #ffffff; border-color: #000000;"
-                    ></div>
-                  </div>
-                </a>
-                
-                <a class="product-recommend-item product-recommend-item--mp" href="#">
-                  <div class="product-recommend-item-img product-recommend-item-img--mp">
-                    <img
-                      src="./images/dest/img/recommend-img2.jpg"
-                      alt="recommend image"
-                      data-rjs="2"
-                    />
-                  </div>
-                  <h4 class="product-recommend-item-title product-recommend-item-title--mp">
-                    <strong>Кофта</strong> с объёмными пл
-                  </h4>
-                  <div class="product-recommend-item-price product-recommend-item-price--mp">
-                    <span class="price-item">10 000 ₽</span>
-                  </div>
-                  <div class="product-recommend-item-color product-recommend-item-color--mp">
-                    <div
-                      class="color-item product-recommend-color-item"
-                      style="background-color: #000000;"
-                    ></div>
-                    <div
-                      class="color-item product-recommend-color-item"
-                      style="background-color: #8c8c8c;"
-                    ></div>
-                    <div
-                      class="color-item color-item--border product-recommend-color-item"
-                      style="background-color: #ffffff; border-color: #000000;"
-                    ></div>
-                  </div>
-                </a>
-                <a class="product-recommend-item product-recommend-item--mp" href="#">
-                  <div class="product-recommend-item-img product-recommend-item-img--mp">
-                    <img
-                      src="./images/dest/img/recommend-img2.jpg"
-                      alt="recommend image"
-                      data-rjs="2"
-                    />
-                  </div>
-                  <h4 class="product-recommend-item-title product-recommend-item-title--mp">
-                    <strong>Кофта</strong> с объёмными пл
-                  </h4>
-                  <div class="product-recommend-item-price product-recommend-item-price--mp">
-                    <span class="price-item">10 000 ₽</span>
-                  </div>
-                  <div class="product-recommend-item-color product-recommend-item-color--mp">
-                    <div
-                      class="color-item product-recommend-color-item"
-                      style="background-color: #000000;"
-                    ></div>
-                    <div
-                      class="color-item product-recommend-color-item"
-                      style="background-color: #8c8c8c;"
-                    ></div>
-                    <div
-                      class="color-item color-item--border product-recommend-color-item"
-                      style="background-color: #ffffff; border-color: #000000;"
-                    ></div>
-                  </div>
-                </a>
-                <a class="product-recommend-item product-recommend-item--mp" href="#">
-                  <div class="product-recommend-item-img product-recommend-item-img--mp">
-                    <img
-                      src="./images/dest/img/recommend-img2.jpg"
-                      alt="recommend image"
-                      data-rjs="2"
-                    />
-                  </div>
-                  <h4 class="product-recommend-item-title product-recommend-item-title--mp">
-                    <strong>Кофта</strong> с объёмными пл
-                  </h4>
-                  <div class="product-recommend-item-price product-recommend-item-price--mp">
-                    <span class="price-item">10 000 ₽</span>
-                  </div>
-                  <div class="product-recommend-item-color product-recommend-item-color--mp">
-                    <div
-                      class="color-item product-recommend-color-item"
-                      style="background-color: #000000;"
-                    ></div>
-                    <div
-                      class="color-item product-recommend-color-item"
-                      style="background-color: #8c8c8c;"
-                    ></div>
-                    <div
-                      class="color-item color-item--border product-recommend-color-item"
-                      style="background-color: #ffffff; border-color: #000000;"
-                    ></div>
-                  </div>
-                </a>
-                <a class="product-recommend-item product-recommend-item--mp" href="#">
-                  <div class="product-recommend-item-img product-recommend-item-img--mp">
-                    <img
-                      src="./images/dest/img/recommend-img2.jpg"
-                      alt="recommend image"
-                      data-rjs="2"
-                    />
-                  </div>
-                  <h4 class="product-recommend-item-title product-recommend-item-title--mp">
-                    <strong>Кофта</strong> с объёмными пл
-                  </h4>
-                  <div class="product-recommend-item-price product-recommend-item-price--mp">
-                    <span class="price-item">10 000 ₽</span>
-                  </div>
-                  <div class="product-recommend-item-color product-recommend-item-color--mp">
-                    <div
-                      class="color-item product-recommend-color-item"
-                      style="background-color: #000000;"
-                    ></div>
-                    <div
-                      class="color-item product-recommend-color-item"
-                      style="background-color: #8c8c8c;"
-                    ></div>
-                    <div
-                      class="color-item color-item--border product-recommend-color-item"
-                      style="background-color: #ffffff; border-color: #000000;"
-                    ></div>
-                  </div>
-                </a>
-
-                <a class="product-recommend-item product-recommend-item--mp" href="#">
-                  <div class="product-recommend-item-img product-recommend-item-img--mp">
-                    <img
-                      src="./images/dest/img/recommend-img1.jpg"
-                      alt="recommend image"
-                      data-rjs="2"
-                    />
-                  </div>
-                  <h4 class="product-recommend-item-title product-recommend-item-title--mp">
-                    <strong>Кофта</strong> с объёмными пл
-                  </h4>
-                  <div class="product-recommend-item-price product-recommend-item-price--mp">
-                    <span class="price-item price-item--discount">10 000 ₽</span>
-                    <span class="price-item price-item--old">15 000 ₽</span>
-                  </div>
-                  <div class="product-recommend-item-color product-recommend-item-color--mp">
-                    <div
-                      class="color-item product-recommend-color-item"
-                      style="background-color: #000000;"
-                    ></div>
-                    <div
-                      class="color-item product-recommend-color-item"
-                      style="background-color: #8c8c8c;"
-                    ></div>
-                    <div
-                      class="color-item color-item--border product-recommend-color-item"
-                      style="background-color: #ffffff; border-color: #000000;"
-                    ></div>
-                  </div>
-                </a>
-              </div>
-              <a href="#" class="btn btn-primary mp-slider-btn">Перейти к покупкам</a>
-            </div>
-
-            <div class="mp-page-column">
-              <div class="frame-item" data-rjs="2" style="background-image: url('./images/dest/img/frame-image3.jpg');">
-                <div class="frame-item-inner">
-                  <h2 class="frame-item-title">О нас</h2>
-                  <p class="frame-item-text">История бренда Amour</p>
-                  <a href="#" class="btn btn-white frame-item-btn-white">Подробнее</a>
-                </div>
-              </div>
-            </div>
-
           </div>
         </div>
-      </main>
+        <section class="catalog-gal">
+          <div class="catalog-gal-row">
+            <div class="catalog-gal-column">
+              <a class="product-recommend-item product-recommend-item--catalog" href="#">
+                <div class="product-recommend-item-img product-recommend-item-img--catalog">
+                  <img
+                    src="./images/dest/img/recommend-img2.jpg"
+                    alt="recommend image"
+                    data-rjs="2"
+                  />
+                </div>
+                <div class="product-recommend-item-preorder-wrapper">
+                  <p class="product-recommend-item-preorder">Предзаказ</p>
+                </div>
+                <h4 class="product-recommend-item-title product-recommend-item-title--catalog">
+                  <strong>Кофта</strong> с объёмными пл
+                </h4>
+                <div class="product-recommend-item-price product-recommend-item-price--catalog">
+                  <span class="price-item">10 000 ₽</span>
+                </div>
+                <div class="product-recommend-item-color product-recommend-item-color--catalog">
+                  <div
+                    class="color-item product-recommend-color-item"
+                    style="background-color: #000000;"
+                  ></div>
+                  <div
+                    class="color-item product-recommend-color-item"
+                    style="background-color: #8c8c8c;"
+                  ></div>
+                  <div
+                    class="color-item color-item--border product-recommend-color-item"
+                    style="background-color: #ffffff; border-color: #000000;"
+                  ></div>
+                </div>
+              </a>
+              <button
+                class="btn-heart btn-heart--big product-recommend-btn-heart"
+                onclick="onAddLike(this)"
+              >
+              <svg class="svg-icon btn-heart-icon-reccomend">
+                <use
+                  xlink:href="./images/sprites/svg/sprite.symbol.svg#heart"
+                ></use>
+              </svg>
+              <span class="visually-hidden">понравилось</span>
+              </button>
+            </div>
 
+            <div class="catalog-gal-column">
+              <a class="product-recommend-item product-recommend-item--catalog" href="#">
+                <div class="product-recommend-item-img product-recommend-item-img--catalog">
+                  <img
+                    src="./images/dest/img/recommend-img2.jpg"
+                    alt="recommend image"
+                    data-rjs="2"
+                  />
+                </div>
+                <h4 class="product-recommend-item-title product-recommend-item-title--catalog">
+                  <strong>Кофта</strong> с объёмными пл
+                </h4>
+                <div class="product-recommend-item-price product-recommend-item-price--catalog">
+                  <span class="price-item">10 000 ₽</span>
+                </div>
+                <div class="product-recommend-item-color product-recommend-item-color--catalog">
+                  <div
+                    class="color-item product-recommend-color-item"
+                    style="background-color: #000000;"
+                  ></div>
+                  <div
+                    class="color-item product-recommend-color-item"
+                    style="background-color: #8c8c8c;"
+                  ></div>
+                  <div
+                    class="color-item color-item--border product-recommend-color-item"
+                    style="background-color: #ffffff; border-color: #000000;"
+                  ></div>
+                </div>
+              </a>
+              <button
+                class="btn-heart btn-heart--big product-recommend-btn-heart"
+                onclick="onAddLike(this)"
+              >
+              <svg class="svg-icon btn-heart-icon-reccomend">
+                <use
+                  xlink:href="./images/sprites/svg/sprite.symbol.svg#heart"
+                ></use>
+              </svg>
+              <span class="visually-hidden">понравилось</span>
+              </button>
+            </div>
+
+            <div class="catalog-gal-column">
+              <a class="product-recommend-item product-recommend-item--catalog" href="#">
+                <div class="product-recommend-item-img product-recommend-item-img--catalog">
+                  <img
+                    src="./images/dest/img/recommend-img2.jpg"
+                    alt="recommend image"
+                    data-rjs="2"
+                  />
+                </div>
+                <h4 class="product-recommend-item-title product-recommend-item-title--catalog">
+                  <strong>Кофта</strong> с объёмными пл
+                </h4>
+                <div class="product-recommend-item-price product-recommend-item-price--catalog">
+                  <span class="price-item">10 000 ₽</span>
+                </div>
+                <div class="product-recommend-item-color product-recommend-item-color--catalog">
+                  <div
+                    class="color-item product-recommend-color-item"
+                    style="background-color: #000000;"
+                  ></div>
+                  <div
+                    class="color-item product-recommend-color-item"
+                    style="background-color: #8c8c8c;"
+                  ></div>
+                  <div
+                    class="color-item color-item--border product-recommend-color-item"
+                    style="background-color: #ffffff; border-color: #000000;"
+                  ></div>
+                </div>
+              </a>
+              <button
+                class="btn-heart btn-heart--big product-recommend-btn-heart"
+                onclick="onAddLike(this)"
+              >
+              <svg class="svg-icon btn-heart-icon-reccomend">
+                <use
+                  xlink:href="./images/sprites/svg/sprite.symbol.svg#heart"
+                ></use>
+              </svg>
+              <span class="visually-hidden">понравилось</span>
+              </button>
+            </div>
+
+            <div class="catalog-gal-column">
+              <a class="product-recommend-item product-recommend-item--catalog" href="#">
+                <div class="product-recommend-item-img product-recommend-item-img--catalog">
+                  <img
+                    src="./images/dest/img/recommend-img2.jpg"
+                    alt="recommend image"
+                    data-rjs="2"
+                  />
+                </div>
+                <h4 class="product-recommend-item-title product-recommend-item-title--catalog">
+                  <strong>Кофта</strong> с объёмными пл
+                </h4>
+                <div class="product-recommend-item-price product-recommend-item-price--catalog">
+                  <span class="price-item">10 000 ₽</span>
+                </div>
+                <div class="product-recommend-item-color product-recommend-item-color--catalog">
+                  <div
+                    class="color-item product-recommend-color-item"
+                    style="background-color: #000000;"
+                  ></div>
+                  <div
+                    class="color-item product-recommend-color-item"
+                    style="background-color: #8c8c8c;"
+                  ></div>
+                  <div
+                    class="color-item color-item--border product-recommend-color-item"
+                    style="background-color: #ffffff; border-color: #000000;"
+                  ></div>
+                </div>
+              </a>
+              <button
+                class="btn-heart btn-heart--big product-recommend-btn-heart"
+                onclick="onAddLike(this)"
+              >
+              <svg class="svg-icon btn-heart-icon-reccomend">
+                <use
+                  xlink:href="./images/sprites/svg/sprite.symbol.svg#heart"
+                ></use>
+              </svg>
+              <span class="visually-hidden">понравилось</span>
+              </button>
+            </div>
+
+            <div class="catalog-gal-column">
+              <a class="product-recommend-item product-recommend-item--catalog" href="#">
+                <div class="product-recommend-item-img product-recommend-item-img--catalog">
+                  <img
+                    src="./images/dest/img/recommend-img2.jpg"
+                    alt="recommend image"
+                    data-rjs="2"
+                  />
+                </div>
+                <h4 class="product-recommend-item-title product-recommend-item-title--catalog">
+                  <strong>Кофта</strong> с объёмными пл
+                </h4>
+                <div class="product-recommend-item-price product-recommend-item-price--catalog">
+                  <span class="price-item">10 000 ₽</span>
+                </div>
+                <div class="product-recommend-item-color product-recommend-item-color--catalog">
+                  <div
+                    class="color-item product-recommend-color-item"
+                    style="background-color: #000000;"
+                  ></div>
+                  <div
+                    class="color-item product-recommend-color-item"
+                    style="background-color: #8c8c8c;"
+                  ></div>
+                  <div
+                    class="color-item color-item--border product-recommend-color-item"
+                    style="background-color: #ffffff; border-color: #000000;"
+                  ></div>
+                </div>
+              </a>
+              <button
+                class="btn-heart btn-heart--big product-recommend-btn-heart"
+                onclick="onAddLike(this)"
+              >
+              <svg class="svg-icon btn-heart-icon-reccomend">
+                <use
+                  xlink:href="./images/sprites/svg/sprite.symbol.svg#heart"
+                ></use>
+              </svg>
+              <span class="visually-hidden">понравилось</span>
+              </button>
+            </div>
+
+            <div class="catalog-gal-column">
+              <a class="product-recommend-item product-recommend-item--catalog" href="#">
+                <div class="product-recommend-item-img product-recommend-item-img--catalog">
+                  <img
+                    src="./images/dest/img/recommend-img2.jpg"
+                    alt="recommend image"
+                    data-rjs="2"
+                  />
+                </div>
+                <h4 class="product-recommend-item-title product-recommend-item-title--catalog">
+                  <strong>Кофта</strong> с объёмными пл
+                </h4>
+                <div class="product-recommend-item-price product-recommend-item-price--catalog">
+                  <span class="price-item">10 000 ₽</span>
+                </div>
+                <div class="product-recommend-item-color product-recommend-item-color--catalog">
+                  <div
+                    class="color-item product-recommend-color-item"
+                    style="background-color: #000000;"
+                  ></div>
+                  <div
+                    class="color-item product-recommend-color-item"
+                    style="background-color: #8c8c8c;"
+                  ></div>
+                  <div
+                    class="color-item color-item--border product-recommend-color-item"
+                    style="background-color: #ffffff; border-color: #000000;"
+                  ></div>
+                </div>
+              </a>
+              <button
+                class="btn-heart btn-heart--big product-recommend-btn-heart"
+                onclick="onAddLike(this)"
+              >
+              <svg class="svg-icon btn-heart-icon-reccomend">
+                <use
+                  xlink:href="./images/sprites/svg/sprite.symbol.svg#heart"
+                ></use>
+              </svg>
+              <span class="visually-hidden">понравилось</span>
+              </button>
+            </div>
+          </div>
+        </section>
+        <section class="catalog-pagin">
+          <div class="catalog-pagin-block">
+
+            <button class="btn-pagin btn-pagin--prev" disabled>
+              <svg class="svg-icon btn-pagin-icon">
+                <use
+                  xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow-prev"
+                ></use>
+              </svg>
+              <span class="visually-hidden">назад</span>
+            </button>
+
+            <div class="catalog-pagin-number-block">
+              <span>1</span>&nbsp;из&nbsp;<span>12</span>
+            </div>
+
+            <button class="btn-pagin btn-pagin--next">
+              <svg class="svg-icon btn-pagin-icon">
+                <use
+                  xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow-next"
+                ></use>
+              </svg>
+              <span class="visually-hidden">вперед</span>
+            </button>
+
+          </div>
+          <div class="catalog-pagin-btn-block">
+            <button class="btn-primary btn-primary-pagin">
+              Загрузить еще
+            </button>
+          </div>
+        </section>
+      </div>
+    </div>
     <footer class="main-footer">
       <img src="./images/dest/img/footer-img.png" alt="footer image" data-rjs="2" class="main-footer-bg-img">
       <section class="subscribe-block container main-footer-subscribe">
@@ -467,8 +715,5 @@
       </div>
     </footer>
     <script src="js/app.min.js"></script>
-    <script>
-      initMpSlider();
-    </script>
   </body>
 </html>

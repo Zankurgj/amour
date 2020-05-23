@@ -8,6 +8,9 @@ body {
   line-height: 26px;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+  &.body-stop-sroll {
+    overflow: hidden;
+  }
 }
 
 h1,
