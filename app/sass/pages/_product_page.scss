@@ -14,7 +14,7 @@
 .product-wrapper {
   @media screen and (min-width: $tablet-bp) {
     display: flex;
-    max-width: 1200px;
+    max-width: 1360px;
     margin: 0 auto;
   }
 }
@@ -29,6 +29,7 @@
   @media screen and (min-width: $tablet-bp) {
     display: flex;
     flex-direction: column-reverse;
+    justify-content: flex-end;
     flex-basis: 33.33%;
     min-width: 0;
     padding: 0 40px;
@@ -607,4 +608,35 @@
 .btn-primary-tab-size {
   width: 100%;
   max-width: 287px;
+}
+
+.btn-change-color-desktop {
+  position: relative;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  margin-right: 34px;
+  border-width: 2px;
+  border-style: solid;
+  &:last-child {
+    margin-right: 0;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    left: 50%;
+    top: 50%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid $gold;
+    opacity: 0;
+    transition: opacity $base-duration $base-timing;
+  }
+  &.active {
+    &::after {
+      opacity: 1;
+    }
+  }
 }

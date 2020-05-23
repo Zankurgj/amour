@@ -221,9 +221,9 @@
           <div class="product-about-buy">
             <div class="product-about-buy-text">
               <h2 class="product-about-buy-title">
-                Костюм Amour (голубой)
+                Костюм Amour (<span id="productColorTitle">голубой</span>)
               </h2>
-              <span class="product-about-buy-price">2 000 ₽</span>
+              <span class="product-about-buy-price"><span id="productCost">2 000</span>₽</span>
               <button
                 class="btn-heart btn-heart--big product-about-btn-heart"
                 onclick="onAddLike(this)"
@@ -237,21 +237,21 @@
               </button>
             </div>
             <div class="product-about-buy-color-text product-about-buy-color-text--desktop">
-              <span class="buy-color-text-inner">Голубой</span>
+              <span class="buy-color-text-inner" id="productColor">Голубой</span>
             </div>
             <ul class="product-about-buy-color product-about-buy-color--desktop">
               <li>
-                <button class="btn-change-color active" data-rjs="2" style="background-image: url('./images/dest/img/product-color1.png');">
+                <button class="btn-change-color-desktop active" style="background-color: #5F6EAE; border-color: #5F6EAE;" data-productId="1" onclick="changeSlideColor(this)">
                   <span class="visually-hidden">выбор цвета</span>
                 </button>
               </li>
               <li>
-                <button class="btn-change-color" data-rjs="2" style="background-image: url('./images/dest/img/product-color1.png');">
+                <button class="btn-change-color-desktop" style="background-color: #ffffff; border-color: #000;" data-productId="2"  onclick="changeSlideColor(this)">
                   <span class="visually-hidden">выбор цвета</span>
                 </button>
               </li>
               <li>
-                <button class="btn-change-color" data-rjs="2" style="background-image: url('./images/dest/img/product-color1.png');">
+                <button class="btn-change-color-desktop" style="background-color: #8C8C8C; border-color: #8C8C8C;" data-productId="3" onclick="changeSlideColor(this)">
                   <span class="visually-hidden">выбор цвета</span>
                 </button>
               </li>

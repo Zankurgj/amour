@@ -226,3 +226,56 @@ const onToggleCatalogMenu = () => {
 const bodyStopScroll = () => {
   document.querySelector('body').classList.toggle('body-stop-sroll');
 };
+
+const products = {
+  1: {
+    color: 'Голубой',
+    images: [
+      'product-gal-img.jpg',
+      'product-gal-img.jpg',
+      'product-gal-img.jpg',
+    ],
+    cost: '1 000',
+  },
+  2: {
+    color: 'Белый',
+    images: [
+      'product-gal-img.jpg',
+      'product-gal-img.jpg',
+      'product-gal-img.jpg',
+      'product-gal-img.jpg',
+    ],
+    cost: '1 234',
+  },
+  3: {
+    color: 'Серый',
+    images: [
+      'product-gal-img.jpg',
+      'product-gal-img.jpg',
+      'product-gal-img.jpg',
+    ],
+    cost: '2 000',
+  },
+};
+
+const changeSlideColor = (el) => {
+  $('.btn-change-color-desktop').removeClass('active');
+  $(el).addClass('active');
+  const id = el.getAttribute('data-productId');
+  const costSelector = document.querySelector('#productCost');
+  const colorSelector = document.querySelector('#productColor');
+  const colorTitleSelector = document.querySelector('#productColorTitle');
+  const productItem = products[+id];
+  costSelector.innerHTML = productItem.cost;
+  colorSelector.innerHTML = productItem.color;
+  colorTitleSelector.innerHTML = productItem.color;
+  $('.product-gallery-slider').slick('removeSlide', null, null, true);
+  for (image of productItem.images) {
+    changeSlides(image);
+  }
+};
+
+const changeSlides = (img) => {
+  const slideTemplate = `<div class="product-gallery-slider-item" data-image="./images/dest/img/${img}"><img src="./images/dest/img/${img}" alt="product" data-rjs="2" /></div>`;
+  $('.product-gallery-slider').slick('slickAdd', `${slideTemplate}`);
+};
