@@ -68,16 +68,28 @@
   .slick-dots {
     display: flex;
     position: absolute;
-    right: 5px;
-    bottom: -92px;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    @media screen and (min-width: $tablet-bp) {
+      right: 5px;
+      left: auto;
+      bottom: -92px;
+      transform: translateX(0);
+    }
     li {
       margin-right: 20px;
-      border: 2px solid transparent;
       &:last-child {
         margin-right: 0;
       }
       &.slick-active {
-        border-color: $gold;
+        .product-gallery-slider-pagin {
+          border-color: $gold;
+        }
+        .product-gallery-slider-pagin--mobile {
+          border-color: $averagegray;
+          background-color: $white;
+        }
       }
     }
   }
@@ -88,7 +100,17 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  border: 2px solid transparent;
   cursor: pointer;
+}
+
+.product-gallery-slider-pagin--mobile {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: $averagegray;
+  border: 2px solid transparent;
+  box-sizing: content-box;
 }
 .product-gallery-slider-item {
   padding: 0 10px;
@@ -108,7 +130,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 12px 0 8px 0;
+  padding: 12px 24px 8px 24px;
   background-color: $white;
   z-index: 9;
   transform: translate3d(0, 0, 0);
@@ -118,9 +140,6 @@
     background-color: transparent;
     margin-bottom: 30px;
     padding: 0;
-  }
-  @media screen and (min-width: $laptop-bg) {
-    // padding: 0 0 0 64px;
   }
   &.fixed-mobile {
     @media screen and (max-width: $tablet-bp) {
@@ -204,6 +223,8 @@
   }
 }
 .product-about-buy-color-text--mobile {
+  margin-top: 10px;
+  margin-bottom: 10px;
   @media screen and (min-width: $tablet-bp) {
     display: none;
   }
@@ -359,7 +380,12 @@
   line-height: 24px;
   margin-bottom: 16px;
 }
-
+.product-about-item-text-wrapper {
+  padding: 0 24px;
+  @media screen and (min-width: $tablet-bp) {
+    padding: 0;
+  }
+}
 .product-about-item-text {
   padding: 24px 0;
   font-size: 16px;
@@ -437,6 +463,7 @@
   font-size: 14px;
   line-height: 24px;
   color: $black;
+  font-family: $subfamily;
 }
 .price-item--discount {
   color: $attention;
@@ -528,6 +555,7 @@
 .popup-tabs-btn-wrapper {
   display: flex;
   justify-content: space-between;
+  border-bottom: 2px solid $averagegray;
 }
 .btn-link-gray--popup-about-wrapper {
   margin-bottom: 30px;
@@ -549,12 +577,13 @@
 }
 .btn-tab-change-label {
   position: relative;
-  margin-bottom: 7px;
+  margin-bottom: 3px;
   font-weight: 600;
   font-size: 18px;
   line-height: 18px;
   font-family: $subfamily;
   color: $averagegray;
+  cursor: pointer;
   &::before {
     content: '';
     position: absolute;
@@ -562,7 +591,7 @@
     bottom: -5px;
     height: 2px;
     width: 100%;
-    background-color: $averagegray;
+    background-color: transparent;
   }
   @media screen and (min-width: $tablet-bp) {
     font-size: 16px;
@@ -614,6 +643,7 @@
   font-size: 14px;
   line-height: 24px;
   color: $black;
+  cursor: pointer;
   &:before {
     content: '';
     display: none;
@@ -683,4 +713,68 @@
       opacity: 1;
     }
   }
+}
+
+.popup-fast-buy {
+  display: none;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  z-index: 20;
+  &.popup-fast-buy--show {
+    display: block;
+  }
+}
+.popup-fast-buy-container {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 32px 24px;
+  width: 100%;
+  background-color: $white;
+  z-index: 21;
+  @media screen and (min-width: $tablet-bp) {
+    padding: 24px 80px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    transform: translate(-50%, -50%);
+    max-width: 540px;
+  }
+}
+.popup-fast-buy-title {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 36px;
+  text-align: center;
+  margin-bottom: 24px;
+  @media screen and (min-width: $tablet-bp) {
+    font-size: 24px;
+  }
+}
+.btn-close-popup-fast-buy {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  @media screen and (min-width: $tablet-bp) {
+    right: 24px;
+    top: 24px;
+  }
+}
+.popup-fast-buy-form {
+  display: flex;
+  flex-direction: column;
+}
+.base-input--popup-fast-buy {
+  width: 100%;
+  margin-bottom: 24px;
+}
+.btn-primary--popup-fast-buy {
+  margin-top: 24px;
+  max-width: 312px;
+  width: 100%;
+  align-self: center;
 }

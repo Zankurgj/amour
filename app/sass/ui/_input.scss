@@ -1,3 +1,6 @@
+.base-input-wrapper {
+  position: relative;
+}
 .base-input {
   padding: 14px 20px 12px 20px;
   border: 1px solid $black;
@@ -12,11 +15,28 @@
   &:focus {
     outline: none;
   }
+  &.error {
+    border-color: $err;
+    & + {
+      .base-input-err-text {
+        display: block;
+      }
+    }
+  }
 }
-
+.base-input-err-text {
+  display: none;
+  font-size: 12px;
+  color: $err;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  white-space: nowrap;
+}
 .custom-checkbox-wrapper {
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 .custom-checkbox {
   @extend .visually-hidden;

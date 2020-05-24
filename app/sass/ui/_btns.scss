@@ -119,6 +119,7 @@ input[type='submit'] {
   height: 20px;
 }
 .btn-heart {
+  display: none !important;
   position: relative;
   display: flex;
   align-items: center;
@@ -173,8 +174,15 @@ input[type='submit'] {
   font-size: 16px;
   line-height: 32px;
   color: $white;
-  &:hover {
+  @media (hover: hover) {
+    &:hover {
+      color: $white;
+      background-color: $gold;
+    }
+  }
+  &:active {
     color: $white;
+    background-color: $gold;
   }
   &:disabled,
   &.disabled {

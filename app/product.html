@@ -175,17 +175,17 @@
           </div>
           <ul class="product-about-buy-color product-about-buy-color--mobile">
             <li>
-              <button class="btn-change-color js-btn-change active" data-rjs="2" style="background-image: url('./images/dest/img/product-color1.png');" data-productId="1" onclick="changeSlideColor(this)">
+              <button class="js-btn-change btn-change-color-desktop active" style="background-color: #5F6EAE; border-color: #5F6EAE;" data-productId="1" onclick="changeSlideColor(this)">
                 <span class="visually-hidden">выбор цвета</span>
               </button>
             </li>
             <li>
-              <button class="btn-change-color js-btn-change" data-rjs="2" style="background-image: url('./images/dest/img/product-color1.png');" data-productId="2" onclick="changeSlideColor(this)">
+              <button class="js-btn-change btn-change-color-desktop" style="background-color: #ffffff; border-color: #000;" data-productId="2"  onclick="changeSlideColor(this)">
                 <span class="visually-hidden">выбор цвета</span>
               </button>
             </li>
             <li>
-              <button class="btn-change-color js-btn-change" data-rjs="2" style="background-image: url('./images/dest/img/product-color1.png');" data-productId="3" onclick="changeSlideColor(this)">
+              <button class="js-btn-change btn-change-color-desktop" style="background-color: #8C8C8C; border-color: #8C8C8C;" data-productId="3" onclick="changeSlideColor(this)">
                 <span class="visually-hidden">выбор цвета</span>
               </button>
             </li>
@@ -384,8 +384,8 @@
               </li>
             </ul>
             <div class="product-about-buy-btns">
-              <a href="#" class="btn btn-gold product-about-fastbuy-btn"
-                >Быстрая покупка</a
+              <button class="btn-gold product-about-fastbuy-btn" onclick="onTogglePopUpFb()"
+                >Быстрая покупка</button
               >
               <button
                 class="btn-primary btn-primary--icon product-about-basket-btn"
@@ -610,6 +610,52 @@
             >перейти к покупке</a
           >
         </div>
+      </div>
+    </article>
+    <article class="popup-fast-buy">
+      <div class="popup-overlay" onclick="onTogglePopUpFb()"></div>
+        <div class="popup-fast-buy-container">
+          <button
+          class="btn-close btn-close-popup-fast-buy"
+          onclick="onTogglePopUpFb()"
+        >
+          <svg class="svg-icon btn-close-check-block-icon">
+            <use
+              xlink:href="./images/sprites/svg/sprite.symbol.svg#close"
+            ></use>
+          </svg>
+          <span class="visually-hidden">закрыть</span>
+        </button>
+            <h3 class="popup-fast-buy-title">Быстрая покупка</h3>
+            <form action="" class="popup-fast-buy-form">
+              <label for="fast-buy-name" class="base-input-wrapper base-input-wrapper--popup-fast-buy">
+                <input
+              type="text"
+              placeholder="Имя"
+              class="base-input base-input--popup-fast-buy"
+              id="fast-buy-name"
+              required
+            />  
+            <span class="base-input-err-text">
+              Введите имя
+            </span>
+              </label>
+              <label for="fast-buy-phone" class="base-input-wrapper base-input-wrapper--popup-fast-buy">
+                <input
+                type="tel"
+                placeholder="Телефон"
+                class="base-input base-input--popup-fast-buy error"
+                id="fast-buy-phone"
+                required
+              />
+              <span class="base-input-err-text">
+                Введите телефон
+              </span>
+              </label>
+            <button class="btn-primary btn-primary--popup-fast-buy" type="submit" disabled>
+              купить
+            </button>
+            </form>
       </div>
     </article>
     <script src="js/app.min.js"></script>

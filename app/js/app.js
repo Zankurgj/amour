@@ -19,7 +19,10 @@ document.addEventListener('DOMContentLoaded', function () {
           variableWidth: true,
           infinite: false,
           arrows: false,
-          dots: false,
+          dots: true,
+          customPaging: function (slider, i) {
+            return `<div class="product-gallery-slider-pagin--mobile"></div>`;
+          },
         },
       },
     ],
@@ -67,7 +70,6 @@ const renewScroll = () => {
 };
 
 const changeTabs = (index) => {
-  console.log(index);
   const tabIndex = index;
   const tabsEl = document.querySelectorAll('.popup-tabs-item');
   const activetab = document.querySelector('.popup-tabs-item--show');
@@ -140,7 +142,7 @@ const changeTabSize = (el) => {
 };
 
 const onChangeTabsItem = (el) => {
-  el.classList.remove('tab-size-btn-wrapper--show');
+  // el.classList.remove('tab-size-btn-wrapper--show');
   document.querySelector('#tab1').setAttribute('checked', 'false');
   document.querySelector('#tab2').setAttribute('checked', 'checked');
   changeTabs('tab2');
@@ -236,6 +238,7 @@ const products = {
       'product-gal-img.jpg',
     ],
     cost: '1 000',
+    href: 'product1',
   },
   2: {
     color: 'Белый',
@@ -246,6 +249,7 @@ const products = {
       'product-gal-img.jpg',
     ],
     cost: '1 234',
+    href: 'product2',
   },
   3: {
     color: 'Серый',
@@ -255,6 +259,7 @@ const products = {
       'product-gal-img.jpg',
     ],
     cost: '2 000',
+    href: 'product3',
   },
 };
 
@@ -268,17 +273,38 @@ const changeSlideColor = (el) => {
   const colorTitleSelector = document.querySelector('#productColorTitle');
 
   const productItem = products[+id];
+  // Раскоментить
+  // history.pushState(null, null, productItem.href.toString());
   costSelector.innerHTML = productItem.cost;
   colorSelector.innerHTML = productItem.color;
   colorSelectorMobile.innerHTML = productItem.color;
   colorTitleSelector.innerHTML = productItem.color;
+  refreshStatePage();
   $('.product-gallery-slider').slick('removeSlide', null, null, true);
   for (image of productItem.images) {
     changeSlides(image);
   }
 };
-
+const refreshStatePage = () => {
+  const checkItems = document.querySelectorAll('.btn-tab-size:checked');
+  const activBtnsWrapper = document.querySelectorAll(
+    '.tab-size-btn-wrapper--show'
+  );
+  for (checkItem of checkItems) {
+    checkItem.checked = false;
+  }
+  for (activBtn of activBtnsWrapper) {
+    activBtn.classList.remove('tab-size-btn-wrapper--show');
+  }
+};
 const changeSlides = (img) => {
   const slideTemplate = `<div class="product-gallery-slider-item" data-image="./images/dest/img/${img}"><img src="./images/dest/img/${img}" alt="product" data-rjs="2" /></div>`;
   $('.product-gallery-slider').slick('slickAdd', `${slideTemplate}`);
+};
+
+const onTogglePopUpFb = () => {
+  document
+    .querySelector('.popup-fast-buy')
+    .classList.toggle('popup-fast-buy--show');
+  bodyStopScroll();
 };
