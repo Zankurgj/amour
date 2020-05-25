@@ -542,12 +542,19 @@
     padding: 0;
   }
 }
+.popup-content--popup-about--basket {
+  @media screen and (min-width: $tablet-bp) {
+    position: absolute;
+    padding: 0;
+  }
+}
 .btn-popup-close {
   position: absolute;
   right: 24px;
   top: 24px;
 }
 .btn-popup-close-icon {
+  display: block;
   width: 16px;
   height: 16px;
 }
@@ -579,7 +586,7 @@
   position: relative;
   margin-bottom: 3px;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 18px;
   font-family: $subfamily;
   color: $averagegray;

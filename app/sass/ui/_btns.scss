@@ -56,13 +56,6 @@ input[type='submit'] {
   &::after {
     bottom: -7px;
   }
-  // &:hover {
-  //   color: $gray;
-  //   &::after,
-  //   &::before {
-  //     background-color: $gray;
-  //   }
-  // }
 }
 
 .btn-search {
@@ -289,4 +282,13 @@ input[type='submit'] {
 .btn-pagin-icon {
   width: 6px;
   height: 12px;
+}
+.btn-gray {
+  border-radius: 4px;
+  background-color: $neutral;
+  padding: 5px 20px;
+  font-family: $subfamily;
+  color: $black;
+  font-size: 16px;
+  line-height: 32px;
 }

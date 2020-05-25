@@ -115,87 +115,302 @@
 
     <div class="basket-page">
       <div class="container container-basket">
-        <div class="basket-head">
-          <h1 class="basket-head-title">Корзина</h1>
-          <p class="basket-head-sub-title">
-            <span>2</span> товара на сумму <span >20 000 ₽</span>
-          </p>
+        <div class="container basket-head-wrapper">
+          <div class="basket-head">
+            <h1 class="basket-head-title">Корзина</h1>
+            <p class="basket-head-sub-title">
+              <span>2</span> товара на сумму <span >20 000 ₽</span>
+            </p>
+          </div>
         </div>
-        <div class="basket-empty-block">
-          <h3 class="basket-empty-title">Ваша карзина пуста</h3>
-          <p class="basket-empty-text">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia nulla consectetur distinctio tempora reiciendis, culpa vitae accusamus possimus odio laboriosam ratione excepturi ducimus impedit pariatur numquam. Eius suscipit tempora pariatur.
-          </p>
-        </div>
+
         <div class="basket-row">
-          <div class="basket-column">
-            <div class="basket-product-item-wrapper">
-              <div class="basket-product-item">
-                <div class="basket-product-item-img">
-                  <img src="./images/src/img/basket_item.jpg" alt="product" data-rjs="2">
-                </div>
-                <div class="basket-product-item-inner">
-                  <span class="basket-product-item-title">Костюм Amour</span>
-                  <div class="basket-product-item-size-block">
-                    <span class="basket-product-item-size">Размер:&nbsp<span class="basket-product-item-size-inner">XS</span></span>
-                    <button class="btn-link-gray">Изменить</button>
+
+          <div class="basket-column basket-column--basket-item">
+
+            <div class="basket-empty-block">
+              <div class="container">
+                <h3 class="basket-empty-title">Ваша карзина пуста</h3>
+                <p class="basket-empty-text">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia nulla consectetur distinctio tempora reiciendis, culpa vitae accusamus possimus odio laboriosam ratione excepturi ducimus impedit pariatur numquam. Eius suscipit tempora pariatur.
+                </p>
+              </div>
+            </div>
+
+            <div class="container container--basket-product-item">
+              <div class="basket-product-item-wrapper">
+                <div class="basket-product-item">
+                  <button
+                    class="btn-close btn-delete-basket-item"
+                    onclick="hideCheckPopup()"
+                  >
+                    <svg class="svg-icon btn-delete-basket-item-icon">
+                      <use
+                        xlink:href="./images/sprites/svg/sprite.symbol.svg#close"
+                      ></use>
+                    </svg>
+                    <span class="visually-hidden">закрыть</span>
+                  </button>
+                  <div class="basket-product-item-img">
+                    <img src="./images/src/img/basket_item.jpg" alt="product" data-rjs="2">
                   </div>
-                  <div class="basket-product-item-lengt-block">
-                    <span class="basket-product-item-length">Длина:&nbsp<span class="basket-product-item-length-inner">170</span></span>
-                  </div>
-                  <div class="basket-product-item-counter-block">
-                    <div class="basket-product-item-counter">
-                      <button class="btn-item-counter btn-item-counter--minus"><span>–</span></button>
-                      <input class="item-counter-input" type="text"  value="100" size="4" readonly>
-                      <button class="btn-item-counter btn-item-counter--plus"><span>+</span></button>
+                  <div class="basket-product-item-inner">
+                    <span class="basket-product-item-title">Костюм Amour</span>
+                    <div class="basket-product-item-size-block">
+                      <span class="basket-product-item-size">Размер:&nbsp<span class="basket-product-item-size-inner">XS</span></span>
+                      <button class="btn-link-gray" onclick="onTogglePopUpSize()">Изменить</button>
                     </div>
-                    <div class="basket-product-item-cost-wrapper"><span>10 000</span> <span class="currency"> ₽</span></div>
+                    <div class="basket-product-item-lengt-block">
+                      <span class="basket-product-item-length">Длина:&nbsp<span class="basket-product-item-length-inner">170</span></span>
+                    </div>
+                    <div class="basket-product-item-counter-block">
+                      <div class="basket-product-item-counter">
+                        <button class="btn-item-counter btn-item-counter--minus" onclick="onCounterMinus('counter1')"><span>–</span></button>
+                        <input class="item-counter-input" type="text"  value="0" size="4" readonly id="counter1">
+                        <button class="btn-item-counter btn-item-counter--plus" onclick="onCounterPlus('counter1')"><span>+</span></button>
+                      </div>
+                      <div class="basket-product-item-cost-wrapper"><span>10 000</span> <span class="currency"> ₽</span></div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </div> 
+
+            <div class="container container--basket-product-item">
+              <div class="basket-product-item-wrapper">
+                <div class="basket-product-item">
+                  <button
+                    class="btn-close btn-delete-basket-item"
+                    onclick="hideCheckPopup()"
+                  >
+                    <svg class="svg-icon btn-delete-basket-item-icon">
+                      <use
+                        xlink:href="./images/sprites/svg/sprite.symbol.svg#close"
+                      ></use>
+                    </svg>
+                    <span class="visually-hidden">закрыть</span>
+                  </button>
+                  <div class="basket-product-item-img">
+                    <img src="./images/src/img/basket_item.jpg" alt="product" data-rjs="2">
+                  </div>
+                  <div class="basket-product-item-inner">
+                    <span class="basket-product-item-title">Джинсы на высокой посадке свободного кроя </span>
+                    <div class="basket-product-item-size-block">
+                      <span class="basket-product-item-size">Размер:&nbsp<span class="basket-product-item-size-inner">XS</span></span>
+                      <button class="btn-link-gray" onclick="onTogglePopUpSize()">Изменить</button>
+                    </div>
+                    <div class="basket-product-item-lengt-block">
+                      <span class="basket-product-item-length">Длина:&nbsp<span class="basket-product-item-length-inner">170</span></span>
+                    </div>
+                    <div class="basket-product-item-counter-block">
+                      <div class="basket-product-item-counter">
+                        <button class="btn-item-counter btn-item-counter--minus" onclick="onCounterMinus('counter2')"><span>–</span></button>
+                        <input class="item-counter-input" type="text"  value="0" size="4" readonly id="counter2">
+                        <button class="btn-item-counter btn-item-counter--plus" onclick="onCounterPlus('counter2')"><span>+</span></button>
+                      </div>
+                      <div class="basket-product-item-cost-wrapper"><span>10 000</span> <span class="currency"> ₽</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> 
           </div>
 
-          <div class="basket-column">
-            <div class="basket-product-item-wrapper">
-              <div class="basket-product-item">
-                <button
-                  class="btn-close btn-delete-basket-item"
-                  onclick="hideCheckPopup()"
-                >
-                  <svg class="svg-icon btn-delete-basket-item-icon">
-                    <use
-                      xlink:href="./images/sprites/svg/sprite.symbol.svg#close"
-                    ></use>
-                  </svg>
-                  <span class="visually-hidden">закрыть</span>
-                </button>
-                <div class="basket-product-item-img">
-                  <img src="./images/src/img/basket_item.jpg" alt="product" data-rjs="2">
-                </div>
-                <div class="basket-product-item-inner">
-                  <span class="basket-product-item-title">Джинсы на высокой посадке свободного кроя</span>
-                  <div class="basket-product-item-size-block">
-                    <span class="basket-product-item-size">Размер:&nbsp<span class="basket-product-item-size-inner">XS</span></span>
-                    <button class="btn-link-gray">Изменить</button>
-                  </div>
-                  <div class="basket-product-item-lengt-block">
-                    <span class="basket-product-item-length">Длина:&nbsp<span class="basket-product-item-length-inner">170</span></span>
-                  </div>
-                  <div class="basket-product-item-counter-block">
-                    <div class="basket-product-item-counter">
-                      <button class="btn-item-counter btn-item-counter--minus"><span>–</span></button>
-                      <input class="item-counter-input" type="text"  value="100" size="4" readonly>
-                      <button class="btn-item-counter btn-item-counter--plus"><span>+</span></button>
+            <div class="basket-column basket-column--promocode">
+              <div class="container basket-promocode-block-wrapper">
+                <div class="basket-promocode-block">
+                  <form action="" class="basket-promocode-form js-basket-promocode-form basket-promocode-form--hide">
+                    <h4 class="basket-promocode-form-title">Добавить промокод для скидки</h4>
+                    <div class="base-input-wrapper-promocode">
+                      <label for="promocode-input" class="base-input-wrapper base-input-wrapper-promocode-form">
+                        <input type="text" class="base-input base-input--light base-input--promocode" placeholder="Введите промокод" id="promocode-input">
+                        <span class="base-input-err-text">текст ошибки</span>
+                       </label>
+                       <button type="submit" class="btn-base-promocode">Активировать</button>
                     </div>
-                    <div class="basket-product-item-cost-wrapper"><span>10 000</span> <span class="currency"> ₽</span></div>
-                  </div>
+                    <div class="basket-promocode-form-cost-block">
+                      <div class="basket-promocode-form-cost">
+                        <span class="basket-promocode-form-cost-title">Стоимость заказа</span>
+                        <span class="basket-promocode-form-cost-item">1 599 Pуб</span>
+                      </div>
+                      <div class="basket-promocode-form-cost">
+                        <span class="basket-promocode-form-cost-title">Доставка</span>
+                        <span class="basket-promocode-form-cost-item">199 Pуб</span>
+                      </div>
+                      <div class="basket-promocode-form-cost">
+                        <span class="basket-promocode-form-cost-title">Итого к оплате:</span>
+                        <span class="basket-promocode-form-cost-item">1 798 Pуб</span>
+                      </div>                      	                                    
+                    </div>
+                    <div class="basket-promocode-form-text">
+                      <p>Цены и стоимость доставки являются неподтвержденными до перехода к разделу оформления заказа.
+                        14-дневный период возврата товара, комиссия за возврат и возврат стоимости за неотправленный товар. Прочитать о возврате и возмещении стоимости товара.</p>
+                    </div>
+                  </form>
+                  <button class="btn-gray btn-promocode-block btn-gray--btn-promocode-block  js-form-toggle-btn" onclick="onTogglePromocode()">Использовать промокод</button>
+                  <a href="#" class="btn btn-primary btn-promocode-block">
+                    Перейти к покупке
+                    <svg class="svg-icon btn-promocode-block-icon">
+                      <use
+                        xlink:href="./images/sprites/svg/sprite.symbol.svg#spoiler-arrow"
+                      ></use>
+                    </svg>
+                  </a>
+                  <a href="#" class="btn basket-promocode-block-link">Продолжить покупки</a>
                 </div>
               </div>
             </div>
-          </div>
+            <div class="basket-column basket-column--info">
+              <section class="basket-info">
+                <div class="container">
+                  <div class="basket-info-text-wrapper">
+                    <p>
+                      Просим обратить ваше внимание, что сроки обработки и формирования посылок на складе могут быть продлены в связи с большим колличеством заказов. Приносим извинения за неудобства!
+        
+                      Уважаемые покупатели! Срок возврата товаров, приобретенных в магазине Amour начиная с 19.05.2020, будет продлен на 30 дней с момента возобновления работы магазина в России. При приобретении товаров онлайн на Amourrr.com, начиная с 19.05.2020 срок возврата составляет 60 дней с момента получения заказа. Этот срок возврата действует до следующего уведомления.
+                      
+                      Пожалуйста, обратите внимание, что в связи с высоким спросом на товары их доставка может осуществляться с задержкой. Мы приносим извинения за неудобства. Фактическое время доставки будет указано на этапе оформления заказа.
+                      
+                      Доставка через: 3-16 рабочих дней (Больший срок для отдаленных районов. Проверьте страницу Службы поддержки покупателей для подробной информации). Доставка на дом курьером составляет от 390 Руб.
+                      
+                      Доставка на следующий рабочий день 699 Руб. Услуга доступна для всех жителей Москвы в пределах МКАД. Разместитe заказ до 16:30 по московскому времени.
+                    </p>
+                  </div>
+                </div>
+              </section>
+            </div>
 
         </div>
+
+
+        <section class="product-recommend product-recommend--basket">          
+          <h2 class="product-recommend-title product-recommend-title--basket">Возможно, вам также понравится</h2>
+          <div class="product-recommend-slider product-recommend-slider--basket">
+            <a class="product-recommend-item" href="#">
+              <div class="product-recommend-item-img">
+                <img
+                  src="./images/dest/img/recommend-img1.jpg"
+                  alt="recommend image"
+                  data-rjs="2"
+                />
+              </div>
+              <h4 class="product-recommend-item-title">
+                <strong>Кофта</strong> Lorem ipsum dolor sitLorem ipsum dolor
+                sit
+              </h4>
+              <div class="product-recommend-item-price">
+                <span class="price-item price-item--discount">10 000 ₽</span>
+                <span class="price-item price-item--old">15 000 ₽</span>
+              </div>
+              <div class="product-recommend-item-color">
+                <div
+                  class="color-item product-recommend-color-item"
+                  style="background-color: #000000;"
+                ></div>
+                <div
+                  class="color-item product-recommend-color-item"
+                  style="background-color: #8c8c8c;"
+                ></div>
+                <div
+                  class="color-item color-item--border product-recommend-color-item"
+                  style="background-color: #ffffff; border-color: #000000;"
+                ></div>
+              </div>
+            </a>
+
+            <a class="product-recommend-item" href="#">
+              <div class="product-recommend-item-img">
+                <img
+                  src="./images/dest/img/recommend-img2.jpg"
+                  alt="recommend image"
+                  data-rjs="2"
+                />
+              </div>
+              <h4 class="product-recommend-item-title">
+                <strong>Кофта</strong> с объёмными пл
+              </h4>
+              <div class="product-recommend-item-price">
+                <span class="price-item">10 000 ₽</span>
+              </div>
+              <div class="product-recommend-item-color">
+                <div
+                  class="color-item product-recommend-color-item"
+                  style="background-color: #000000;"
+                ></div>
+                <div
+                  class="color-item product-recommend-color-item"
+                  style="background-color: #8c8c8c;"
+                ></div>
+                <div
+                  class="color-item color-item--border product-recommend-color-item"
+                  style="background-color: #ffffff; border-color: #000000;"
+                ></div>
+              </div>
+            </a>
+
+            <a class="product-recommend-item" href="#">
+              <div class="product-recommend-item-img">
+                <img
+                  src="./images/dest/img/recommend-img1.jpg"
+                  alt="recommend image"
+                  data-rjs="2"
+                />
+              </div>
+              <h4 class="product-recommend-item-title">
+                <strong>Кофта</strong> с объёмными пл
+              </h4>
+              <div class="product-recommend-item-price">
+                <span class="price-item price-item--discount">10 000 ₽</span>
+                <span class="price-item price-item--old">15 000 ₽</span>
+              </div>
+              <div class="product-recommend-item-color">
+                <div
+                  class="color-item product-recommend-color-item"
+                  style="background-color: #000000;"
+                ></div>
+                <div
+                  class="color-item product-recommend-color-item"
+                  style="background-color: #8c8c8c;"
+                ></div>
+                <div
+                  class="color-item color-item--border product-recommend-color-item"
+                  style="background-color: #ffffff; border-color: #000000;"
+                ></div>
+              </div>
+            </a>
+
+            <a class="product-recommend-item" href="#">
+              <div class="product-recommend-item-img">
+                <img
+                  src="./images/dest/img/recommend-img1.jpg"
+                  alt="recommend image"
+                  data-rjs="2"
+                />
+              </div>
+              <h4 class="product-recommend-item-title">
+                <strong>Кофта</strong> с объёмными пл
+              </h4>
+              <div class="product-recommend-item-price">
+                <span class="price-item price-item--discount">10 000 ₽</span>
+                <span class="price-item price-item--old">15 000 ₽</span>
+              </div>
+              <div class="product-recommend-item-color">
+                <div
+                  class="color-item product-recommend-color-item"
+                  style="background-color: #000000;"
+                ></div>
+                <div
+                  class="color-item product-recommend-color-item"
+                  style="background-color: #8c8c8c;"
+                ></div>
+                <div
+                  class="color-item color-item--border product-recommend-color-item"
+                  style="background-color: #ffffff; border-color: #000000;"
+                ></div>
+              </div>
+            </a>
+          </div>
+        </section>
       </div>
     </div>
       
@@ -245,6 +460,132 @@
         </div>
       </div>
     </footer>
+    <article class="popup-block" id="popup1" >
+      <div class="popup-overlay popup-overlay--basket" onclick="onTogglePopUpSize()"></div>
+      <div class="popup-content popup-content--basket">
+        <button
+          class="btn-close btn-popup-close btn-popup-close--basket"
+          onclick="onTogglePopUpSize()"
+        >
+          <svg class="svg-icon btn-popup-close-icon">
+            <use
+              xlink:href="./images/sprites/svg/sprite.symbol.svg#close"
+            ></use>
+          </svg>
+          <span class="visually-hidden">закрыть</span>
+        </button>
+
+        <div class="btn-link-gray--popup-about-wrapper">
+          <a href="#" class="btn btn-link-gray btn-link-gray--popup-about">Таблица размеров</a>
+        </div>
+        <div class="popup-tabs">
+          <div class="popup-tabs-btn-wrapper popup-tabs-btn-wrapper--basket">
+            <input
+                  type="radio"
+                  id="tab1"
+                  name="tabs"
+                  value="tab1"
+                  class="btn-tab-change"
+                  onchange="changeTabs('tab1')"
+                  checked
+                />
+            <label for="tab1" class="btn-tab-change-label"> Выберите размер </label>
+            <input
+                  type="radio"
+                  id="tab2"
+                  name="tabs"
+                  value="tab2"
+                  class="btn-tab-change"
+                  onchange="changeTabs('tab2')"
+                />
+            <label for="tab2" class="btn-tab-change-label">Выбрать длину</label>
+          </div>
+          <div class="popup-tabs-item-wrapper">
+            <div class="popup-tabs-item popup-tabs-item--show" data-tabIndex="tab1">
+              <div class="popup-tabs-item-inner">
+              <input
+                  type="radio"
+                  id="size1"
+                  name="size"
+                  value="size1"
+                  class="btn-tab-size"
+                  onchange="changeTabSize(this)"
+                />
+              <label for="size1" class="btn-tab-size-label">32 EU &#183 XXS<span class="btn-tab-size-label-text">&#183 нет в наличии</span></label>
+
+              <input
+                  type="radio"
+                  id="size2"
+                  name="size"
+                  value="size2"
+                  class="btn-tab-size"
+                  checked
+                  onchange="changeTabSize(this)"
+                />
+              <label for="size2" class="btn-tab-size-label">34 EU &#183 XS <span class="btn-tab-size-label-text">&#183 нет в наличии</span></label>
+
+              <input
+                  type="radio"
+                  id="size3"
+                  name="size"
+                  value="size3"
+                  class="btn-tab-size"
+                  disabled
+                  onchange="changeTabSize(this)"  
+                />
+              <label for="size3" class="btn-tab-size-label">36 EU &#183 S<span class="btn-tab-size-label-text">&#183 нет в наличии</span></label>
+              <p class="btn-tab-size-text-item">* Данная модель представлена в длинах по внутреннему шву </p>
+            </div>
+            <div class="tab-size-btn-wrapper" id="tab1-btn-wrapper">
+              <button class="btn-primary btn-primary-tab-size" onclick="onChangeSizeBasket()">
+                Изменить размер
+              </button>
+            </div>
+          </div>
+          <div class="popup-tabs-item" data-tabIndex="tab2">
+            <div class="popup-tabs-item-inner">
+            <input
+                type="radio"
+                id="length1"
+                name="length"
+                value="length"
+                class="btn-tab-size"
+                onchange="changeTabLength(this)"
+              />
+            <label for="length1" class="btn-tab-size-label">78 см<span class="btn-tab-size-label-text">&#183 нет в наличии</span></label>
+
+            <input
+                type="radio"
+                id="length2"
+                name="length"
+                value="length2"
+                class="btn-tab-size"
+                checked
+                onchange="changeTabLength(this)"
+              />
+            <label for="length2" class="btn-tab-size-label">80 см <span class="btn-tab-size-label-text">&#183 нет в наличии</span></label>
+
+            <input
+                type="radio"
+                id="length3"
+                name="length"
+                value="length3"
+                class="btn-tab-size"
+                disabled
+                onchange="changeTabLength(this)"  
+              />
+            <label for="length3" class="btn-tab-size-label">85 см<span class="btn-tab-size-label-text">&#183 нет в наличии</span></label>
+            <p class="btn-tab-size-text-item">* Данная модель представлена в длинах по внутреннему шву </p>
+          </div>
+          <div class="tab-size-btn-wrapper" id="tab2-btn-wrapper">
+            <button class="btn btn-primary btn-primary-tab-size" onclick="onChangeLengthBasket()">
+              Изменить длину
+            </button>
+          </div>
+        </div>
+        </div>
+      </div>
+    </article>
     <script src="js/app.min.js"></script>
   </body>
 </html>

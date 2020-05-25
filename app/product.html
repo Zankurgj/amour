@@ -222,11 +222,11 @@
             </div>
           </div>
           <article class="popup-block popup-about-size" id="popup1" >
-            <div class="popup-overlay popup-overlay--popup-about" onclick="onClosePopUpSize()"></div>
+            <div class="popup-overlay popup-overlay--popup-about" onclick="onTogglePopUpSize()"></div>
             <div class="popup-content popup-content--popup-about">
               <button
                 class="btn-close btn-popup-close btn-popup-close--popup-about"
-                onclick="onClosePopUpSize()"
+                onclick="onTogglePopUpSize()"
               >
                 <svg class="svg-icon btn-popup-close-icon">
                   <use
@@ -400,7 +400,7 @@
                 <span class="text-disabled">В корзинe</span>
               </button>
             </div>
-            <button class="btn-size product-about-buy-btn-size" onclick="onShowPopUpSize()">
+            <button class="btn-size product-about-buy-btn-size" onclick="onTogglePopUpSize()">
               <span>Выбрать размер</span>
             </button>
           </div>

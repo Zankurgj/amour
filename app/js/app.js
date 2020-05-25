@@ -153,12 +153,14 @@ const changeTabLength = (el) => {
     .querySelector('#tab2-btn-wrapper')
     .classList.add('tab-size-btn-wrapper--show');
 };
-const onClosePopUpSize = () => {
-  document.querySelector('#popup1').classList.remove('popup-block--show');
+const onTogglePopUpSize = () => {
+  document.querySelector('#popup1').classList.toggle('popup-block--show');
+  bodyStopScroll();
 };
-const onShowPopUpSize = () => {
-  document.querySelector('#popup1').classList.add('popup-block--show');
-};
+// const onShowPopUpSize = () => {
+//   document.querySelector('#popup1').classList.add('popup-block--show');
+//   bodyStopScroll();
+// };
 
 const initMpSlider = () => {
   const sliderSelector = document.querySelector(
@@ -307,4 +309,37 @@ const onTogglePopUpFb = () => {
     .querySelector('.popup-fast-buy')
     .classList.toggle('popup-fast-buy--show');
   bodyStopScroll();
+};
+
+const onTogglePromocode = () => {
+  const btn = document.querySelector('.js-form-toggle-btn');
+  const form = document.querySelector('.js-basket-promocode-form');
+  btn.classList.toggle('btn-promocode-block--hide');
+  form.classList.toggle('basket-promocode-form--hide');
+  document.querySelector('#promocode-input').focus();
+};
+const onCounterMinus = (id) => {
+  let val = getCounterVal(id);
+  if (val > 0) {
+    --val;
+  }
+  setCounterVal(id, val);
+};
+const onCounterPlus = (id) => {
+  let val = getCounterVal(id);
+  ++val;
+  setCounterVal(id, val);
+};
+const getCounterVal = (id) => {
+  return document.getElementById(id).value;
+};
+const setCounterVal = (id, val) => {
+  document.getElementById(id).value = val;
+};
+
+const onChangeLengthBasket = () => {
+  
+};
+const onChangeSizeBasket = () => {
+  
 };

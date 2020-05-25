@@ -33,6 +33,17 @@
   left: 0;
   white-space: nowrap;
 }
+.base-input--light {
+  font-size: 14px;
+  line-height: 32px;
+  font-family: $subfamily;
+  padding: 8px 8px;
+  border-color: $lightgray;
+  border-radius: 0;
+  &::placeholder {
+    color: #b5b5b5;
+  }
+}
 .custom-checkbox-wrapper {
   display: flex;
   align-items: center;
@@ -83,4 +94,7 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
+}
+
+.base-input-light {
 }
