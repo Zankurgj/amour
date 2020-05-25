@@ -115,24 +115,132 @@
 
     <div class="order-page">
       <div class="container container-order">
-
         <h1 class="order-title">Оформление заказа</h1>
-
-        <div class="order-column order-delivery">
-          <label for="promocode-input" class="base-input-wrapper base-input-wrapper-promocode-form">
-            <input type="text" class="base-input" id="promocode-input" value="г. Москва">
-            <span class="base-input-err-text">текст ошибки</span>
-           </label>
-           <h2 class="order-delivery-title">Выберите способ доставки</h2>
-           <div class="radio-btn-wrapper">
-             <input type="radio" class="btn-radio" name="delivery" value="delivery1" id="delivery1">
-            <label for="delivery1" class="btn-radio-label">
-              <span class="btn-radio-label-title">Самовывоз (шоурум Elen Dan)</span>
-              <span class="btn-radio-label-sub-title"> Москва, наб. Тараса Шевченко, 3, корп.3 </span>
+        
+        <form action="" class="order-form order-row">
+          <div class="order-column">
+          <div class="order-block order-block--delivery">
+            <label for="promocode-input" class="base-input-wrapper base-input-wrapper--delivery">
+              <input type="text" class="base-input base-input--order" id="order-city" placeholder="г. Москва">
+              <span class="base-input-err-text">текст ошибки</span>
             </label>
-           </div> 
-        </div>
+            <h2 class="order-item-title order-delivery-title">Выберите способ доставки</h2>
+            <div class="radio-btn-wrapper radio-btn-wrapper--order">
+              <input type="radio" class="btn-radio" name="delivery" value="delivery1" id="delivery1" checked>
+              <label for="delivery1" class="btn-radio-label">
+                <span class="btn-radio-icon"></span>
+                <span class="btn-radio-label-title">Самовывоз (шоурум Elen Dan)</span>
+                <span class="btn-radio-label-sub-title"> Москва, наб. Тараса Шевченко, 3, корп.3 </span>
+              </label>
+            </div>
 
+            <div class="radio-btn-wrapper radio-btn-wrapper--order">
+              <input type="radio" class="btn-radio" name="delivery" value="delivery1" id="delivery2">
+            <label for="delivery2" class="btn-radio-label">
+              <span class="btn-radio-icon"></span>
+              <span class="btn-radio-label-title">Курьером Amour с примеркой</span>
+              <span class="btn-radio-label-sub-title"> от 350 ₽ в пределах МКАД</span>
+            </label>
+            </div> 
+
+            <div class="radio-btn-wrapper radio-btn-wrapper--order">
+              <input type="radio" class="btn-radio" name="delivery" value="delivery1" id="delivery3">
+            <label for="delivery3" class="btn-radio-label">
+              <span class="btn-radio-icon"></span>
+              <span class="btn-radio-label-title">Курьером Amour за МКАД</span>
+              <span class="btn-radio-label-sub-title"> от 600 ₽, стоимость расчитывается индивидуально, оплата наличными </span>
+            </label>
+            </div> 
+
+            <div class="radio-btn-wrapper radio-btn-wrapper--order">
+              <input type="radio" class="btn-radio" name="delivery" value="delivery1" id="delivery4">
+            <label for="delivery4" class="btn-radio-label">
+              <span class="btn-radio-icon"></span>
+              <span class="btn-radio-label-title">Курьером CDEK</span>
+              <span class="btn-radio-label-sub-title"> от 380 ₽, в зависимости от адреса доставки </span>
+            </label>
+            </div> 
+          </div>
+          </div>
+          <div class="order-column">
+          <div class="order-block order-block--adress">
+            <h2 class="order-item-title order-adress-title">Адрес получателя</h2>
+            <label for="order-street" class="base-input-wrapper base-input-wrapper--adress">
+              <span class="base-input-wrapper-title">Улица</span>
+              <input type="text" class="base-input base-input--order base-input--required" id="order-street" placeholder="ул. Малая Бронная" required>
+              <span class="base-input-err-text">текст ошибки</span>
+            </label>
+            <div class="base-input-wrapper-half">
+              <label for="order-house" class="base-input-wrapper base-input-wrapper--adress">
+                <span class="base-input-wrapper-title">Дом</span>
+                <input type="number" class="base-input base-input--order base-input--required" id="order-house" placeholder="21" required>
+                <span class="base-input-err-text">текст ошибки</span>
+              </label>
+              <label for="order-room" class="base-input-wrapper base-input-wrapper--adress">
+                <span class="base-input-wrapper-title">Квартира</span>
+                <input type="number" class="base-input base-input--order base-input--required" id="order-room" placeholder="91" required>
+                <span class="base-input-err-text">текст ошибки</span>
+              </label>
+            </div>
+            <label for="order-name" class="base-input-wrapper base-input-wrapper--adress">
+              <span class="base-input-wrapper-title">ФИО</span>
+              <input type="text" class="base-input base-input--order base-input--required" id="order-name" placeholder="Александр Александрович Иванов" required>
+              <span class="base-input-desc">Полные фамилия, имя и отчество могут потребоваться при получении заказа</span>
+            </label>
+            <label for="order-mail" class="base-input-wrapper base-input-wrapper--adress">
+              <span class="base-input-wrapper-title">Электронная почта</span>
+              <input type="email" class="base-input base-input--order base-input--required error" id="order-mail" placeholder="ул. Малая Бронная" required>
+              <span class="base-input-err-text">текст ошибки</span>
+            </label>
+
+            <label for="order-phone" class="base-input-wrapper base-input-wrapper--adress">
+              <span class="base-input-wrapper-title">Телефон</span>
+              <input type="text" class="base-input base-input--order base-input--required" id="order-phone" placeholder="+7 999 005 995 00" required>
+              <span class="base-input-desc">Номер телефона используется для оповещений об изменениях статуса заказа</span>
+            </label>
+          </div>
+        </div>
+        <div class="order-column">
+          <div class="order-block order-block--extra">
+            <h2 class="order-item-title order-adress-title">Дополнительно</h2>
+            <label for="input-extra" class="base-textarea-label">
+              <span class="base-textarea-title">Комментарий к заказу</span>
+              <textarea name="input-extra" id="input-extra" class="base-textarea"></textarea>
+            </label>
+          </div>
+          <div class="order-block order-block--payment">
+            <h2 class="order-item-title order-adress-title">Способ оплаты</h2>
+            <div class="radio-btn-wrapper radio-btn-wrapper--order">
+              <input type="radio" class="btn-radio" name="payment" value="delivery1" id="payment1">
+              <label for="payment1" class="btn-radio-label">
+                <span class="btn-radio-icon"></span>
+                <span class="btn-radio-label-title">Банковской картой онлайн</span>
+                <span class="btn-radio-label-sub-title">(Visa, Master Card, МИР)</span>
+              </label>
+            </div>
+            <div class="radio-btn-wrapper radio-btn-wrapper--order">
+              <input type="radio" class="btn-radio" name="payment" value="delivery1" id="payment2">
+              <label for="payment2" class="btn-radio-label">
+                <span class="btn-radio-icon"></span>
+                <span class="btn-radio-label-title">Наличными при получении</span>
+              </label>
+            </div> 
+            <div class="btn-wrapper-order">
+              <button class="btn-primary btn-primary--payment">
+                Оплатить
+                <svg class="svg-icon btn-promocode-block-icon">
+                  <use
+                    xlink:href="./images/sprites/svg/sprite.symbol.svg#spoiler-arrow"
+                  ></use>
+                </svg>
+              </button>
+              <p class="btn-wrapper-order-text">
+                Нажимая “Оплатить” , вы соглашаетесь с <br> условиями <a href="#">публичной оферты</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        </form>
        </div>
     </div>
       

@@ -457,6 +457,7 @@
 .product-recommend-item-price {
   display: flex;
   align-items: center;
+  font-family: $subfamily;
 }
 .price-item {
   font-weight: 500;
@@ -777,11 +778,13 @@
 }
 .base-input--popup-fast-buy {
   width: 100%;
-  margin-bottom: 24px;
 }
 .btn-primary--popup-fast-buy {
   margin-top: 24px;
   max-width: 312px;
   width: 100%;
   align-self: center;
+}
+.base-input-wrapper--popup-fast-buy {
+  margin-bottom: 32px;
 }

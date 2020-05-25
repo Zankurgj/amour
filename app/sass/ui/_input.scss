@@ -24,14 +24,27 @@
     }
   }
 }
+.base-input--required {
+  background-repeat: no-repeat;
+  background-position: center right 13px;
+  background-size: 17px 13px;
+  background-image: url("data:image/svg+xml,%3Csvg width='17' height='13' viewBox='0 0 17 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.40909 10.2836L1.35227 6.20896L0 7.56716L5.40909 13L17 1.35821L15.6477 0L5.40909 10.2836Z' fill='%23000'/%3E%3C/svg%3E");
+  padding: 14px 40px 12px 20px;
+}
 .base-input-err-text {
   display: none;
   font-size: 12px;
+  line-height: 22px;
   color: $err;
   position: absolute;
-  bottom: 0;
+  top: 100%;
   left: 0;
   white-space: nowrap;
+}
+.base-input-desc {
+  font-size: 12px;
+  line-height: 16px;
+  color: #6b6b6b;
 }
 .base-input--light {
   font-size: 14px;
@@ -96,5 +109,80 @@
   line-height: 24px;
 }
 
-.base-input-light {
+.btn-radio {
+  @extend .visually-hidden;
+  &:checked + .btn-radio-label {
+    .btn-radio-icon {
+      border-color: #333;
+      &:after {
+        opacity: 1;
+      }
+    }
+  }
+}
+.btn-radio-label {
+  position: relative;
+  display: block;
+  padding: 0 0 0 36px;
+}
+.btn-radio-icon {
+  position: absolute;
+  left: 0;
+  top: 2px;
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: 2px solid #777;
+  border-radius: 50%;
+  transition: border-color $base-timing $base-duration;
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background-color: #333;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity $base-timing $base-duration;
+  }
+}
+
+.btn-radio-label-title {
+  display: block;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+}
+.btn-radio-label-sub-title {
+  display: block;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  color: $gray;
+}
+
+.base-textarea-title {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #6b6b6b;
+}
+.base-textarea {
+  resize: none;
+  border: 1px solid $gray;
+  border-radius: 2px;
+  font-size: 16px;
+  line-height: 24px;
+  color: $black;
+  width: 100%;
+  padding: 14px;
+  &:focus {
+    border-color: $black;
+    outline: none;
+  }
 }

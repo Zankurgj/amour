@@ -1,11 +1,99 @@
-.basket-order {
-  @media screen and (min-width: $tablet-bp) {
-    overflow-x: hidden;
-  }
-}
 .container-order {
-  padding: 64px 0 42px 0;
+  padding: 64px 24px 42px 24px;
   @media screen and (min-width: $tablet-bp) {
     padding: 80px 40px 62px 14px;
   }
+}
+.order-row {
+  display: flex;
+  flex-direction: column;
+  @media screen and (min-width: $tablet-bp) {
+    flex-direction: row;
+  }
+}
+.order-column {
+  @media screen and (min-width: $tablet-bp) {
+    flex-basis: 33.33%;
+    padding: 0 32px;
+  }
+}
+.order-title {
+  padding: 24px 0;
+  font-family: $subfamily;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 18px;
+  @media screen and (min-width: $tablet-bp) {
+    margin: 0 32px;
+    border-bottom: 1px solid $neutral;
+  }
+}
+
+.order-block {
+  border-top: 1px solid $neutral;
+  padding: 28px 0 8px 0;
+  @media screen and (min-width: $tablet-bp) {
+    border-color: transparent;
+  }
+}
+.radio-btn-wrapper--order {
+  margin-bottom: 24px;
+}
+.base-input-wrapper--delivery {
+  width: 100%;
+  margin-top: 8px;
+  margin-bottom: 30px;
+}
+.base-input-wrapper-title {
+  font-size: 16px;
+  line-height: 24px;
+  color: #6b6b6b;
+  margin-bottom: 2px;
+}
+
+.base-input--order {
+  width: 100%;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: $mainfamily;
+}
+.order-item-title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 32px;
+  margin-bottom: 16px;
+}
+.base-input-wrapper-half {
+  display: flex;
+  .base-input-wrapper {
+    &:first-child {
+      margin-right: 20px;
+    }
+  }
+}
+.base-input-wrapper--adress {
+  width: 100%;
+  flex-basis: 100%;
+  margin-bottom: 24px;
+}
+.btn-wrapper-order {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.btn-primary--payment {
+  width: 100%;
+  max-width: 310px;
+  margin-bottom: 20px;
+  padding: 8px 20px;
+}
+.btn-wrapper-order-text {
+  text-align: center;
+  font-size: 14px;
+  line-height: 16px;
+  color: #4f4f4f;
 }
