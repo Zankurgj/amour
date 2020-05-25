@@ -326,6 +326,22 @@
     }
   }
 }
+.popup-about-check-wrapper {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 11;
+}
+.popup-about-check-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 11;
+}
 .product-about-check-block {
   position: fixed;
   top: 64px;
@@ -336,11 +352,12 @@
   box-shadow: 0px -4px 10px rgba(204, 153, 51, 0.1);
   transform: translate3d(0, 0, 0);
   border: 0.5px solid rgba(204, 153, 51, 0.1);
-  z-index: 11;
+  z-index: 12;
   @media screen and (min-width: $tablet-bp) {
     padding: 6px 40px 12px 40px;
   }
 }
+
 .popup-about-check-container {
   position: relative;
   padding: 0;

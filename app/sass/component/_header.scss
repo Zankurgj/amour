@@ -97,6 +97,9 @@
 .main-header-nav-item {
   display: inline-block;
   line-height: 56px;
+  &:last-child {
+    margin-right: 0;
+  }
   @media screen and (min-width: $tablet-bp) {
     margin-right: 26px;
   }

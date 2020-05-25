@@ -585,33 +585,36 @@
         </div>
       </div>
     </footer>
-    <article class="popup-about-check product-about-check-block">
-      <div class="container popup-about-check-container">
-        <button
-          class="btn-close btn-close-check-block"
-          onclick="hideCheckPopup()"
-        >
-          <svg class="svg-icon btn-close-check-block-icon">
-            <use
-              xlink:href="./images/sprites/svg/sprite.symbol.svg#close"
-            ></use>
-          </svg>
-          <span class="visually-hidden">закрыть</span>
-        </button>
-        <p class="product-about-check-subtitle">
-          Товар добавлен в корзину
-        </p>
-        <h4 class="product-about-check-title">
-          Костюм Amour (голубой) 32 EU (XXS)
-        </h4>
-        <div class="product-about-check-bottom">
-          <span class="product-about-check-price">10 000 ₽</span>
-          <a href="#" class="link-gold product-about-check-link"
-            >перейти к покупке</a
+    <div class="popup-about-check-wrapper popup-about-check">
+      <div class="popup-about-check-overlay" onclick="toggleCheckPopop()"></div>
+      <article class="product-about-check-block">
+        <div class="container popup-about-check-container">
+          <button
+            class="btn-close btn-close-check-block"
+            onclick="toggleCheckPopop()"
           >
+            <svg class="svg-icon btn-close-check-block-icon">
+              <use
+                xlink:href="./images/sprites/svg/sprite.symbol.svg#close"
+              ></use>
+            </svg>
+            <span class="visually-hidden">закрыть</span>
+          </button>
+          <p class="product-about-check-subtitle">
+            Товар добавлен в корзину
+          </p>
+          <h4 class="product-about-check-title">
+            Костюм Amour (голубой) 32 EU (XXS)
+          </h4>
+          <div class="product-about-check-bottom">
+            <span class="product-about-check-price">10 000 ₽</span>
+            <a href="#" class="link-gold product-about-check-link"
+              >перейти к покупке</a
+            >
+          </div>
         </div>
-      </div>
-    </article>
+      </article>
+    </div>
     <article class="popup-fast-buy">
       <div class="popup-overlay" onclick="onTogglePopUpFb()"></div>
         <div class="popup-fast-buy-container">
