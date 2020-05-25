@@ -1,0 +1,11 @@
+.basket-order {
+  @media screen and (min-width: $tablet-bp) {
+    overflow-x: hidden;
+  }
+}
+.container-order {
+  padding: 64px 0 42px 0;
+  @media screen and (min-width: $tablet-bp) {
+    padding: 80px 40px 62px 14px;
+  }
+}

@@ -275,8 +275,7 @@ const changeSlideColor = (el) => {
   const colorTitleSelector = document.querySelector('#productColorTitle');
 
   const productItem = products[+id];
-  // Раскоментить
-  // history.pushState(null, null, productItem.href.toString());
+  history.pushState(null, null, productItem.href.toString());
   costSelector.innerHTML = productItem.cost;
   colorSelector.innerHTML = productItem.color;
   colorSelectorMobile.innerHTML = productItem.color;
