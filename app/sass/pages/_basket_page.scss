@@ -335,6 +335,7 @@
 .basket-promocode-form-cost-block {
   display: none;
   width: 100%;
+  margin-bottom: 30px;
   @media screen and (min-width: $tablet-bp) {
     display: block;
   }
@@ -346,7 +347,6 @@
   font-size: 14px;
   line-height: 32px;
   font-family: $subfamily;
-  margin-bottom: 30px;
 }
 .basket-promocode-form-text {
   display: none;

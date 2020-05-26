@@ -5,6 +5,9 @@
 }
 .container-mp {
   padding: 64px 0 45px 0;
+  @media screen and (min-width: $tablet-bp) {
+    padding: 64px 10px 45px 10px;
+  }
 }
 .frame-item {
   position: relative;

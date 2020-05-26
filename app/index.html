@@ -22,6 +22,7 @@
         </button>
         <button
           class="btn-search main-header-btn-search btn-search--hide-desktop"
+          onclick="onToggleSearch()"
         >
           <svg class="svg-icon btn-search-icon">
             <use
@@ -32,7 +33,7 @@
         <div class="main-header-logo">
           <img src="./images/dest/icons/header-logo.svg" alt="лого" />
         </div>
-        <a
+        <!-- <a
           href="#"
           class="btn btn-basket main-header-btn-basket btn-basket--full btn-basket--hide-desktop"
         >
@@ -42,8 +43,7 @@
             ></use>
           </svg>
           <span class="visually-hidden">корзина</span>
-        </a>
-      </div>
+        </a> -->
       <nav class="main-header-nav">
         <ul class="main-header-nav-item-wrapper">
           <li class="main-header-nav-item">
@@ -79,14 +79,40 @@
           <li class="main-header-nav-lang-item"><a href="#">en</a></li>
         </ul>
       </nav>
+      
       <div class="main-header-link-block">
-        <button class="btn-search main-header-btn-search header-link-item">
+        <div class="main-header-search-inner">
+          <button
+            class="btn-close btn-close-search"
+            onclick="onToggleSearch()"
+          >
+            <svg class="svg-icon btn-close-search-icon">
+              <use
+                xlink:href="./images/sprites/svg/sprite.symbol.svg#close"
+              ></use>
+            </svg>
+            <span class="visually-hidden">закрыть</span>
+          </button>
+          <input type="text" class="base-input base-input--header-search" id="search-input">
+          <div class="main-header-search-result">
+            <div class="main-header-search-result-content">
+              <span class="main-header-search-result-item--empty">
+                Результатов не найдено
+              </span>
+              <a href="#" class="main-header-search-result-item">Lorem ipsum dolor sit, amet</a>
+              <a href="#" class="main-header-search-result-item">Lorem ipsum</a>
+              <a href="#" class="main-header-search-result-item">Lorem ipsum dolor sit</a>
+            </div>
+          </div>
+        </div>
+        <button class="btn-search main-header-btn-search btn-search--hide-mobile header-link-item" onclick="onToggleSearch()">
           <svg class="svg-icon btn-search-icon">
             <use
               xlink:href="./images/sprites/svg/sprite.symbol.svg#search"
             ></use>
           </svg>
         </button>
+
         <a
           href="#"
           class="btn btn-heart main-header-btn-heart btn-heart--full header-link-item"
@@ -111,6 +137,7 @@
           <span class="visually-hidden">корзина</span>
         </a>
       </div>
+    </div>
     </header>
 
       <main class="mp-page">
@@ -435,6 +462,12 @@
             placeholder="E-mail"
             class="base-input subscribe-block-input"
           />
+          <p><label class="custom-checkbox-wrapper custom-checkbox-wrapper--catalog-nav">
+            <input type="checkbox" class="custom-checkbox" onchange="onSetFilter('value')">
+            <span class="custom-checkbox-check"></span>
+            <span class="custom-checkbox-text">Я соглашаюсь на обработку моих персональных данных
+              и ознакомлен(а) с условиями публичной оферты</span>
+          </label></p>
           <button class="btn-primary subscribe-block-btn" type="submit">
             Подписаться
           </button>

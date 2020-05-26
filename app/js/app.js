@@ -33,12 +33,14 @@ document.addEventListener('DOMContentLoaded', function () {
     dots: false,
     arrows: false,
     variableWidth: true,
+    swipeToSlide: true,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
+          // slidesToShow: 2,
+          // slidesToScroll: 1,
+          speed: 200,
           variableWidth: true,
           infinite: false,
           arrows: false,
@@ -362,9 +364,20 @@ const spoilerToogle = (el) => {
     $(el).siblings('.spoiler-content').removeClass('spoiler-content--opened');
   }
 };
-// const spoilerToogle = (el) => {
-//   $(el).toggleClass('spoiler--opened');
-//   var animateEL = $(el).siblings('.spoiler-content');
-//   animateEL.addClass('spoiler-content--opened');
-//   animateEL.slideToggle(200);
-// };
+
+const onToggleSearch = () => {
+  const searchSelector = document.querySelector('.main-header-search-inner');
+  searchSelector.classList.toggle('main-header-search-inner--show');
+  document.querySelector('#search-input').focus();
+};
+
+$('#search-input').on('input', function () {
+  const resultSelector = document.querySelector('.main-header-search-result');
+  var input = $(this);
+  var val = input.val();
+  if (val) {
+    resultSelector.classList.add('main-header-search-result--show');
+  } else {
+    resultSelector.classList.remove('main-header-search-result--show');
+  }
+});
