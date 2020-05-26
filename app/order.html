@@ -22,6 +22,7 @@
         </button>
         <button
           class="btn-search main-header-btn-search btn-search--hide-desktop"
+          onclick="onToggleSearch()"
         >
           <svg class="svg-icon btn-search-icon">
             <use
@@ -29,21 +30,9 @@
             ></use>
           </svg>
         </button>
-        <div class="main-header-logo">
+        <a class="main-header-logo" href="/">
           <img src="./images/dest/icons/header-logo.svg" alt="лого" />
-        </div>
-        <a
-          href="#"
-          class="btn btn-basket main-header-btn-basket btn-basket--full btn-basket--hide-desktop"
-        >
-          <svg class="svg-icon btn-basket-icon">
-            <use
-              xlink:href="./images/sprites/svg/sprite.symbol.svg#basket"
-            ></use>
-          </svg>
-          <span class="visually-hidden">корзина</span>
         </a>
-      </div>
       <nav class="main-header-nav">
         <ul class="main-header-nav-item-wrapper">
           <li class="main-header-nav-item">
@@ -79,14 +68,40 @@
           <li class="main-header-nav-lang-item"><a href="#">en</a></li>
         </ul>
       </nav>
+      
       <div class="main-header-link-block">
-        <button class="btn-search main-header-btn-search header-link-item">
+        <div class="main-header-search-inner">
+          <button
+            class="btn-close btn-close-search"
+            onclick="onToggleSearch()"
+          >
+            <svg class="svg-icon btn-close-search-icon">
+              <use
+                xlink:href="./images/sprites/svg/sprite.symbol.svg#close"
+              ></use>
+            </svg>
+            <span class="visually-hidden">закрыть</span>
+          </button>
+          <input type="text" class="base-input base-input--header-search" id="search-input">
+          <div class="main-header-search-result">
+            <div class="main-header-search-result-content">
+              <span class="main-header-search-result-item--empty">
+                Результатов не найдено
+              </span>
+              <a href="#" class="main-header-search-result-item">Lorem ipsum dolor sit, amet</a>
+              <a href="#" class="main-header-search-result-item">Lorem ipsum</a>
+              <a href="#" class="main-header-search-result-item">Lorem ipsum dolor sit</a>
+            </div>
+          </div>
+        </div>
+        <button class="btn-search main-header-btn-search btn-search--hide-mobile header-link-item" onclick="onToggleSearch()">
           <svg class="svg-icon btn-search-icon">
             <use
               xlink:href="./images/sprites/svg/sprite.symbol.svg#search"
             ></use>
           </svg>
         </button>
+
         <a
           href="#"
           class="btn btn-heart main-header-btn-heart btn-heart--full header-link-item"
@@ -111,6 +126,7 @@
           <span class="visually-hidden">корзина</span>
         </a>
       </div>
+    </div>
     </header>
 
     <div class="order-page">
@@ -139,7 +155,7 @@
             <label for="delivery2" class="btn-radio-label">
               <span class="btn-radio-icon"></span>
               <span class="btn-radio-label-title">Курьером Amour с примеркой</span>
-              <span class="btn-radio-label-sub-title"> от 350 ₽ в пределах МКАД</span>
+              <span class="btn-radio-label-sub-title"> от 350 <span class="currency">₽</span> в пределах МКАД</span>
             </label>
             </div> 
 
@@ -148,7 +164,7 @@
             <label for="delivery3" class="btn-radio-label">
               <span class="btn-radio-icon"></span>
               <span class="btn-radio-label-title">Курьером Amour за МКАД</span>
-              <span class="btn-radio-label-sub-title"> от 600 ₽, стоимость расчитывается индивидуально, оплата наличными </span>
+              <span class="btn-radio-label-sub-title"> от 600 <span class="currency">₽</span>, стоимость расчитывается индивидуально, оплата наличными </span>
             </label>
             </div> 
 
@@ -157,7 +173,7 @@
             <label for="delivery4" class="btn-radio-label">
               <span class="btn-radio-icon"></span>
               <span class="btn-radio-label-title">Курьером CDEK</span>
-              <span class="btn-radio-label-sub-title"> от 380 ₽, в зависимости от адреса доставки </span>
+              <span class="btn-radio-label-sub-title"> от 380 <span class="currency">₽</span>, в зависимости от адреса доставки </span>
             </label>
             </div> 
           </div>
