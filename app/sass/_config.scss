@@ -73,3 +73,10 @@ $laptop-bg: 1366px;
     fill: currentColor;
   }
 }
+.clearfix {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}

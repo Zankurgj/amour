@@ -31,38 +31,52 @@
   }
 }
 .basket-row {
-  display: flex;
-  flex-direction: column;
   @media screen and (min-width: $tablet-bp) {
-    flex-direction: row;
-    flex-wrap: wrap;
   }
 }
 .basket-column--basket-item {
   margin-bottom: 32px;
   @media screen and (min-width: $tablet-bp) {
-    flex-basis: 60%;
+    width: 60%;
+    float: left;
   }
   @media screen and (min-width: 1200px) {
-    flex-basis: 33.33%;
+    width: 33.33%;
   }
 }
 .basket-column--promocode {
   @media screen and (min-width: $tablet-bp) {
-    flex-basis: 40%;
+    width: 40%;
+    float: right;
   }
   @media screen and (min-width: 1200px) {
-    flex-basis: 33.33%;
+    width: 33.33%;
+    float: left;
   }
 }
 .basket-column--info {
   position: relative;
   margin-bottom: 32px;
+  @media screen and (min-width: $tablet-bp) {
+    width: 40%;
+    float: right;
+    padding: 0 0 0 40px;
+  }
   @media screen and (min-width: 1200px) {
-    flex-basis: 33.33%;
+    width: 33.33%;
+    float: right;
+    padding: 0;
   }
 }
-
+.product-recommend--basket {
+  @media screen and (min-width: $tablet-bp) {
+    width: 60%;
+    float: left;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 66.66%;
+  }
+}
 .basket-product-item-wrapper {
   padding-top: 24px;
   padding-bottom: 30px;
@@ -313,7 +327,10 @@
   margin-bottom: 12px;
 }
 .product-recommend-slider--basket {
-  padding: 0 0 0 19px;
+  margin: 0 20px;
+  @media screen and (min-width: 1200px) {
+    margin: 0 40px 0 20px;
+  }
 }
 .basket-info {
   padding: 40px 0;
@@ -328,9 +345,6 @@
   }
   @media screen and (min-width: 1200px) {
     margin: 0;
-    position: absolute;
-    left: 0;
-    top: 0;
     background-size: 20px 20px;
     background-position: left 12px top 12px;
   }

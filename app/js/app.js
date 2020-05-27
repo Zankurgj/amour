@@ -28,27 +28,26 @@ document.addEventListener('DOMContentLoaded', function () {
     ],
   });
 
-  $('.product-recommend-slider').slick({
-    infinite: false,
-    dots: false,
-    arrows: false,
-    variableWidth: true,
-    swipeToSlide: true,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          // slidesToShow: 2,
-          // slidesToScroll: 1,
-          speed: 200,
-          variableWidth: true,
-          infinite: false,
-          arrows: false,
-        },
-      },
-    ],
-  });
-  getScroll();
+  // $('.product-recommend-slider').slick({
+  //   infinite: false,
+  //   dots: false,
+  //   arrows: false,
+  //   variableWidth: true,
+  //   swipeToSlide: true,
+  //   responsive: [
+  //     {
+  //       breakpoint: 1024,
+  //       settings: {
+  //         // slidesToShow: 2,
+  //         // slidesToScroll: 1,
+  //         speed: 200,
+  //         variableWidth: true,
+  //         infinite: false,
+  //         arrows: false,
+  //       },
+  //     },
+  //   ],
+  // });
 });
 
 // вспомогательные функции
@@ -107,32 +106,27 @@ const onAddLike = (el) => {
 };
 
 const getScroll = () => {
-  const parent = document.querySelector('.scroll-parent-container');
-  if (parent) {
-    const fixedEl = document.querySelector('.product-about-buy');
-    const parentElementHeight = parent.offsetHeight + 64 - window.screen.height;
-    changeScrollClass(parentElementHeight, fixedEl);
-    window.onscroll = () => {
-      changeScrollClass(parentElementHeight, fixedEl);
-    };
-  }
+  const fixedEl = document.querySelector('.product-about-buy');
+  const parent = fixedEl.parentNode;
+  changeScrollClass(fixedEl, parent);
+  window.onscroll = () => {
+    changeScrollClass(fixedEl, parent);
+  };
 };
 
-const changeScrollClass = (parentElementHeight, fixedEl) => {
-  if (getScrollVal(parentElementHeight)) {
-    fixedEl.classList.remove('fixed-mobile');
+const changeScrollClass = (element, parent) => {
+  if (getScrollVal(element, parent) <= 0) {
+    element.classList.remove('fixed-mobile');
   } else {
-    fixedEl.classList.add('fixed-mobile');
+    element.classList.add('fixed-mobile');
   }
 };
 
-const getScrollVal = (parentElementHeight) => {
+const getScrollVal = (element, parent) => {
   return (
-    Math.round(
-      this.pageYOffset ||
-        (document.documentElement && document.documentElement.scrollTop) ||
-        (document.body && document.body.scrollTop)
-    ) >= parentElementHeight
+    parent.getBoundingClientRect().top -
+    window.screen.height +
+    element.offsetHeight
   );
 };
 
@@ -158,35 +152,31 @@ const onTogglePopUpSize = () => {
   document.querySelector('#popup1').classList.toggle('popup-block--show');
   bodyStopScroll();
 };
-// const onShowPopUpSize = () => {
-//   document.querySelector('#popup1').classList.add('popup-block--show');
-//   bodyStopScroll();
-// };
 
 const initMpSlider = () => {
   const sliderSelector = document.querySelector(
     '.product-recommend-slider--mp'
   );
   setMpSliderWidth(sliderSelector);
-  $('.product-recommend-slider--mp').slick({
-    infinite: false,
-    dots: false,
-    arrows: false,
-    slidesToShow: 1,
-    variableWidth: true,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          variableWidth: true,
-          infinite: false,
-          arrows: false,
-        },
-      },
-    ],
-  });
+  // $('.product-recommend-slider--mp').slick({
+  //   infinite: false,
+  //   dots: false,
+  //   arrows: false,
+  //   slidesToShow: 1,
+  //   variableWidth: true,
+  //   responsive: [
+  //     {
+  //       breakpoint: 1024,
+  //       settings: {
+  //         slidesToShow: 2,
+  //         slidesToScroll: 1,
+  //         variableWidth: true,
+  //         infinite: false,
+  //         arrows: false,
+  //       },
+  //     },
+  //   ],
+  // });
   window.addEventListener('resize', () => {
     setMpSliderWidth(sliderSelector);
   });
