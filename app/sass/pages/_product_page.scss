@@ -196,6 +196,12 @@
   @media screen and (min-width: $tablet-bp) {
     font-size: 20px;
   }
+  .fa-rub {
+    font-size: 14px;
+    @media screen and (min-width: $tablet-bp) {
+      font-size: 18px;
+    }
+  }
 }
 .product-about-buy-color {
   flex-wrap: wrap;
@@ -482,6 +488,9 @@
   line-height: 24px;
   color: $black;
   font-family: $subfamily;
+  .fa-rub {
+    font-size: 12px;
+  }
 }
 .price-item--discount {
   color: $attention;
@@ -490,6 +499,9 @@
   margin-left: 8px;
   font-size: 10px;
   text-decoration: line-through;
+  .fa-rub {
+    font-size: 8px;
+  }
 }
 .product-recommend-item-color {
   display: flex;
