@@ -327,7 +327,7 @@
   .text-disabled {
     display: none;
   }
-  &:disabled {
+  &.product-about-basket-btn--basket {
     .text-disabled {
       display: inline-block;
     }
