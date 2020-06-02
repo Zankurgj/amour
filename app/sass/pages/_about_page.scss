@@ -1,5 +1,8 @@
+.about-page {
+  overflow: hidden;
+}
 .container-about {
-  padding: 64px 24px 42px 24px;
+  padding: 64px 0 42px 0;
   @media screen and (min-width: $tablet-bp) {
     padding: 130px 40px 62px 40px;
   }
@@ -27,21 +30,31 @@
 .about-story-inner-block {
   position: relative;
   flex-basis: 100%;
-  max-width: 370px;
-  margin-top: 80px;
+  max-width: 100%;
+  margin-top: 20px;
+  padding: 0 24px;
   @media screen and (min-width: $tablet-bp) {
     flex-basis: 40%;
+    max-width: 370px;
+    margin-top: 80px;
+    padding: 0;
   }
 }
 .about-story-img-block {
   flex-basis: 100%;
-  padding-top: 56%;
+  @media screen and (min-width: $tablet-bp) {
+    flex-basis: 42%;
+  }
+}
+.about-story-img-block-img {
   background-repeat: no-repeat;
   background-position: center top;
   background-image: url('../images/dest/img/alena-esipova.jpg');
   background-size: cover;
+  width: 100%;
+  padding-top: 105%;
   @media screen and (min-width: $tablet-bp) {
-    flex-basis: 42%;
+    padding-top: 137%;
   }
 }
 .about-story-inner-block-text-quotes {
@@ -54,32 +67,50 @@
 .about-story-inner-block-text {
   position: relative;
   padding-top: 44px;
-  font-size: 24px;
+  font-size: 22px;
   line-height: 1.45;
   font-weight: 400;
+  @media screen and (min-width: $tablet-bp) {
+    font-size: 24px;
+  }
 }
 .about-story-inner-block-sub {
-  font-size: 20px;
+  font-size: 16px;
   line-height: 1.55;
   font-weight: 700;
+  @media screen and (min-width: $tablet-bp) {
+    font-size: 20px;
+  }
 }
 
 .about-story-inner-block-sep {
   position: relative;
-  margin: 30px 0;
-  height: 40px;
+  margin: 15px 0;
+  height: 20px;
+  @media screen and (min-width: $tablet-bp) {
+    margin: 30px 0 0 0;
+    height: 40px;
+  }
   img {
     position: absolute;
     top: 0;
-    left: -150px;
+    left: -180px;
     display: block;
-    width: 570px;
+    width: 460px;
     height: auto;
+    @media screen and (min-width: $tablet-bp) {
+      width: 570px;
+      left: -150px;
+    }
   }
 }
 .about-gal-row {
   display: flex;
   flex-wrap: wrap;
+  padding: 0 24px;
+  @media screen and (min-width: $tablet-bp) {
+    padding: 0;
+  }
 }
 .about-gal-column {
   flex-basis: 50%;
@@ -103,9 +134,10 @@
   font-size: 30px;
   line-height: 1;
   font-weight: 500;
-
+  padding-left: 24px;
   @media screen and (min-width: $tablet-bp) {
     font-size: 81px;
+    padding: 0;
   }
 }
 .about-gal-title {
@@ -127,6 +159,6 @@
   transform: rotate(180deg) translateY(50%);
   @media screen and (min-width: $tablet-bp) {
     width: 540px;
-    right: 0;
+    right: -40px;
   }
 }
