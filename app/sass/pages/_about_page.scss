@@ -1,0 +1,132 @@
+.container-about {
+  padding: 64px 24px 42px 24px;
+  @media screen and (min-width: $tablet-bp) {
+    padding: 130px 40px 62px 40px;
+  }
+}
+
+.about-title {
+  padding: 24px 0;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.2;
+  font-size: 22px;
+  @media screen and (min-width: $tablet-bp) {
+    font-size: 45px;
+  }
+}
+.about-story {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  @media screen and (min-width: $tablet-bp) {
+    font-size: 45px;
+    flex-direction: row;
+  }
+}
+.about-story-inner-block {
+  position: relative;
+  flex-basis: 100%;
+  max-width: 370px;
+  margin-top: 80px;
+  @media screen and (min-width: $tablet-bp) {
+    flex-basis: 40%;
+  }
+}
+.about-story-img-block {
+  flex-basis: 100%;
+  padding-top: 56%;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-image: url('../images/dest/img/alena-esipova.jpg');
+  background-size: cover;
+  @media screen and (min-width: $tablet-bp) {
+    flex-basis: 42%;
+  }
+}
+.about-story-inner-block-text-quotes {
+  font-size: 100px;
+  line-height: 1;
+  position: absolute;
+  top: 0;
+  left: -10px;
+}
+.about-story-inner-block-text {
+  position: relative;
+  padding-top: 44px;
+  font-size: 24px;
+  line-height: 1.45;
+  font-weight: 400;
+}
+.about-story-inner-block-sub {
+  font-size: 20px;
+  line-height: 1.55;
+  font-weight: 700;
+}
+
+.about-story-inner-block-sep {
+  position: relative;
+  margin: 30px 0;
+  height: 40px;
+  img {
+    position: absolute;
+    top: 0;
+    left: -150px;
+    display: block;
+    width: 570px;
+    height: auto;
+  }
+}
+.about-gal-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.about-gal-column {
+  flex-basis: 50%;
+  max-width: 50%;
+  padding: 5px;
+  @media screen and (min-width: $tablet-bp) {
+    flex-basis: 25%;
+    max-width: 25%;
+  }
+}
+
+.about-gal-item {
+  display: block;
+  width: 100%;
+  padding-bottom: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.about-gal-title-text {
+  font-size: 30px;
+  line-height: 1;
+  font-weight: 500;
+
+  @media screen and (min-width: $tablet-bp) {
+    font-size: 81px;
+  }
+}
+.about-gal-title {
+  position: relative;
+  margin: 24px 0;
+  padding: 34px 0;
+  overflow: hidden;
+  @media screen and (min-width: $tablet-bp) {
+    padding: 74px 0;
+    margin: 44px 0;
+  }
+}
+.about-gal-title-img {
+  position: absolute;
+  display: block;
+  width: 300px;
+  right: -120px;
+  top: 50%;
+  transform: rotate(180deg) translateY(50%);
+  @media screen and (min-width: $tablet-bp) {
+    width: 540px;
+    right: 0;
+  }
+}

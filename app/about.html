@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>Amourrr</title>
+    <meta name="description" content="Amourrr" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- <link rel="icon" href="img/favicon.png" /> -->
+    <meta property="og:image" content="img/dest/preview.jpg" />
+    <link rel="stylesheet" href="css/app.min.css" />
+  </head>
+
+  <body>
+    <header class="main-header">
+      <div class="main-header-wrapper">
+        <button
+          class="btn-hamburger main-header-hamburger btn-hamburger--hide-desktop"
+          onclick="onShowMenu(this)"
+        >
+          <span class="btn-hamburger-icon"></span>
+          <span class="visually-hidden">меню</span>
+        </button>
+        <button
+          class="btn-search main-header-btn-search btn-search--hide-desktop"
+          onclick="onToggleSearch()"
+        >
+          <svg class="svg-icon btn-search-icon">
+            <use
+              xlink:href="./images/sprites/svg/sprite.symbol.svg#search"
+            ></use>
+          </svg>
+        </button>
+        <a class="main-header-logo" href="/">
+          <img src="./images/dest/icons/header-logo.svg" alt="лого" />
+        </a>
+      <nav class="main-header-nav">
+        <ul class="main-header-nav-item-wrapper">
+          <li class="main-header-nav-item">
+            <a href="#">Каталог</a>
+          </li>
+          <li class="main-header-nav-item">
+            <a href="#">О бренде</a>
+          </li>
+          <li class="main-header-nav-item">
+            <a href="#" class="active">Таблица размеров</a>
+          </li>
+          <li class="main-header-nav-item">
+            <a href="#">Доставка и возврат</a>
+          </li>
+          <li class="main-header-nav-item">
+            <a href="#">Контакты</a>
+          </li>
+        </ul>
+        <ul class="main-header-nav-location">
+          <li class="main-header-nav-location-item">
+            <svg class="svg-icon main-header-nav-location-item-icon">
+              <use
+                xlink:href="./images/sprites/svg/sprite.symbol.svg#location"
+              ></use>
+            </svg>
+            <span class="active">Москва</span>
+          </li>
+        </ul>
+        <ul class="main-header-nav-lang">
+          <li class="main-header-nav-lang-item">
+            <a href="#" class="active">ru</a>
+          </li>
+          <li class="main-header-nav-lang-item"><a href="#">en</a></li>
+        </ul>
+      </nav>
+      
+      <div class="main-header-link-block">
+        <div class="main-header-search-inner">
+          <button
+            class="btn-close btn-close-search"
+            onclick="onToggleSearch()"
+          >
+            <svg class="svg-icon btn-close-search-icon">
+              <use
+                xlink:href="./images/sprites/svg/sprite.symbol.svg#close"
+              ></use>
+            </svg>
+            <span class="visually-hidden">закрыть</span>
+          </button>
+          <input type="text" class="base-input base-input--header-search" id="search-input">
+          <div class="main-header-search-result">
+            <div class="main-header-search-result-content">
+              <span class="main-header-search-result-item--empty">
+                Результатов не найдено
+              </span>
+              <a href="#" class="main-header-search-result-item">Lorem ipsum dolor sit, amet</a>
+              <a href="#" class="main-header-search-result-item">Lorem ipsum</a>
+              <a href="#" class="main-header-search-result-item">Lorem ipsum dolor sit</a>
+            </div>
+          </div>
+        </div>
+        <button class="btn-search main-header-btn-search btn-search--hide-mobile header-link-item" onclick="onToggleSearch()">
+          <svg class="svg-icon btn-search-icon">
+            <use
+              xlink:href="./images/sprites/svg/sprite.symbol.svg#search"
+            ></use>
+          </svg>
+        </button>
+
+        <a
+          href="#"
+          class="btn btn-heart main-header-btn-heart btn-heart--full header-link-item"
+        >
+          <svg class="svg-icon btn-heart-icon">
+            <use
+              xlink:href="./images/sprites/svg/sprite.symbol.svg#heart"
+            ></use>
+          </svg>
+          <span class="visually-hidden">понравилось</span>
+        </a>
+
+        <a
+          href="#"
+          class="btn btn-basket main-header-btn-basket btn-basket--full header-link-item"
+        >
+          <svg class="svg-icon btn-basket-icon">
+            <use
+              xlink:href="./images/sprites/svg/sprite.symbol.svg#basket"
+            ></use>
+          </svg>
+          <span class="visually-hidden">корзина</span>
+        </a>
+      </div>
+    </div>
+    </header>
+
+    <div class="about-page">
+      <div class="container container-about">
+        <div class="about-story">
+          <div class="about-story-inner-block">
+            <div class="about-story-inner-block-text">
+              <span class="about-story-inner-block-text-quotes">"</span>
+              <p>
+                Коллекции Amour вдохновлены чувством любви и страсти. Бархат, кожа, деним, монохромные цвета и провокационные детали - мы собрали только наши любимые модные тренды и создали модели, которые легко комбинировать между собой. В нарядах Amour вы будете в центре внимания
+              </p>
+            </div>
+            <div class="about-story-inner-block-sep">
+              <img src="./images/dest/img/seporator.svg" alt="seporator">
+            </div>
+            <div class="about-story-inner-block-sub">
+              <p>Алена Есипова</p>
+              <p>Основатель бренда Amour</p>
+            </div>
+          </div>
+          <div class="about-story-img-block"></div>
+        </div>
+        <div class="about-gal">
+          <div class="about-gal-title">
+            <h2 class="about-gal-title-text">Вдохновение <br>
+              в нашем Instagram</h2>
+              <img src="./images/dest/img/sep_title.svg" alt="sepaerator" class="about-gal-title-img">
+          </div>
+          <div class="about-gal-row">
+            <div class="about-gal-column">
+              <a class="about-gal-item" target="_blank" href="https://www.instagram.com/p/CA5L2ThH4a_/" style="background-image:url(https://scontent.cdninstagram.com/v/t51.2885-15/101147379_123646969356850_5160983954205653756_n.jpg?_nc_cat=106&_nc_sid=8ae9d6&_nc_ohc=0mM30BMcRTIAX-qy-lj&_nc_ht=scontent.cdninstagram.com&oh=95b4884c1ae4e82a8cad6037277051b2&oe=5EFAEC11);">
+                <span class="visually-hidden">инстаграм</span>
+              </a>
+            </div>
+
+            <div class="about-gal-column">
+              <a class="about-gal-item" target="_blank" href="https://www.instagram.com/p/CA0ESecnVMP/" style="background-image:url(https://scontent.cdninstagram.com/v/t51.2885-15/101001414_238312557471850_1927383881336635457_n.jpg?_nc_cat=101&_nc_sid=8ae9d6&_nc_ohc=lXyQm_LADPUAX9-2T_Z&_nc_ht=scontent.cdninstagram.com&oh=9c0ce2b58597eb0eb8cb6c8bf699bfb7&oe=5EFA18B0);">
+                <span class="visually-hidden">инстаграм</span>
+              </a>
+            </div>
+
+            <div class="about-gal-column">
+              <a class="about-gal-item" target="_blank" href="https://www.instagram.com/p/CAp-QCOHwJq/" style="background-image:url(https://scontent.cdninstagram.com/v/t51.2885-15/101001362_732901780784969_6659121445228859239_n.jpg?_nc_cat=109&_nc_sid=8ae9d6&_nc_ohc=HAKpMApvgoEAX9laCNi&_nc_ht=scontent.cdninstagram.com&oh=0a8b03216f2750981e8af63e4484cdd3&oe=5EFC9D4C);">
+                <span class="visually-hidden">инстаграм</span>
+              </a>
+            </div>
+
+            <div class="about-gal-column">
+              <a class="about-gal-item" target="_blank" href="https://www.instagram.com/p/CAhyHv5nufq/" style="background-image:url(https://scontent.cdninstagram.com/v/t51.2885-15/100996814_928424127608958_1384001287441788276_n.jpg?_nc_cat=111&_nc_sid=8ae9d6&_nc_ohc=6WUIRccG12oAX8dP3XW&_nc_ht=scontent.cdninstagram.com&oh=39f118d762f17dad0d991408820a1432&oe=5EFC12B2);">
+                <span class="visually-hidden">инстаграм</span>
+              </a>
+            </div>
+
+            <div class="about-gal-column">
+              <a class="about-gal-item" target="_blank" href="https://www.instagram.com/p/CAgK3Aon2V0/" style="background-image:url(https://scontent.cdninstagram.com/v/t51.2885-15/100945306_278064323373531_7789901390722976931_n.jpg?_nc_cat=100&_nc_sid=8ae9d6&_nc_ohc=5mvKBlmSL_8AX8Ie4M1&_nc_ht=scontent.cdninstagram.com&oh=9f71661877cbd3752cc5dbfe16eb6eaf&oe=5EFAB97B)">
+                <span class="visually-hidden">инстаграм</span>
+              </a>
+            </div>
+
+            <div class="about-gal-column">
+              <a class="about-gal-item" target="_blank" href="https://www.instagram.com/p/CAXIPK_H7ja/" style="background-image:url(https://scontent.cdninstagram.com/v/t51.2885-15/98123359_862460074274785_6298847014943354712_n.jpg?_nc_cat=101&_nc_sid=8ae9d6&_nc_ohc=xv65IRrhQWUAX9v615_&_nc_ht=scontent.cdninstagram.com&oh=2c5f0169bf034f2008e881f106daabbd&oe=5EFC9652)">
+                <span class="visually-hidden">инстаграм</span>
+              </a>
+            </div>
+
+            <div class="about-gal-column">
+              <a class="about-gal-item" target="_blank" href="https://www.instagram.com/p/CAVE6FuHuTQ/" style="background-image:url(https://scontent.cdninstagram.com/v/t51.2885-15/97230133_1610232925791249_8213303170301656257_n.jpg?_nc_cat=108&_nc_sid=8ae9d6&_nc_ohc=70fVafKDM_oAX9IPQ5D&_nc_ht=scontent.cdninstagram.com&oh=e2d69e2a95d73b77fa346d9ad2f4a8b7&oe=5EF9A0B2)">
+                <span class="visually-hidden">инстаграм</span>
+              </a>
+            </div>
+
+            <div class="about-gal-column">
+              <a class="about-gal-item" target="_blank" href="https://www.instagram.com/p/CAM7U2ZnOmj/" style="background-image:url(https://scontent.cdninstagram.com/v/t51.2885-15/97102089_161104452109735_6667299369365640908_n.jpg?_nc_cat=104&_nc_sid=8ae9d6&_nc_ohc=87uECRUnzGcAX_9Hv81&_nc_ht=scontent.cdninstagram.com&oh=726375764a5f482747050ff10dba5525&oe=5EFABAB9)">
+                <span class="visually-hidden">инстаграм</span>
+              </a>
+            </div>
+          </div>
+        </div>
+       </div>
+    </div>
+      
+    <footer class="main-footer">
+      <img src="./images/dest/img/footer-img.png" alt="footer image" data-rjs="2" class="main-footer-bg-img">
+      <section class="contacts-block container">
+        <h2 class="contacts-block-title">Нужна помощь?</h2>
+        <a
+          href="tel:7 968 941 33"
+          class="contacts-block-item contacts-block-phone"
+          >+ 7 968 941 33 77</a
+        >
+        <a
+          href="mailto:amourrr.moscow@yandex.ru"
+          class="contacts-block-item contacts-block-mail"
+          >amourrr.moscow@yandex.ru</a
+        >
+        <div class="contacts-block-social">
+          <a
+            href="https://api.whatsapp.com/send?phone=79685669977"
+            class="contacts-block-social-item contacts-block-social-item-wp"
+            ><span class="visually-hidden">whatsapp</span></a
+          >
+          <a
+            href="https://www.instagram.com/a.amourrr/"
+            class="contacts-block-social-item contacts-block-social-item-inst"
+            ><span class="visually-hidden">instagram</span></a
+          >
+        </div>
+      </div>
+    </footer>
+    <article class="popup-block" id="popup1" >
+      <div class="popup-overlay popup-overlay--basket" onclick="onTogglePopUpSize()"></div>
+      <div class="popup-content popup-content--basket">
+        <button
+          class="btn-close btn-popup-close btn-popup-close--basket"
+          onclick="onTogglePopUpSize()"
+        >
+          <svg class="svg-icon btn-popup-close-icon">
+            <use
+              xlink:href="./images/sprites/svg/sprite.symbol.svg#close"
+            ></use>
+          </svg>
+          <span class="visually-hidden">закрыть</span>
+        </button>
+
+        <div class="btn-link-gray--popup-about-wrapper">
+          <a href="#" class="btn btn-link-gray btn-link-gray--popup-about">Таблица размеров</a>
+        </div>
+        <div class="popup-tabs">
+          <div class="popup-tabs-btn-wrapper popup-tabs-btn-wrapper--basket">
+            <input
+                  type="radio"
+                  id="tab1"
+                  name="tabs"
+                  value="tab1"
+                  class="btn-tab-change"
+                  onchange="changeTabs('tab1')"
+                  checked
+                />
+            <label for="tab1" class="btn-tab-change-label"> Выберите размер </label>
+            <input
+                  type="radio"
+                  id="tab2"
+                  name="tabs"
+                  value="tab2"
+                  class="btn-tab-change"
+                  onchange="changeTabs('tab2')"
+                />
+            <label for="tab2" class="btn-tab-change-label">Выбрать длину</label>
+          </div>
+          <div class="popup-tabs-item-wrapper">
+            <div class="popup-tabs-item popup-tabs-item--show" data-tabIndex="tab1">
+              <div class="popup-tabs-item-inner">
+              <input
+                  type="radio"
+                  id="size1"
+                  name="size"
+                  value="size1"
+                  class="btn-tab-size"
+                  onchange="changeTabSize(this)"
+                />
+              <label for="size1" class="btn-tab-size-label">32 EU &#183 XXS<span class="btn-tab-size-label-text">&#183 нет в наличии</span></label>
+
+              <input
+                  type="radio"
+                  id="size2"
+                  name="size"
+                  value="size2"
+                  class="btn-tab-size"
+                  checked
+                  onchange="changeTabSize(this)"
+                />
+              <label for="size2" class="btn-tab-size-label">34 EU &#183 XS <span class="btn-tab-size-label-text">&#183 нет в наличии</span></label>
+
+              <input
+                  type="radio"
+                  id="size3"
+                  name="size"
+                  value="size3"
+                  class="btn-tab-size"
+                  disabled
+                  onchange="changeTabSize(this)"  
+                />
+              <label for="size3" class="btn-tab-size-label">36 EU &#183 S<span class="btn-tab-size-label-text">&#183 нет в наличии</span></label>
+              <p class="btn-tab-size-text-item">* Данная модель представлена в длинах по внутреннему шву </p>
+            </div>
+            <div class="tab-size-btn-wrapper" id="tab1-btn-wrapper">
+              <button class="btn-primary btn-primary-tab-size" onclick="onChangeSizeBasket()">
+                Изменить размер
+              </button>
+            </div>
+          </div>
+          <div class="popup-tabs-item" data-tabIndex="tab2">
+            <div class="popup-tabs-item-inner">
+            <input
+                type="radio"
+                id="length1"
+                name="length"
+                value="length"
+                class="btn-tab-size"
+                onchange="changeTabLength(this)"
+              />
+            <label for="length1" class="btn-tab-size-label">78 см<span class="btn-tab-size-label-text">&#183 нет в наличии</span></label>
+
+            <input
+                type="radio"
+                id="length2"
+                name="length"
+                value="length2"
+                class="btn-tab-size"
+                checked
+                onchange="changeTabLength(this)"
+              />
+            <label for="length2" class="btn-tab-size-label">80 см <span class="btn-tab-size-label-text">&#183 нет в наличии</span></label>
+
+            <input
+                type="radio"
+                id="length3"
+                name="length"
+                value="length3"
+                class="btn-tab-size"
+                disabled
+                onchange="changeTabLength(this)"  
+              />
+            <label for="length3" class="btn-tab-size-label">85 см<span class="btn-tab-size-label-text">&#183 нет в наличии</span></label>
+            <p class="btn-tab-size-text-item">* Данная модель представлена в длинах по внутреннему шву </p>
+          </div>
+          <div class="tab-size-btn-wrapper" id="tab2-btn-wrapper">
+            <button class="btn btn-primary btn-primary-tab-size" onclick="onChangeLengthBasket()">
+              Изменить длину
+            </button>
+          </div>
+        </div>
+        </div>
+      </div>
+    </article>
+    <script src="js/app.min.js"></script>
+  </body>
+</html>

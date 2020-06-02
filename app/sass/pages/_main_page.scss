@@ -127,12 +127,16 @@
   height: auto;
 }
 .product-gallery-slider-item {
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-size: cover;
   margin-right: 15px;
   width: 327px;
   height: 464px;
+  padding: 0 !important;
+}
+.product-gallery-slider-item-img {
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 140%;
 }
 .main-footer {
   margin-top: auto;
@@ -144,6 +148,9 @@
     padding-right: 30px;
     max-width: 1360px;
     margin: 0 auto;
+  }
+  .product-gallery-slider .slick-dots {
+    right: 11px;
   }
   .main-header {
     padding: 0;
