@@ -1,0 +1,68 @@
+.container-table {
+  padding: 64px 24px 42px 24px;
+  @media screen and (min-width: $tablet-bp) {
+    padding: 80px 40px 62px 40px;
+  }
+}
+
+.table-title {
+  padding: 24px 0;
+  font-family: $subfamily;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 18px;
+  @media screen and (min-width: $tablet-bp) {
+  }
+}
+.table-inner-wrapper {
+  overflow-x: scroll;
+}
+.table-inner {
+  @media screen and (min-width: $tablet-bp) {
+    width: 100%;
+  }
+  th {
+    font-size: 16px;
+    color: $black;
+    padding: 24px 32px 24px 24px;
+    border-bottom: 1px solid $black;
+    white-space: nowrap;
+  }
+  tr {
+    &:nth-child(odd) {
+      background-color: $neutral;
+    }
+    &:first-child {
+      background-color: transparent;
+    }
+  }
+  td {
+    font-size: 16px;
+    color: $gray;
+    padding: 24px;
+  }
+}
+.get-size-table {
+  padding: 32px 0;
+}
+.get-size-table-title {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+.get-size-table-list {
+  margin: 12px 0;
+  padding-inline-start: 24px;
+}
+.btn-primary--get-size-table {
+  display: block;
+  max-width: 260px;
+  margin: 32px auto 0 auto;
+}
+.link-gold--table {
+  font-size: inherit;
+  text-decoration: none;
+  &:hover {
+    color: $gold;
+  }
+}
