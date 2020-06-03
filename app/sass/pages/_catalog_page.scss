@@ -357,3 +357,12 @@
     display: flex;
   }
 }
+.btn-text-underline {
+  padding: 8px 0;
+  font-family: $subfamily;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  white-space: nowrap;
+  text-decoration: underline;
+}
