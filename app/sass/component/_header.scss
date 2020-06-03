@@ -70,9 +70,8 @@
 
 // navigation
 .main-header-nav {
-  display: none;
+  display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   position: fixed;
   left: 0;
   top: 0;
@@ -81,18 +80,33 @@
   height: 100%;
   padding: 112px 24px 24px 24px;
   background-color: $white;
+  transform: translateX(-100%);
+  visibility: hidden;
+  transition: transform 0.2s ease-in-out, visibility 0s 0.2s;
+  will-change: transform;
   @media screen and (min-width: $tablet-bp) {
     position: relative;
-    display: flex;
+    transform: translateX(0);
+    visibility: visible;
     justify-content: center;
     height: auto;
     padding: 0;
     width: auto;
   }
   &.main-header-nav--show {
-    display: flex;
+    transform: translateX(0);
+    visibility: visible;
+    transition: transform 0.2s ease-in-out;
   }
 }
+
+.main-header-nav-wrapper {
+  display: flex;
+  flex-grow: 1;
+  overflow-y: scroll;
+  flex-direction: column;
+}
+
 .main-header-nav-item-wrapper {
   display: flex;
   flex-direction: column;
@@ -368,4 +382,7 @@
   @media screen and (min-width: $tablet-bp) {
     display: none;
   }
+}
+
+.scroll {
 }
