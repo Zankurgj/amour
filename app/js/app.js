@@ -371,3 +371,8 @@ $('#search-input').on('input', function () {
     resultSelector.classList.remove('main-header-search-result--show');
   }
 });
+
+const onTogglePopUpReturn = () => {
+  document.querySelector('#popup1').classList.toggle('popup-block--show');
+  bodyStopScroll();
+};

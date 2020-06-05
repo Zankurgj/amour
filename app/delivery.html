@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>Amourrr</title>
+    <meta name="description" content="Amourrr" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- <link rel="icon" href="img/favicon.png" /> -->
+    <meta property="og:image" content="img/dest/preview.jpg" />
+    <link rel="stylesheet" href="css/app.min.css" />
+  </head>
+
+  <body>
+    <header class="main-header">
+      <div class="main-header-wrapper">
+        <button
+          class="btn-hamburger main-header-hamburger btn-hamburger--hide-desktop"
+          onclick="onShowMenu(this)"
+        >
+          <span class="btn-hamburger-icon"></span>
+          <span class="visually-hidden">меню</span>
+        </button>
+        <button
+          class="btn-search main-header-btn-search btn-search--hide-desktop"
+          onclick="onToggleSearch()"
+        >
+          <svg class="svg-icon btn-search-icon">
+            <use
+              xlink:href="./images/sprites/svg/sprite.symbol.svg#search"
+            ></use>
+          </svg>
+        </button>
+        <a class="main-header-logo" href="/">
+          <img src="./images/dest/icons/header-logo.svg" alt="лого" />
+        </a>
+        <nav class="main-header-nav">
+          <div class="main-header-nav-wrapper" >
+          <ul class="main-header-nav-item-wrapper">
+            <li class="main-header-nav-item">
+              <a href="#">Каталог</a>
+            </li>
+            <li class="main-header-nav-item">
+              <a href="#">О бренде</a>
+            </li>
+            <li class="main-header-nav-item">
+              <a href="#" class="active">Таблица размеров</a>
+            </li>
+            <li class="main-header-nav-item">
+              <a href="#">Доставка и возврат</a>
+            </li>
+            <li class="main-header-nav-item">
+              <a href="#">Контакты</a>
+            </li>
+          </ul>
+          <ul class="main-header-nav-location">
+            <li class="main-header-nav-location-item">
+              <svg class="svg-icon main-header-nav-location-item-icon">
+                <use
+                  xlink:href="./images/sprites/svg/sprite.symbol.svg#location"
+                ></use>
+              </svg>
+              <span class="active">Москва</span>
+            </li>
+          </ul>
+          <ul class="main-header-nav-lang">
+            <li class="main-header-nav-lang-item">
+              <a href="#" class="active">ru</a>
+            </li>
+            <li class="main-header-nav-lang-item"><a href="#">en</a></li>
+          </ul>
+        </div>
+        </nav>
+      
+      <div class="main-header-link-block">
+        <div class="main-header-search-inner">
+          <button
+            class="btn-close btn-close-search"
+            onclick="onToggleSearch()"
+          >
+            <svg class="svg-icon btn-close-search-icon">
+              <use
+                xlink:href="./images/sprites/svg/sprite.symbol.svg#close"
+              ></use>
+            </svg>
+            <span class="visually-hidden">закрыть</span>
+          </button>
+          <input type="text" class="base-input base-input--header-search" id="search-input">
+          <div class="main-header-search-result">
+            <div class="main-header-search-result-content">
+              <span class="main-header-search-result-item--empty">
+                Результатов не найдено
+              </span>
+              <a href="#" class="main-header-search-result-item">Lorem ipsum dolor sit, amet</a>
+              <a href="#" class="main-header-search-result-item">Lorem ipsum</a>
+              <a href="#" class="main-header-search-result-item">Lorem ipsum dolor sit</a>
+            </div>
+          </div>
+        </div>
+        <button class="btn-search main-header-btn-search btn-search--hide-mobile header-link-item" onclick="onToggleSearch()">
+          <svg class="svg-icon btn-search-icon">
+            <use
+              xlink:href="./images/sprites/svg/sprite.symbol.svg#search"
+            ></use>
+          </svg>
+        </button>
+
+        <a
+          href="#"
+          class="btn btn-heart main-header-btn-heart btn-heart--full header-link-item"
+        >
+          <svg class="svg-icon btn-heart-icon">
+            <use
+              xlink:href="./images/sprites/svg/sprite.symbol.svg#heart"
+            ></use>
+          </svg>
+          <span class="visually-hidden">понравилось</span>
+        </a>
+
+        <a
+          href="#"
+          class="btn btn-basket main-header-btn-basket btn-basket--full header-link-item"
+        >
+          <svg class="svg-icon btn-basket-icon">
+            <use
+              xlink:href="./images/sprites/svg/sprite.symbol.svg#basket"
+            ></use>
+          </svg>
+          <span class="visually-hidden">корзина</span>
+        </a>
+      </div>
+    </div>
+    </header>
+
+    <div class="delivery-page">
+      <div class="container container-delivery">
+        <div class="delivery-page-text-inner">
+
+          <h1 class="delivery-title">Доставка и возврат</h1>
+          <p class="delivery-sub-title"><strong>Самовывоз</strong></p>
+          <p>Заказ можно забрать на следующий день после заказа самостоятельно в шоуруме ЭЛЕН ДАН по адресу: набережная Тараса Шевченко, дом 3к3. Ежедневно с 12:00 до 21:00.</p>
+
+          <p class="delivery-sub-title"><strong>Москва (в пределах МКАД)</strong></p>
+          <p>Стоимость доставки - 350₽. Доставка курьером на следующий день после заказа! В Москве доступна доставка с примеркой (до 7 вещей). Оплатить заказ можно наличными курьеру при получении. После заказа вы можете отказаться от заказа полностью или частично без оформления возврата.</p>
+
+          <p class="delivery-sub-title"><strong>Московская область</strong></p>
+          <p>Доставка курьером CDEK стоимостью 380₽.
+            В отдельные части Московской области возможна доставка на следующий день после заказа курьером Amour. Стоимость доставки курьером Amour зависит от адреса доставки и определяется индивидуально после оформления заказа. Оплата за доставку курьером Amour по МО принимается курьером при получении.</p>
+
+          <p class="delivery-sub-title"><strong>Россия</strong></p>
+          <p>Только 100% предоплата заказа.</p>
+
+          <p class="delivery-sub-title"><strong>Беларусь и Казахстан</strong></p>
+          <p>Стоимость доставки - от 1000₽.
+            Точную стоимость доставки и сроки вам сообщит менеджер после оформления заказа.</p>
+
+          <p class="delivery-sub-title"><strong>Доставка по миру</strong></p>
+          <p>Заказ можно забрать на следующий день после заказа самостоятельно в шоуруме ЭЛЕН ДАН по адресу: набережная Тараса Шевченко, дом 3к3. Ежедневно с 12:00 до 21:00.</p>
+
+        </div>
+        <div class="delivery-page-text-inner">
+
+          <h2 class="delivery-title">Условия возврата</h2>
+          <p>Возврат можно осуществить в течении 14 дней с момента получения вашего заказа. Для запроса возврата или обмена необходимо заполнить форму ниже и отправить нам. После того, как мы обработаем вашу заявку, с вами свяжется менеджер для согласования передачи товара в наш магазин.</p>
+          <p>
+            Помните, что возвращаемые товары необходимо отправить в течение 14 дней с момента отправки вашего заказа, до истечения срока возврата.
+          </p>
+
+          <p>Необходимые документы:</p>
+          <ul>
+            <li><p>Заполненное и подписанное <a href="https://yadi.sk/i/IHJlgladelPzDw" target="_blank"><strong><u>заявление на возврат</u></strong></a> обязательно для всех возвратов;</p></li>
+            <li><p>Копия паспорта лица, оплатившего заказ;</p></li>
+            <li><p>Копия или оригинал документа об оплате заказа, в зависимости от формы оплаты:</p></li>
+            <li><p>Если Вы оплатили заказ в магазине, приложите копию чека;</p></li>
+            <li><p>В случае предоплаты заказа через интернет, приложите документ об оплате, который прилагается к Электронному письму о подтверждении Вашего заказа</p>.</li>
+            <p>При возврате стоимость доставки не возмещается.</p>
+            <p>Возврат товара возможен только в том случае, если сохранен его товарный вид, фабричные ярлыки и этикетки, а также документ, подтверждающий факт и условия покупки товара.</p>
+          </ul>
+
+        </div>
+        <button class="btn-primary btn-primary--delivery-page" onclick="onTogglePopUpReturn()">Оформить возврат</button>
+       </div>
+    </div>
+      <article class="popup-block popup-return" id="popup1" >
+        <div class="popup-overlay popup-overlay--popup-return" onclick="onTogglePopUpReturn()"></div>
+        <div class="btn-popup-close-wrapper">
+          <button
+          class="btn-close btn-popup-close btn-popup-close--popup-return"
+          onclick="onTogglePopUpReturn()"
+        >
+          <svg class="svg-icon btn-popup-close-icon">
+            <use
+              xlink:href="./images/sprites/svg/sprite.symbol.svg#close"
+            ></use>
+          </svg>
+          <span class="visually-hidden">закрыть</span>
+        </button>
+        </div>
+        <div class="popup-content popup-content--popup-return">
+          <form action="" class="popup-return-form">
+            <h3 class="popup-return-title">Оформление возврата
+            </h3>
+            <p class="popup-return-sub-title">Просьба внимательно заполнить все поля анкеты для корректного оформления вашего возврата.</p>
+            <label class="base-input-wrapper base-input-wrapper--popup-return">
+              <span class="popup-return-description">Ваше ФИО</span>
+              <input type="text" class="base-input base-input--popup-return" placeholder="ФИО полностью">
+            </label>
+
+            <label class="base-input-wrapper base-input-wrapper--popup-return">
+              <span class="popup-return-description">Ваш номер</span>
+              <input type="tel" class="base-input base-input--popup-return" id="phone">
+            </label>
+
+            <label class="base-input-wrapper base-input-wrapper--popup-return">
+              <span class="popup-return-description">Ваш email</span>
+              <input type="email" class="base-input base-input--popup-return">
+            </label>
+
+            <label class="base-input-wrapper base-input-wrapper--popup-return">
+              <span class="popup-return-description">Название изделия, которое вы хотите вернуть?</span>
+              <input type="text" class="base-input base-input--popup-return" placeholder="Джинсы">
+            </label>
+
+            <label class="base-input-wrapper base-input-wrapper--popup-return">
+              <span class="popup-return-description">Размер</span>
+              <input type="text" class="base-input base-input--popup-return">
+            </label>
+
+            <label class="base-input-wrapper base-input-wrapper--popup-return">
+              <span class="popup-return-description">Цвет</span>
+              <input type="text" class="base-input base-input--popup-return">
+            </label>
+
+            <label class="base-input-wrapper base-input-wrapper--popup-return">
+              <span class="popup-return-description">Серия и номер вашего паспорта?</span>
+              <span class="popup-return-text">Для оформления возврата нам необходимы ваши паспортные данные</span>
+              <input type="text" class="base-input base-input--popup-return" placeholder="Паспортные данные">
+            </label>
+
+            <label class="base-input-wrapper base-input-wrapper--popup-return">
+              <span class="popup-return-description">Кем выдан ваш паспорт?</span>
+              <input type="text" class="base-input base-input--popup-return" placeholder="Паспортные данные">
+            </label>
+
+            <label class="base-input-wrapper base-input-wrapper--popup-return">
+              <span class="popup-return-description">Дата выдачи вашего паспорта?</span>
+              <input type="text" class="base-input base-input--popup-return" placeholder="Паспортные данные">
+            </label>
+
+            <label class="base-input-wrapper base-input-wrapper--popup-return">
+              <span class="popup-return-description">Причина возврата</span>
+              <select class="base-input base-input--select base-input--popup-return"  name="">
+                <option disabled selected>Выберите свой вариант ответа</option>
+                <option value="Не подошел выбранный размер">Не подошел выбранный размер</option>
+                <option value="Не удовлетворило качество изделия">Не удовлетворило качество изделия</option>
+                <option value="Хочу вернуть деньги">Хочу вернуть деньги</option>
+               </select>
+            </label>
+
+            <label class="base-input-wrapper base-input-wrapper--popup-return">
+              <span class="popup-return-description">Номер заказа</span>
+              <input type="text" class="base-input base-input--popup-return">
+            </label>
+
+            <label class="base-input-wrapper base-input-wrapper--popup-return">
+              <span class="popup-return-description">Дата оформления заказа</span>
+              <input type="text" class="base-input base-input--popup-return base-input--popup-return--date" id="date" readonly>
+            </label>
+            <button class="btn-primary btn-primary--popup-return" type="submit">Отправить заявку</button>
+          </form>
+        </div>
+      </article>
+    <footer class="main-footer">
+      <img src="./images/dest/img/footer-img.png" alt="footer image" data-rjs="2" class="main-footer-bg-img">
+      <section class="contacts-block container">
+        <h2 class="contacts-block-title">Нужна помощь?</h2>
+        <a
+          href="tel:7 968 941 33"
+          class="contacts-block-item contacts-block-phone"
+          >+ 7 968 941 33 77</a
+        >
+        <a
+          href="mailto:amourrr.moscow@yandex.ru"
+          class="contacts-block-item contacts-block-mail"
+          >amourrr.moscow@yandex.ru</a
+        >
+        <div class="contacts-block-social">
+          <a
+            href="https://api.whatsapp.com/send?phone=79685669977"
+            class="contacts-block-social-item contacts-block-social-item-wp"
+            ><span class="visually-hidden">whatsapp</span></a
+          >
+          <a
+            href="https://www.instagram.com/a.amourrr/"
+            class="contacts-block-social-item contacts-block-social-item-inst"
+            ><span class="visually-hidden">instagram</span></a
+          >
+        </div>
+      </div>
+    </footer>
+    <script src="js/app.min.js"></script>
+    <script>
+      var inputPhone = document.querySelector('#phone');
+      window.intlTelInput(inputPhone, {
+        initialCountry: "ru",
+        preferredCountries: [],
+        separateDialCode: true
+      });
+
+      var maskPhone = $("#phone").attr('placeholder').replace(/[0-9]/g, 9);      
+      $('#phone').mask(maskPhone);
+
+      $("#phone").on("countrychange", function (e, countryData) {
+          $("#phone").val('');
+          var maskPhone = $("#phone").attr('placeholder').replace(/[0-9]/g, 9);
+          $('#phone').mask(maskPhone);
+      });
+      $.datepicker.regional['ru'] = {
+        prevText: '',
+        nextText: '',
+        monthNames: [
+          'Январь',
+          'Февраль',
+          'Март',
+          'Апрель',
+          'Май',
+          'Июнь',
+          'Июль',
+          'Август',
+          'Сентябрь',
+          'Октябрь',
+          'Ноябрь',
+          'Декабрь',
+        ],
+        monthNamesShort: [
+          'Янв',
+          'Фев',
+          'Мар',
+          'Апр',
+          'Май',
+          'Июн',
+          'Июл',
+          'Авг',
+          'Сен',
+          'Окт',
+          'Ноя',
+          'Дек',
+        ],
+        dayNames: [
+          'воскресенье',
+          'понедельник',
+          'вторник',
+          'среда',
+          'четверг',
+          'пятница',
+          'суббота',
+        ],
+        dayNamesShort: ['вск', 'пнд', 'втр', 'срд', 'чтв', 'птн', 'сбт'],
+        dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+        dateFormat: 'dd-mm-yy',
+        showButtonPanel: true,
+        closeText: '',
+      };
+      $.datepicker.setDefaults($.datepicker.regional['ru']);
+      $('#date').datepicker().datepicker('setDate', new Date());
+    </script>
+    
+  </body>
+</html>

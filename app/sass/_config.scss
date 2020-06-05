@@ -5,6 +5,7 @@
 // @import "node_modules/bootstrap/scss/utilities/_sizing.scss" // Optional Bootstrap Utilites
 @import 'node_modules/slick-carousel/slick/slick.scss'; // Slick carousel
 @import 'node_modules/font-awesome/scss/font-awesome.scss';
+@import 'node_modules/intl-tel-input/src/css/intlTelInput.scss';
 @import 'node_modules/retinajs/dist/retina.scss';
 
 // USER VARIABLES SECTION
@@ -78,5 +79,15 @@ $laptop-bg: 1366px;
     content: '';
     display: table;
     clear: both;
+  }
+}
+
+.iti__flag {
+  background-image: url('../images/dest/img/flags.png');
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .iti__flag {
+    background-image: url('../images/dest/img/flags@2x.png');
   }
 }
