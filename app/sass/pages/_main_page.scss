@@ -150,7 +150,9 @@
     margin: 0 auto;
   }
   .product-gallery-slider .slick-dots {
-    right: 11px;
+    left: 50%;
+    transform: translateX(-50%);
+    justify-content: center;
   }
   .main-header {
     padding: 0;
