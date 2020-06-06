@@ -68,24 +68,27 @@
   font-size: 18px;
   line-height: 18px;
   margin-bottom: 22px;
+  @media screen and (min-width: $tablet-bp) {
+    margin-bottom: 2px;
+  }
 }
 .product-recommend-slider--mp {
   margin-bottom: 14px;
-  @media screen and (min-width: $tablet-bp) {
-    position: absolute;
-    left: 23px;
-    top: 33px;
-  }
+  // @media screen and (min-width: $tablet-bp) {
+  //   position: absolute;
+  //   left: 23px;
+  //   top: 33px;
+  // }
 }
 .mp-slider-btn {
   display: block;
   margin: 0 auto;
   max-width: 216px;
   @media screen and (min-width: $tablet-bp) {
-    position: absolute;
-    z-index: 5;
-    bottom: 0;
-    left: 28px;
+    // position: absolute;
+    // z-index: 5;
+    // bottom: 0;
+    // left: 28px;
   }
 }
 
@@ -108,8 +111,9 @@
   padding: 28px 15px 48px 15px;
   position: relative;
   @media screen and (min-width: $tablet-bp) {
-    height: 400px;
-    padding: 0 0 35px 28px;
+    flex-basis: 66.66%;
+    max-width: 66.66%;
+    padding: 0 28px 35px 28px;
     order: 1;
   }
 }

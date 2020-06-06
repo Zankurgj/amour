@@ -27,27 +27,6 @@ document.addEventListener('DOMContentLoaded', function () {
       },
     ],
   });
-
-  // $('.product-recommend-slider').slick({
-  //   infinite: false,
-  //   dots: false,
-  //   arrows: false,
-  //   variableWidth: true,
-  //   swipeToSlide: true,
-  //   responsive: [
-  //     {
-  //       breakpoint: 1024,
-  //       settings: {
-  //         // slidesToShow: 2,
-  //         // slidesToScroll: 1,
-  //         speed: 200,
-  //         variableWidth: true,
-  //         infinite: false,
-  //         arrows: false,
-  //       },
-  //     },
-  //   ],
-  // });
 });
 
 // вспомогательные функции
@@ -153,49 +132,49 @@ const onTogglePopUpSize = () => {
   bodyStopScroll();
 };
 
-const initMpSlider = () => {
-  const sliderSelector = document.querySelector(
-    '.product-recommend-slider--mp'
-  );
-  setMpSliderWidth(sliderSelector);
-  // $('.product-recommend-slider--mp').slick({
-  //   infinite: false,
-  //   dots: false,
-  //   arrows: false,
-  //   slidesToShow: 1,
-  //   variableWidth: true,
-  //   responsive: [
-  //     {
-  //       breakpoint: 1024,
-  //       settings: {
-  //         slidesToShow: 2,
-  //         slidesToScroll: 1,
-  //         variableWidth: true,
-  //         infinite: false,
-  //         arrows: false,
-  //       },
-  //     },
-  //   ],
-  // });
-  window.addEventListener('resize', () => {
-    setMpSliderWidth(sliderSelector);
-  });
-};
+// const initMpSlider = () => {
+//   const sliderSelector = document.querySelector(
+//     '.product-recommend-slider--mp'
+//   );
+//   setMpSliderWidth(sliderSelector);
+// $('.product-recommend-slider--mp').slick({
+//   infinite: false,
+//   dots: false,
+//   arrows: false,
+//   slidesToShow: 1,
+//   variableWidth: true,
+//   responsive: [
+//     {
+//       breakpoint: 1024,
+//       settings: {
+//         slidesToShow: 2,
+//         slidesToScroll: 1,
+//         variableWidth: true,
+//         infinite: false,
+//         arrows: false,
+//       },
+//     },
+//   ],
+// });
+// window.addEventListener('resize', () => {
+//   setMpSliderWidth(sliderSelector);
+// });
+// };
 
-const setMpSliderWidth = (sliderSelector) => {
-  const mobileBp = 1024;
-  if (window.innerWidth >= mobileBp) {
-    sliderSelector.style.width = `${getMpSliderWidth(sliderSelector)}px`;
-  } else {
-    sliderSelector.style.width = 'auto';
-  }
-};
+// const setMpSliderWidth = (sliderSelector) => {
+//   const mobileBp = 1024;
+//   if (window.innerWidth >= mobileBp) {
+//     sliderSelector.style.width = `${getMpSliderWidth(sliderSelector)}px`;
+//   } else {
+//     sliderSelector.style.width = 'auto';
+//   }
+// };
 
-const getMpSliderWidth = (sliderSelector) => {
-  const distanceLeft = sliderSelector.getBoundingClientRect().left;
-  const distanceRight = window.innerWidth - distanceLeft;
-  return distanceRight;
-};
+// const getMpSliderWidth = (sliderSelector) => {
+//   const distanceLeft = sliderSelector.getBoundingClientRect().left;
+//   const distanceRight = window.innerWidth - distanceLeft;
+//   return distanceRight;
+// };
 
 // фильтр
 const onSetFilter = (valueFilter) => {
