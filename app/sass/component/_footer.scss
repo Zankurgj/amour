@@ -20,7 +20,7 @@
 .main-footer-subscribe {
   margin-bottom: 48px;
   @media screen and (min-width: $tablet-bp) {
-    margin-bottom: 100px;
+    margin-bottom: 0;
   }
 }
 .subscribe-block-title {
@@ -76,6 +76,7 @@
     align-items: center;
     padding: 0;
     max-width: 100%;
+    margin-top: 100px;
   }
 }
 .contacts-block-item {

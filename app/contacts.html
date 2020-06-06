@@ -182,6 +182,33 @@
     </div>
       
     <footer class="main-footer">
+      <section class="subscribe-block container main-footer-subscribe">
+        <h2 class="subscribe-block-title">Подпишись на новинки!</h2>
+        <p class="subscribe-block-text">
+          Подпишись на рассылку Amour <br />
+          и первой узнавай о новинках и специальных <br />
+          предложениях.
+        </p>
+        <form class="subscribe-block-form">
+          <input
+            type="text"
+            placeholder="E-mail"
+            class="base-input subscribe-block-input"
+          />
+          <div class="subscribe-nda-text">
+            <label class="custom-checkbox-wrapper custom-checkbox-wrapper--catalog-nav">
+              <input type="checkbox" class="custom-checkbox" onchange="onSetFilter('value')">
+  
+              <span class="custom-checkbox-check"></span>
+              <span class="custom-checkbox-text custom-checkbox-text--footer">Я соглашаюсь на обработку моих персональных данных
+                и ознакомлен(а) с условиями публичной оферты</span>
+            </label>
+          </div>
+          <button class="btn-primary subscribe-block-btn" type="submit">
+            Подписаться
+          </button>
+        </form>
+      </section>
       <section class="contacts-block container">
         <h2 class="contacts-block-title">Нужна помощь?</h2>
         <a
