@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
   $('.product-gallery-slider').slick({
-    infinite: false,
-    slidesToShow: 2,
+    slidesToShow: 1,
     slidesToScroll: 1,
-    dots: true,
+    variableWidth: true,
+    infinite: false,
     arrows: false,
-    variableWidth: false,
+    dots: true,
     customPaging: function (slider, i) {
       const thumb = $(slider.$slides[i]).data('image');
       return `<div style="background-image: url('${thumb}');" class="product-gallery-slider-pagin"></div>`;
