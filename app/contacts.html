@@ -133,52 +133,63 @@
 
     <div class="contacts-page">
       <div class="container container-contacts">
-        <p class="contacts-title">Для быстрой и удобной связи с менеджером напишите нам в <a href="https://api.whatsapp.com/send?phone=79685669977" target="_blank" class="link-gold--text">WhatsApp</a>, или оформите заказ самостоятельно на <a href="/"class="link-gold--text">нашем сайте!</a></p>
-
-        <div class="contacts-row">
-
-          <div class="contacts-column">
-            <a class="contacts-item" href="https://api.whatsapp.com/send?phone=79685669977" target="_blank">
-              <div class="contacts-item-icon">
-                <img src="./images/dest/icons/icon-contacts-wp.png" alt="whatsapp icon">
-              </div>
-              <p class="contacts-item-title">WhatsApp</p>
-              <span class="contacts-item-link">написать</span>
+        <nav
+        aria-label="Breadcrumb"
+        class="breadcrumb contacts-page-breadcrumb"
+      >
+        <ul class="breadcrumb-item-wrapper">
+          <li class="breadcrumb-item breadcrumb-arrow-back">
+            <a href="#">
+              <svg class="svg-icon breadcrumb-arrow-back-icon">
+                <use
+                  xlink:href="./images/sprites/svg/sprite.symbol.svg#arrow-back"
+                ></use>
+              </svg>
+              <span class="visually-hidden">назад</span>
             </a>
+          </li>
+          <li class="breadcrumb-item">
+            <span href="#" aria-current="page">
+              Контакты
+            </span>
+          </li>
+        </ul>
+      </nav>
+      <div class="contacts-row">
+        <div class="contacts-column">
+          <div class="contacts-item">
+            <h2 class="contacts-item-title">
+              <img src="./images/dest/icons/contacts-icon1.svg" alt="title img">
+              <span>Чат</span>
+            </h2>
+            <p class="contacts-item-text">Доступны с понедельника  по пятницу с 9:00 до 19:00 по московскому врем.</p>
+            <a href="https://api.whatsapp.com/send?phone=79685669977" target="_blank" class="btn btn-primary--thin btn-primary--thin--contacts">Написать</a>
           </div>
-
-          <div class="contacts-column">
-            <a class="contacts-item" href="https://www.amourrr.com/">
-              <div class="contacts-item-icon">
-                <img src="./images/dest/icons/icon-contacts-site.svg" alt="whatsapp icon">
-              </div>
-              <p class="contacts-item-title">Website</p>
-              <span class="contacts-item-link">amourrr.com</span>
-            </a>
-          </div>
-
-          <div class="contacts-column">
-            <a class="contacts-item" href="mailto: amourrr.moscow@yandex.ru" target="_blank">
-              <div class="contacts-item-icon">
-                <img src="./images/dest/icons/icon-contacts-email.svg" alt="whatsapp icon">
-              </div>
-              <p class="contacts-item-title">Email</p>
-              <span class="contacts-item-link">написать</span>
-            </a>
-          </div>
-
-          <div class="contacts-column">
-            <a class="contacts-item" href="tel:+79691745777" target="_blank">
-              <div class="contacts-item-icon">
-                <img src="./images/dest/icons/icon-contacts-phone.svg" alt="whatsapp icon">
-              </div>
-              <p class="contacts-item-title">Позвонить менеджеру</p>
-              <span class="contacts-item-link">позвонить</span>
-            </a>
-          </div>
-
         </div>
-       </div>
+
+        <div class="contacts-column">
+          <div class="contacts-item">
+            <h2 class="contacts-item-title">
+              <img src="./images/dest/icons/contacts-icon2.svg" alt="title img">
+              <span>Телефон</span>
+            </h2>
+            <p class="contacts-item-text">+7 (968) 941 33 77, доступны спонедельника  по пятницу с 9:00 до 19:00 по московскому врем.</p>
+            <a href="tel:+79691745777" target="_blank" class="btn btn-primary--thin btn-primary--thin--contacts">Позвонить</a>
+          </div>
+        </div>
+
+        <div class="contacts-column">
+          <div class="contacts-item">
+            <h2 class="contacts-item-title">
+              <img src="./images/dest/icons/contacts-icon3.svg" alt="title img">
+              <span>Email</span>
+            </h2>
+            <p class="contacts-item-text">amourrr@gmail.com</p>
+            <a href="mailto: amourrr@gmail.com" target="_blank" class="btn btn-primary--thin btn-primary--thin--contacts">Отправить письмо</a>
+          </div>
+        </div>
+      </div>
+      </div>
     </div>
       
     <footer class="main-footer">
