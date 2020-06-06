@@ -114,7 +114,7 @@
   font-size: 14px;
   line-height: 24px;
   margin-bottom: 10px;
-  padding-right: 15px;
+  padding-right: 25px;
 }
 .basket-product-item-size-block {
   margin-bottom: 10px;
@@ -209,13 +209,15 @@
 }
 .btn-delete-basket-item {
   position: absolute;
-  right: 0;
-  top: 0;
+  right: 6px;
+  top: 6px;
   color: $black;
+  padding: 2px;
 }
 .btn-delete-basket-item-icon {
-  width: 10px;
-  height: 10px;
+  display: block;
+  width: 12px;
+  height: 12px;
 }
 .basket-promocode-block-wrapper {
   margin-bottom: 32px;
