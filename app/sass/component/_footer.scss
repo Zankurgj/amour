@@ -4,7 +4,7 @@
   background: url('../images/dest/img/footer-bg.png') center bottom -60px no-repeat;
   background-size: cover;
   @media screen and (min-width: $tablet-bp) {
-    background: url('../images/dest/img/footer-img.png') center;
+    background: url('../images/dest/img/footer-img.png') center bottom repeat-x;
   }
 }
 // .main-footer-bg-img {
@@ -20,7 +20,7 @@
 .main-footer-subscribe {
   margin-bottom: 48px;
   @media screen and (min-width: $tablet-bp) {
-    display: none;
+    margin-bottom: 100px;
   }
 }
 .subscribe-block-title {
