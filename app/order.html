@@ -289,6 +289,114 @@
         </div>
       </div>
     </footer>
+
+    <article class="popup-auth">
+      <div class="popup-overlay" onclick="onToggleAuth()"></div>
+        <div class="popup-auth-container">
+          <button
+          class="btn-close btn-close-popup-auth"
+          onclick="onToggleAuth()"
+        >
+          <svg class="svg-icon btn-close-popup-auth-icon">
+            <use
+              xlink:href="./images/sprites/svg/sprite.symbol.svg#close"
+            ></use>
+          </svg>
+          <span class="visually-hidden">закрыть</span>
+        </button>
+
+          <form action="" class="popup-auth-form popup-auth-form--show" id="authPhone">
+            <h3 class="popup-auth-title">Авторизация по телефону</h3>
+            <label class="base-input-wrapper base-input-wrapper--popup-auth">
+              <input type="text" id="phone" class="base-input base-input--popup-auth">
+            <div class="base-input-err-text hide" id="phoneInputErr"></div>
+            </label>
+            <label class="base-input-wrapper base-input-wrapper--popup-auth">
+              <input type="text" id="phonePwd" class="base-input base-input--popup-auth" placeholder="Введите код">
+            </label>
+            <button class="btn-primary btn-primary--popup-auth" type="submit" disabled id="getCode">Получить код</button>
+            <button class="btn-primary btn-primary--popup-auth btn-primary--popup-auth-nav" onclick="showAuthForm('authMail')" type="button">Войти по email</button>
+            <button class="btn-primary btn-primary--popup-auth btn-primary--popup-auth-nav" onclick="showAuthForm('restorePwd')" type="button">Забыли пароль?</button>
+          </form>
+
+          <form action="" class="popup-auth-form" id="authMail">
+            <h3 class="popup-auth-title">Авторизация по почте</h3>
+            <label class="base-input-wrapper base-input-wrapper--popup-auth">
+              <input type="text" id="email" class="base-input base-input--popup-auth" placeholder="Email">
+              <div class="base-input-err-text">Ошибка</div>
+            </label>
+            <label class="base-input-wrapper base-input-wrapper--popup-auth">
+              <input type="text" id="emailPwd" class="base-input base-input--popup-auth error" placeholder="Введите пароль">
+              <div class="base-input-err-text">Неверный пароль</div>
+            </label>
+            <button class="btn-primary btn-primary--popup-auth" type="submit">Войти</button>
+
+            <button class="btn-primary btn-primary--popup-auth btn-primary--popup-auth-nav" onclick="showAuthForm('authPhone')" type="button">Войти по телефону</button>
+            <button class="btn-primary btn-primary--popup-auth btn-primary--popup-auth-nav" onclick="showAuthForm('restorePwd')" type="button">Забыли пароль?</button>
+          </form>
+
+          <form action="" class="popup-auth-form" id="restorePwd">
+            <h3 class="popup-auth-title">Восстановление пароля</h3>
+            <p class="popup-auth-form-text">Укажите e-mail, на который мы отправим новый пароль.</p>
+            <label class="base-input-wrapper base-input-wrapper--popup-auth">
+              <input type="text" id="restoreEmail" class="base-input base-input--popup-auth" placeholder="Email">
+            </label>
+            <button class="btn-primary btn-primary--popup-auth" type="submit">Отправить</button>
+
+            <button class="btn-primary btn-primary--popup-auth btn-primary--popup-auth-nav" onclick="showAuthForm('authPhone')" type="button">Войти по телефону</button>
+          </form>
+
+      </div>
+    </article>
+
     <script src="js/app.min.js"></script>
+    <script>
+      var inputPhone = document.querySelector('#phone');
+      var iti = window.intlTelInput(inputPhone, {
+        initialCountry: "ru",
+        preferredCountries: [],
+        separateDialCode: true
+      });
+      var errorMsg = document.querySelector("#phoneInputErr");
+      var codeBtn = document.querySelector("#getCode");
+      var errorMap = ["Неправильный номер", "Неверный код страны", "Неправильный номер", "Неправильный номер", "Неправильный номер"];
+
+      var maskPhone = $("#phone").attr('placeholder').replace(/[0-9]/g, 9);      
+      $('#phone').mask(maskPhone);
+
+      $("#phone").on("countrychange", function (e, countryData) {
+          $("#phone").val('');
+          var maskPhone = $("#phone").attr('placeholder').replace(/[0-9]/g, 9);
+          $('#phone').mask(maskPhone);
+      });
+
+      // Валидация
+      var reset = function() {
+        inputPhone.classList.remove("error");
+        errorMsg.innerHTML = "";
+        errorMsg.classList.add("hide");
+        codeBtn.disabled = true;
+      };
+
+      inputPhone.addEventListener('keyup', function() {
+        reset();
+        if (inputPhone.value.trim()) {
+          if (iti.isValidNumber()) {
+            codeBtn.disabled = false;
+          } else {
+            inputPhone.classList.add("error");
+            var errorCode = iti.getValidationError();
+            errorMsg.innerHTML = errorMap[errorCode]||'Неправильный номер';
+            errorMsg.classList.remove("hide");
+          }
+        }
+      });
+      
+      // Инициализируем попап
+      document.addEventListener('DOMContentLoaded', function () {
+        onToggleAuth();
+      });
+
+    </script>
   </body>
 </html>

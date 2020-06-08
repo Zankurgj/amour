@@ -355,3 +355,13 @@ const onTogglePopUpReturn = () => {
   document.querySelector('#popup1').classList.toggle('popup-block--show');
   bodyStopScroll();
 };
+
+const showAuthForm = (formId) => {
+  const activeForm = document.querySelector('.popup-auth-form--show');
+  activeForm.classList.remove('popup-auth-form--show');
+  document.querySelector(`#${formId}`).classList.add('popup-auth-form--show');
+};
+
+const onToggleAuth = () => {
+  document.querySelector('.popup-auth').classList.toggle('popup-auth--show');
+};
