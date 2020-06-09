@@ -365,3 +365,92 @@ const showAuthForm = (formId) => {
 const onToggleAuth = () => {
   document.querySelector('.popup-auth').classList.toggle('popup-auth--show');
 };
+
+const submitPopupSizeForm = () => {
+  $sizeGuide.pickSize();
+  showPopupSizeTabs('sizeTableTab');
+};
+
+const showPopupSizeTabs = (tabId) => {
+  const activeForm = document.querySelector('.popup-size-tab--show');
+  activeForm.classList.remove('popup-size-tab--show');
+  document.querySelector(`#${tabId}`).classList.add('popup-size-tab--show');
+};
+
+const togglePopupSize = () => {
+  document.querySelector('.popup-size').classList.toggle('popup-size--show');
+  bodyStopScroll();
+};
+
+var $sizeGuide = new SizeGuide([
+  {
+    size: 'XXS',
+    waist: { min: 56, max: 58 },
+    hips: { min: 85, max: 88 },
+    chest: { min: 76, max: 80 },
+  },
+  {
+    size: 'XS',
+    waist: { min: 58, max: 62 },
+    hips: { min: 86, max: 90 },
+    chest: { min: 80, max: 85 },
+  },
+  {
+    size: 'S',
+    waist: { min: 62, max: 66 },
+    hips: { min: 90, max: 94 },
+    chest: { min: 85, max: 90 },
+  },
+  {
+    size: 'M',
+    waist: { min: 66, max: 70 },
+    hips: { min: 94, max: 98 },
+    chest: { min: 90, max: 95 },
+  },
+  {
+    size: 'L',
+    waist: { min: 70, max: 74 },
+    hips: { min: 98, max: 104 },
+    chest: { min: 95, max: 100 },
+  },
+]);
+
+function SizeGuide($params) {
+  this.params = $params;
+
+  this.pickSize = function () {
+    var $chest = parseInt($('#sizeChest').val()) || 0;
+    var $waist = parseInt($('#sizeWaist').val()) || 0;
+    var $hips = parseInt($('#sizaHisp').val()) || 0;
+
+    if ($chest > 0 && $waist > 0 && $hips > 0) {
+      var $size = 'â€”';
+      for (var $i = 0; $i < this.params.length; $i++) {
+        var $pass = 0;
+        if (
+          $chest >= parseInt(this.params[$i].chest.min) &&
+          $chest <= parseInt(this.params[$i].chest.max)
+        ) {
+          $pass++;
+        }
+        if (
+          $waist >= parseInt(this.params[$i].waist.min) &&
+          $waist <= parseInt(this.params[$i].waist.max)
+        ) {
+          $pass++;
+        }
+        if (
+          $hips >= parseInt(this.params[$i].hips.min) &&
+          $hips <= parseInt(this.params[$i].hips.max)
+        ) {
+          $pass++;
+        }
+
+        if ($pass >= 2) {
+          $size = this.params[$i].size;
+        }
+      }
+      $('.popup-size-tab-size').text($size);
+    }
+  };
+}

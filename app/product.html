@@ -243,7 +243,7 @@
               </button>
       
               <div class="btn-link-gray--popup-about-wrapper">
-                <a href="#" class="btn btn-link-gray btn-link-gray--popup-about">Таблица размеров</a>
+                <button class="btn btn-link-gray btn-link-gray--popup-about" onclick="togglePopupSize()">Таблица размеров</button>
               </div>
               <div class="popup-tabs">
                 <div class="popup-tabs-btn-wrapper">
@@ -806,6 +806,119 @@
             </form>
       </div>
     </article>
+
+    <article class="popup-size">
+      <div class="popup-overlay popup-overlay-popup-size" onclick="togglePopupSize()"></div>
+      <div class="popup-size-container">
+
+      <div class="popup-size-content">
+        <button
+        class="btn-close btn-close-popup-popup-size"
+        onclick="togglePopupSize()"
+        >
+          <svg class="svg-icon btn-close-popup-popup-size-icon">
+            <use
+              xlink:href="./images/sprites/svg/sprite.symbol.svg#close"
+            ></use>
+          </svg>
+          <span class="visually-hidden">закрыть</span>
+        </button>
+        <h3 class="popup-size-title">Узнайте свой размер</h3>
+        <div class="popup-size-row">
+          <div class="popup-size-product">
+            <div class="popup-size-product-img" style="background-image: url('./images/dest/img/product-gal-img.jpg');">
+            </div>
+            <div class="popup-size-text">
+              <h4 class="popup-size-product-title">Приталенный жакет</h4>
+              <div class="popup-size-product-cost">20 000 <i class="fa fa-rub" aria-hidden="true"></i></div>
+            </div>
+          </div>
+          <div class="popup-size-tab popup-size-tab--show" id="sizeProductTab">
+            <div class="popup-size-form">
+              <form onsubmit="submitPopupSizeForm(this);return false">
+                <label class="base-input-wrapper base-input-wrapper--size-from">
+                  <span class="popup-size-form-input-text">Объем груди</span>
+                  <input type="text" class="base-input base-input--size-from" id="sizeChest" placeholder="см">
+                </label>
+                <label class="base-input-wrapper base-input-wrapper--size-from">
+                  <span class="popup-size-form-input-text">Обхват талии</span>
+                  <input type="text" class="base-input base-input--size-from" id="sizeWaist" placeholder="см">
+                </label>
+                <label class="base-input-wrapper base-input-wrapper--size-from">
+                  <span class="popup-size-form-input-text">Объем бедер</span>
+                  <input type="text" class="base-input base-input--size-from" id="sizaHisp" placeholder="см">
+                </label>
+                <div class="popup-size-form-inner">
+                  <h4 class="popup-size-form-inner-title">Как снимать мерки?</h4>
+                  <p class="popup-size-form-inner-text"><strong>Для того, чтобы правильно выбрать размер, снимите мерки по инструкции ниже:</strong></p>
+                  <ol class="popup-size-form-inner-list">
+                    <li><p>Обхват груди измеряется вокруг туловища по самой выступающей линии бюста.</p></li>
+                    <li><p>Обхват талии измеряется по самой узкой линии талии.</p></li>
+                    <li><p>Обхват бедер измеряется в области на 20 см ниже талии, по линии максимальной ширины бедер.</p></li>
+                  </ol>
+                  <p class="popup-size-form-inner-text">Мы можем помочь вам с выбором размера в <a href="https://api.whatsapp.com/send?phone=79685669977" target="_blank">WhatsApp</a></p>
+                </div>
+                <button class="btn-primary btn-primary--popup-size-form" type="submit">Продолжить</button>
+              </form>
+            </div>
+          </div>
+          <div class="popup-size-tab" id="sizeTableTab">
+            <div class="popup-size-tab-recomend">
+              <span class="popup-size-tab-text">Мы рекомендуем <br> вам размер:</span>
+              <span class="popup-size-tab-size">-</span>
+            </div>
+            <div class="table-inner-wrapper table-inner-wrapper--popup-size">
+              <table class="table-inner">
+                <tr>
+                  <th>Размер</th>
+                  <th>Обхват талии</th>
+                  <th>Обхват бедер</th>
+                  <th>Обхват груди</th>
+                </tr>
+                <tr>
+                  <td>XXS</td>
+                  <td>56-58</td>
+                  <td colspan="2">85-88</td>
+                </tr>
+                <tr>
+                  <td>XS</td>
+                  <td>58-62</td>
+                  <td>86-90</td>
+                  <td>80-85</td>
+                </tr>
+                <tr>
+                  <td>S</td>
+                  <td>62-66</td>
+                  <td>90-94</td>
+                  <td>85-90</td>
+                </tr>
+                <tr>
+                  <td>M</td>
+                  <td>66-70</td>
+                  <td>94-98</td>
+                  <td>90-95</td>
+                </tr>
+                <tr>
+                  <td>L</td>
+                  <td>70-74</td>
+                  <td>98-104</td>
+                  <td>95-100</td>
+                </tr>
+                <tr>
+                  <td>Onesize</td>
+                  <td colspan="3">Универсальный размер для параметров XS, S, M, L</td>
+                </tr>
+              </table>
+            </div>
+            <button class="btn-primary btn-primary--popup-size-form" onclick="togglePopupSize()">Продолжить покупки</button>
+            <button class="btn-primary--thin btn-primary--popup-size-form" onclick="showPopupSizeTabs('sizeProductTab')">Начать с начала</button>
+          </div>
+        </div>
+      </div>
+      
+      </div>
+    </article>
+
     <script src="js/app.min.js"></script>
     <script>getScroll();</script>
   </body>
