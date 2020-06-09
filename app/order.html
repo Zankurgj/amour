@@ -354,7 +354,7 @@
       var inputPhone = document.querySelector('#phone');
       var iti = window.intlTelInput(inputPhone, {
         initialCountry: "ru",
-        preferredCountries: [],
+        preferredCountries: ['ru', 'kz', 'ua', 'by'],
         separateDialCode: true
       });
       var errorMsg = document.querySelector("#phoneInputErr");
