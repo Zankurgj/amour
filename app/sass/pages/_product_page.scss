@@ -367,8 +367,10 @@
 }
 .btn-close-check-block {
   position: absolute;
-  right: 24px;
-  top: 12px;
+  right: 0;
+  top: 0;
+  width: 24px;
+  height: 24px;
   color: $averagegray;
   &:hover {
     color: $lightgray;
@@ -380,10 +382,17 @@
   height: 12px;
 }
 .product-about-check-subtitle {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 24px;
   color: $gray;
   margin-bottom: 4px;
+}
+.product-about-check-img {
+  width: 120px;
+  height: 170px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 .product-about-check-bottom {
   display: flex;
