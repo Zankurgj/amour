@@ -1013,3 +1013,16 @@
     padding: 12px 20px 12px 12px;
   }
 }
+
+.product-about-buy-error {
+  display: none;
+  color: $err;
+  font-size: 14px;
+  line-height: 1.6;
+  @media screen and (min-width: $tablet-bp) {
+    order: 2;
+  }
+}
+.product-about-buy-error--show {
+  display: block;
+}
