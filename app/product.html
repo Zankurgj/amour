@@ -166,13 +166,24 @@
             <div class="product-gallery-slider">
               <!-- Для отображения изображения в пагинации, нужно к слайду добавить "data-image" атрибут с урлом -->
               <div class="product-gallery-slider-item" data-image="./images/dest/img/product-gal-img.jpg" data-rjs="2" >
-                <div class="product-gallery-slider-item-img" style="background-image: url('./images/dest/img/product-gal-img.jpg');"></div>
+                <a class="product-gallery-slider-item-img" href="./images/dest/img/product-gal-img.jpg"  data-fancybox="gallery" style="background-image: url('./images/dest/img/product-gal-img.jpg');"></a>
               </div>
               <div class="product-gallery-slider-item" data-image="./images/dest/img/product-gal-img.jpg" data-rjs="2">
-                <div class="product-gallery-slider-item-img" style="background-image: url('./images/dest/img/product-gal-img.jpg');"></div>
+                <a class="product-gallery-slider-item-img" href="./images/dest/img/product-gal-img.jpg"  data-fancybox="gallery" style="background-image: url('./images/dest/img/product-gal-img.jpg');"></a>
               </div>
               <div class="product-gallery-slider-item" data-image="./images/dest/img/product-gal-img.jpg" data-rjs="2">
-                <div class="product-gallery-slider-item-img" style="background-image: url('./images/dest/img/product-gal-img.jpg');"></div>
+                <a href="#myVideo" class="product-gallery-slider-item-img product-gallery-slider-item-img--video" data-fancybox="gallery" style="background-image: url('./images/dest/img/product-gal-img.jpg');">
+                  <video 
+                  id="myVideo"
+                  class="popup-video"
+                  loop
+                  muted
+                  style="display:none;">
+                    <source src="https://www.html5rocks.com/en/tutorials/video/basics/Chrome_ImF.webm" type="video/webm">
+                    <source src="https://www.html5rocks.com/en/tutorials/video/basics/Chrome_ImF.mp4" type="video/mp4">
+                    Your browser doesn't support HTML5 video tag.
+                </video>
+                </a>
               </div>
             </div>
           </div>

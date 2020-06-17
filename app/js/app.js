@@ -454,3 +454,16 @@ function SizeGuide($params) {
     }
   };
 }
+
+document.querySelectorAll('.popup-video').forEach((video) => {
+  video.addEventListener('click', function (event) {
+    const video = event.target;
+    if (video.paused == true) {
+      // Play the video
+      video.play();
+    } else {
+      // Pause the video
+      video.pause();
+    }
+  });
+});

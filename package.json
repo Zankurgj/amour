@@ -24,6 +24,7 @@
     "jquery": "^3.5.0"
   },
   "dependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
     "font-awesome": "^4.7.0",
     "gulp-svg-sprite": "1.5.0",
     "intl-tel-input": "^17.0.3",

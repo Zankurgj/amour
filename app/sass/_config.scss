@@ -8,6 +8,16 @@
 @import 'node_modules/intl-tel-input/src/css/intlTelInput.scss';
 @import 'node_modules/retinajs/dist/retina.scss';
 
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
+}
+
+@import 'node_modules/@fancyapps/fancybox/dist/jquery.fancybox';
+
 // USER VARIABLES SECTION
 
 $grid-gutter-width: 20px;
