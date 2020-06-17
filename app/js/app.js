@@ -455,15 +455,45 @@ function SizeGuide($params) {
   };
 }
 
-document.querySelectorAll('.popup-video').forEach((video) => {
-  video.addEventListener('click', function (event) {
-    const video = event.target;
+const facnyBoxInit = () => {
+  $('[data-fancybox]').fancybox({
+    buttons: ['zoom', 'slideShow', 'close'],
+    video: {
+      autoStart: true,
+    },
+    onInit: function () {
+      toggleVideoPlay('.slider-video');
+      toggleBlurBody();
+    },
+    beforeClose: function () {
+      toggleBlurBody();
+    },
+    afterClose: function () {
+      toggleVideoPlay('.slider-video');
+    },
+  });
+  document.querySelectorAll('.popup-video').forEach((video) => {
+    video.addEventListener('click', function (event) {
+      const video = event.target;
+      if (video.paused == true) {
+        video.play();
+      } else {
+        video.pause();
+      }
+    });
+  });
+};
+const toggleBlurBody = () => {
+  document
+    .querySelector('.page-content')
+    .classList.toggle('page-content--blured');
+};
+const toggleVideoPlay = (videoClass) => {
+  document.querySelectorAll(`${videoClass}`).forEach((video) => {
     if (video.paused == true) {
-      // Play the video
       video.play();
     } else {
-      // Pause the video
       video.pause();
     }
   });
-});
+};
