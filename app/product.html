@@ -166,17 +166,16 @@
           <div class="product-gallery-slider-wrapper">
             <div class="product-gallery-slider">
               <!-- Для отображения изображения в пагинации, нужно к слайду добавить "data-image" атрибут с урлом -->
-              <div class="product-gallery-slider-item" data-image="./images/dest/img/product-gal-img.jpg" data-rjs="2" >
-                <a class="product-gallery-slider-item-img" href="./images/dest/img/product-gal-img.jpg"  data-fancybox="gallery" data-width="2048" data-height="1365" style="background-image: url('./images/dest/img/product-gal-img.jpg');"></a>
+              <div class="product-gallery-slider-item" data-image="./images/dest/img/product-gal-img.jpg">
+                <a class="product-gallery-slider-item-img fancybox-item" href="./images/dest/img/product-gal-img.jpg"  data-width="2048" data-height="1365" data-rjs="2" style="background-image: url('./images/dest/img/product-gal-img.jpg');"></a>
               </div>
-              <div class="product-gallery-slider-item" data-image="./images/dest/img/product-gal-img.jpg" data-rjs="2">
-                <a href="#myVideo" class="product-gallery-slider-item-img" data-fancybox="gallery">
+              <div class="product-gallery-slider-item" data-image="./images/dest/img/product-gal-img.jpg">
+                <a href="#myVideo" class="product-gallery-slider-item-img fancybox-item">
                   <!-- Превью -->
                   <video 
                     class="slider-video"
                     loop
-                    muted
-                    autoplay>
+                    muted>
                     <source src="./video/productVideo.mp4" type="video/mp4">
                     Your browser doesn't support HTML5 video tag.
                   </video>
@@ -186,15 +185,14 @@
                     class="popup-video"
                     loop
                     muted
-                    autoplay 
                     style="display: none;">
                     <source src="./video/productVideo.mp4" type="video/mp4">
                     Your browser doesn't support HTML5 video tag.
                 </video>
                 </a>
               </div>
-              <div class="product-gallery-slider-item" data-image="./images/dest/img/product-gal-img.jpg" data-rjs="2">
-                <a class="product-gallery-slider-item-img" href="./images/dest/img/product-gal-img.jpg"  data-fancybox="gallery"  data-width="2048" data-height="1365" style="background-image: url('./images/dest/img/product-gal-img.jpg');"></a>
+              <div class="product-gallery-slider-item" data-image="./images/dest/img/product-gal-img.jpg">
+                <a class="product-gallery-slider-item-img fancybox-item" href="./images/dest/img/product-gal-img.jpg"   data-width="2048" data-height="1365" data-rjs="2" style="background-image: url('./images/dest/img/product-gal-img.jpg');"></a>
               </div>
             </div>
           </div>
@@ -946,11 +944,10 @@
 
     <script src="js/app.min.js"></script>
     <script>
-    getScroll();
-    facnyBoxInit();
-    document.querySelectorAll('.slider-video').forEach((video) => {
-      video.play();
-    });
+      getScroll();
+      initProductSlider();
+      initFancyBoxClickHandler();
+      fancyBoxInit();
     </script>
    </div>
   </body>

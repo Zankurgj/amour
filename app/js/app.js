@@ -1,33 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
-  $('.product-gallery-slider').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    variableWidth: true,
-    infinite: false,
-    arrows: false,
-    dots: true,
-    customPaging: function (slider, i) {
-      const thumb = $(slider.$slides[i]).data('image');
-      return `<div style="background-image: url('${thumb}');" class="product-gallery-slider-pagin"></div>`;
-    },
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          variableWidth: true,
-          infinite: false,
-          arrows: false,
-          dots: true,
-          customPaging: function (slider, i) {
-            return `<div class="product-gallery-slider-pagin--mobile"></div>`;
-          },
-        },
-      },
-    ],
-  });
-});
+document.addEventListener('DOMContentLoaded', function () {});
 
 // вспомогательные функции
 
@@ -203,33 +174,55 @@ const bodyStopScroll = () => {
 
 const products = {
   1: {
+    type: 'image',
     color: 'Голубой',
-    images: [
-      'product-gal-img.jpg',
-      'product-gal-img.jpg',
-      'product-gal-img.jpg',
-    ],
+    content: {
+      items: [
+        { type: 'image', name: 'product-gal-img.jpg' },
+        {
+          type: 'video',
+          name: 'productVideo.mp4',
+          prewImg: 'product-gal-img.jpg',
+        },
+        { type: 'image', name: 'product-gal-img.jpg' },
+      ],
+    },
     cost: '1 000',
     href: 'product1',
   },
   2: {
+    type: 'image',
     color: 'Белый',
-    images: [
-      'product-gal-img.jpg',
-      'product-gal-img.jpg',
-      'product-gal-img.jpg',
-      'product-gal-img.jpg',
-    ],
+    content: {
+      items: [
+        { type: 'image', name: 'product-gal-img.jpg' },
+        { type: 'image', name: 'product-gal-img.jpg' },
+        { type: 'image', name: 'product-gal-img.jpg' },
+        { type: 'image', name: 'product-gal-img.jpg' },
+        {
+          type: 'video',
+          name: 'productVideo.mp4',
+          prewImg: 'product-gal-img.jpg',
+        },
+      ],
+    },
     cost: '1 234',
     href: 'product2',
   },
   3: {
     color: 'Серый',
-    images: [
-      'product-gal-img.jpg',
-      'product-gal-img.jpg',
-      'product-gal-img.jpg',
-    ],
+    content: {
+      items: [
+        {
+          type: 'video',
+          name: 'productVideo.mp4',
+          prewImg: 'product-gal-img.jpg',
+        },
+        { type: 'image', name: 'product-gal-img.jpg' },
+        { type: 'image', name: 'product-gal-img.jpg' },
+        { type: 'image', name: 'product-gal-img.jpg' },
+      ],
+    },
     cost: '2 000',
     href: 'product3',
   },
@@ -252,9 +245,11 @@ const changeSlideColor = (el) => {
   colorTitleSelector.innerHTML = productItem.color;
   refreshStatePage();
   $('.product-gallery-slider').slick('removeSlide', null, null, true);
-  for (image of productItem.images) {
-    changeSlides(image);
+
+  for (item of productItem.content.items) {
+    changeSlides(item);
   }
+  $('.product-gallery-slider').slick('refresh');
 };
 const refreshStatePage = () => {
   const checkItems = document.querySelectorAll('.btn-tab-size:checked');
@@ -268,9 +263,42 @@ const refreshStatePage = () => {
     activBtn.classList.remove('tab-size-btn-wrapper--show');
   }
 };
-const changeSlides = (img) => {
-  const slideTemplate = `<div class="product-gallery-slider-item" data-image="./images/dest/img/${img}"><img src="./images/dest/img/${img}" alt="product" data-rjs="2" /></div>`;
+
+const changeSlides = (item) => {
+  const slideTemplate = setSlideTemplat(item);
   $('.product-gallery-slider').slick('slickAdd', `${slideTemplate}`);
+};
+const setSlideTemplat = (item) => {
+  const randomId = Math.floor(Math.random() * Math.floor(100));
+  const templateMap = {
+    video: `
+    <div class="product-gallery-slider-item" data-image="./images/dest/img/${item.prewImg}">
+      <a href="#video${randomId}" class="product-gallery-slider-item-img fancybox-item">
+        <video 
+          class="slider-video"
+          loop
+          muted>
+          <source src="./video/${item.name}" type="video/mp4">
+          Your browser doesn't support HTML5 video tag.
+        </video>
+        <video 
+          id="video${randomId}"
+          class="popup-video"
+          loop
+          muted
+          style="display: none;">
+          <source src="./video/${item.name}" type="video/mp4">
+          Your browser doesn't support HTML5 video tag.
+        </video>
+      </a>
+    </div>
+    `,
+    image: `
+    <div class="product-gallery-slider-item" data-image="./images/dest/img/${item.name}">
+      <a class="product-gallery-slider-item-img fancybox-item" href="./images/dest/img/${item.name}" style="background-image: url('./images/dest/img/${item.name}');" data-width="2048" data-height="1365" data-rjs="2"></a>
+    </div>`,
+  };
+  return templateMap[item.type];
 };
 
 const onTogglePopUpFb = () => {
@@ -455,23 +483,25 @@ function SizeGuide($params) {
   };
 }
 
-const facnyBoxInit = () => {
-  $('[data-fancybox]').fancybox({
+const fancyBoxInit = () => {
+  $('.fancybox-item').fancybox({
+    selector: '.fancybox-item',
     buttons: ['zoom', 'slideShow', 'close'],
     video: {
       autoStart: true,
     },
-    onInit: function () {
-      toggleVideoPlay('.slider-video');
-      toggleBlurBody();
-    },
-    beforeClose: function () {
-      toggleBlurBody();
-    },
-    afterClose: function () {
-      toggleVideoPlay('.slider-video');
-    },
   });
+  $(document).on('onInit.fb', function () {
+    videoPause('.slider-video');
+    toggleBlurBody();
+  });
+  $(document).on('beforeClose.fb', function () {
+    toggleBlurBody();
+  });
+  $(document).on('afterClose.fb', function () {
+    videoPlay('.slider-video');
+  });
+
   document.querySelectorAll('.popup-video').forEach((video) => {
     video.addEventListener('click', function (event) {
       const video = event.target;
@@ -483,17 +513,81 @@ const facnyBoxInit = () => {
     });
   });
 };
+
 const toggleBlurBody = () => {
   document
     .querySelector('.page-content')
     .classList.toggle('page-content--blured');
 };
-const toggleVideoPlay = (videoClass) => {
+
+const videoPlay = (videoClass) => {
   document.querySelectorAll(`${videoClass}`).forEach((video) => {
     if (video.paused == true) {
       video.play();
-    } else {
+    }
+  });
+};
+
+const videoPause = (videoClass) => {
+  document.querySelectorAll(`${videoClass}`).forEach((video) => {
+    if (video.paused == false) {
       video.pause();
     }
   });
+};
+
+const initProductSlider = () => {
+  $('.product-gallery-slider').on('init', () => {
+    videoPlay('.slider-video');
+  });
+  $('.product-gallery-slider').on('reInit', function (slick) {
+    videoPlay('.slider-video');
+  });
+
+  $('.product-gallery-slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    variableWidth: true,
+    infinite: false,
+    arrows: false,
+    dots: true,
+    customPaging: function (slider, i) {
+      const thumb = $(slider.$slides[i]).data('image');
+      return `<div style="background-image: url('${thumb}');" class="product-gallery-slider-pagin"></div>`;
+    },
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          variableWidth: true,
+          infinite: false,
+          arrows: false,
+          dots: true,
+          customPaging: function (slider, i) {
+            return `<div class="product-gallery-slider-pagin--mobile"></div>`;
+          },
+        },
+      },
+    ],
+  });
+};
+
+const initFancyBoxClickHandler = () => {
+  let isSimpleClick = false;
+  $('.fancybox-item')
+    .on('mousedown', () => {
+      isSimpleClick = true;
+    })
+    .on('mousemove', () => {
+      isSimpleClick = false;
+    })
+    .on('click', (event) => {
+      if (!isSimpleClick) {
+        event.stopImmediatePropagation();
+        event.stopPropagation();
+        event.preventDefault();
+      }
+    });
 };
