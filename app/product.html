@@ -174,8 +174,10 @@
                   <!-- Превью -->
                   <video 
                     class="slider-video"
-                    loop
-                    muted>
+                    preload="auto"
+                    autoplay="autoplay"
+                    loop="loop"
+                    muted="muted">
                     <source src="./video/productVideo.mp4" type="video/mp4">
                     Your browser doesn't support HTML5 video tag.
                   </video>
@@ -183,8 +185,9 @@
                   <video 
                     id="myVideo"
                     class="popup-video"
-                    loop
-                    muted
+                    loop="loop"
+                    preload="auto"
+                    muted="muted"
                     style="display: none;">
                     <source src="./video/productVideo.mp4" type="video/mp4">
                     Your browser doesn't support HTML5 video tag.
@@ -235,7 +238,7 @@
             </div>
             <div class="product-about-item-text">
               <p>
-                <strong>Состав</strong> – Материал верха: Хлопок 100% Подкладка:
+                <strong>Состав</strong> – Материал верха: Хлопок 100%Подкладка:
                 Полиэстер 100%
               </p>
             </div>

@@ -232,5 +232,9 @@ html,
   filter: blur(3px);
 }
 .fancybox-close-small {
-  color: black;
+  color: $black;
+  transition: color 0.3s ease-in-out;
+  &:hover {
+    color: rgba($color: $black, $alpha: 0.6);
+  }
 }

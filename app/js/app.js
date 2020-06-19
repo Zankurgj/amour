@@ -276,16 +276,19 @@ const setSlideTemplat = (item) => {
       <a href="#video${randomId}" class="product-gallery-slider-item-img fancybox-item">
         <video 
           class="slider-video"
-          loop
-          muted>
+          preload="auto"
+          autoplay="autoplay"
+          loop="loop"
+          muted="muted">
           <source src="./video/${item.name}" type="video/mp4">
           Your browser doesn't support HTML5 video tag.
         </video>
         <video 
           id="video${randomId}"
           class="popup-video"
-          loop
-          muted
+          loop="loop"
+          preload="auto"
+          muted="muted"
           style="display: none;">
           <source src="./video/${item.name}" type="video/mp4">
           Your browser doesn't support HTML5 video tag.
