@@ -374,19 +374,82 @@
         <section class="catalog-gal">
           <div class="catalog-gal-row">
             <div class="catalog-gal-column">
-              <a class="product-recommend-item product-recommend-item--catalog" href="#">
+              <a class="product-recommend-item product-recommend-item--catalog" href="#" onmouseenter="mouseStartVideo(event)" onmouseleave="mousePauseVideo(event)">
                 <div class="product-recommend-item-img product-recommend-item-img--catalog">
                   <div 
                     class="product-recommend-item-img-catalog product-recommend-item-img-catalog--first lazyload"
                     style="background-image: url('./images/dest/img/thumbnail_catalog.jpeg');"
-                    data-src="./images/dest/img/frame-image2.jpg"
-                    data-srcset="./images/dest/img/frame-image2.jpg 1x, ./images/dest/img/frame-image2@2x.jpg 2x">
+                    data-bg="./images/dest/img/frame-image2.jpg"
+                    data-bg-hidpi="./images/dest/img/frame-image2@2x.jpg 2x">
+                  </div>
+                  <div 
+                    class="product-recommend-item-img-catalog product-recommend-item-img-catalog-second product-recommend-item--video">
+                    <video 
+                      class="product-recommend-item-img-catalog-video lazyload"
+                      preload="auto"
+                      loop="loop"
+                      muted="muted">
+                      <source type="video/mp4" data-src="./video/productVideo.mp4">
+                      Your browser doesn't support HTML5 video tag.
+                    </video>
+                  </div>
+                </div>
+                <div class="product-recommend-item-preorder-wrapper">
+                  <p class="product-recommend-item-preorder">Предзаказ</p>
+                </div>
+                <h4 class="product-recommend-item-title product-recommend-item-title--catalog">
+                  <strong>Кофта</strong> с объёмными пл
+                </h4>
+                <div class="product-recommend-item-price product-recommend-item-price--catalog">
+                  <span class="price-item">10 000 <i class="fa fa-rub" aria-hidden="true"></i></span>
+                </div>
+                <div class="product-recommend-item-color product-recommend-item-color--catalog">
+                  <div
+                    class="color-item product-recommend-color-item"
+                    style="background-color: #000000;"
+                  ></div>
+                  <div
+                    class="color-item product-recommend-color-item"
+                    style="background-color: #8c8c8c;"
+                  ></div>
+                  <div
+                    class="color-item color-item--border product-recommend-color-item"
+                    style="background-color: #ffffff; border-color: #000000;"
+                  ></div>
+                </div>
+              </a>
+              <button
+                class="btn-heart btn-heart--big product-recommend-btn-heart"
+                onclick="onAddLike(this)"
+              >
+              <svg class="svg-icon btn-heart-icon-reccomend">
+                <use
+                  xlink:href="./images/sprites/svg/sprite.symbol.svg#heart"
+                ></use>
+              </svg>
+              <span class="visually-hidden">понравилось</span>
+              </button>
+            </div>
+
+            <div class="catalog-gal-column">
+              <a class="product-recommend-item product-recommend-item--catalog" href="#" onmouseenter="mouseStartVideo(event)" onmouseleave="mousePauseVideo(event)">
+                <div class="product-recommend-item-img product-recommend-item-img--catalog">
+                  <div 
+                    class="product-recommend-item-img-catalog product-recommend-item-img-catalog--first product-recommend-item--video">
+                    <video 
+                      class="product-recommend-item-img-catalog-video lazyload"
+                      preload="auto"
+                      loop="loop"
+                      muted="muted">
+                      <source type="video/mp4" data-src="./video/productVideo.mp4">
+                      Your browser doesn't support HTML5 video tag.
+                    </video>
                   </div>
                   <div 
                     class="product-recommend-item-img-catalog product-recommend-item-img-catalog-second lazyload" 
                     style="background-image: url('./images/dest/img/thumbnail_catalog.jpeg');"
-                    data-src="./images/dest/img/recommend-img2.jpg"
-                    data-srcset="./images/dest/img/recommend-img2.jpg 1x, ./images/dest/img/recommend-img2@2x.jpg 2x">
+                    data-bg="./images/dest/img/recommend-img2.jpg"
+                    data-bg-hidpi="./images/dest/img/recommend-img2@2x.jpg 2x">
                   </div>
                 </div>
                 <div class="product-recommend-item-preorder-wrapper">
@@ -432,14 +495,14 @@
                   <div 
                     class="product-recommend-item-img-catalog product-recommend-item-img-catalog--first lazyload"
                     style="background-image: url('./images/dest/img/thumbnail_catalog.jpeg');"
-                    data-src="./images/dest/img/frame-image2.jpg"
-                    data-srcset="./images/dest/img/frame-image2.jpg 1x, ./images/dest/img/frame-image2@2x.jpg 2x">
+                    data-bg="./images/dest/img/frame-image2.jpg"
+                    data-bg-hidpi="./images/dest/img/frame-image2@2x.jpg 2x">
                   </div>
                   <div 
                     class="product-recommend-item-img-catalog product-recommend-item-img-catalog-second lazyload" 
                     style="background-image: url('./images/dest/img/thumbnail_catalog.jpeg');"
-                    data-src="./images/dest/img/recommend-img2.jpg"
-                    data-srcset="./images/dest/img/recommend-img2.jpg 1x, ./images/dest/img/recommend-img2@2x.jpg 2x">
+                    data-bg="./images/dest/img/recommend-img2.jpg"
+                    data-bg-hidpi="./images/dest/img/recommend-img2@2x.jpg 2x">
                   </div>
                 </div>
                 <div class="product-recommend-item-preorder-wrapper">
@@ -485,14 +548,14 @@
                   <div 
                     class="product-recommend-item-img-catalog product-recommend-item-img-catalog--first lazyload"
                     style="background-image: url('./images/dest/img/thumbnail_catalog.jpeg');"
-                    data-src="./images/dest/img/frame-image2.jpg"
-                    data-srcset="./images/dest/img/frame-image2.jpg 1x, ./images/dest/img/frame-image2@2x.jpg 2x">
+                    data-bg="./images/dest/img/frame-image2.jpg"
+                    data-bg-hidpi="./images/dest/img/frame-image2@2x.jpg 2x">
                   </div>
                   <div 
                     class="product-recommend-item-img-catalog product-recommend-item-img-catalog-second lazyload" 
                     style="background-image: url('./images/dest/img/thumbnail_catalog.jpeg');"
-                    data-src="./images/dest/img/recommend-img2.jpg"
-                    data-srcset="./images/dest/img/recommend-img2.jpg 1x, ./images/dest/img/recommend-img2@2x.jpg 2x">
+                    data-bg="./images/dest/img/recommend-img2.jpg"
+                    data-bg-hidpi="./images/dest/img/recommend-img2@2x.jpg 2x">
                   </div>
                 </div>
                 <div class="product-recommend-item-preorder-wrapper">
@@ -537,14 +600,14 @@
                   <div 
                     class="product-recommend-item-img-catalog product-recommend-item-img-catalog--first lazyload"
                     style="background-image: url('./images/dest/img/thumbnail_catalog.jpeg');"
-                    data-src="./images/dest/img/frame-image2.jpg"
-                    data-srcset="./images/dest/img/frame-image2.jpg 1x, ./images/dest/img/frame-image2@2x.jpg 2x">
+                    data-bg="./images/dest/img/frame-image2.jpg"
+                    data-bg-hidpi="./images/dest/img/frame-image2@2x.jpg 2x">
                   </div>
                   <div 
                     class="product-recommend-item-img-catalog product-recommend-item-img-catalog-second lazyload" 
                     style="background-image: url('./images/dest/img/thumbnail_catalog.jpeg');"
-                    data-src="./images/dest/img/recommend-img2.jpg"
-                    data-srcset="./images/dest/img/recommend-img2.jpg 1x, ./images/dest/img/recommend-img2@2x.jpg 2x">
+                    data-bg="./images/dest/img/recommend-img2.jpg"
+                    data-bg-hidpi="./images/dest/img/recommend-img2@2x.jpg 2x">
                   </div>
                 </div>
                 <div class="product-recommend-item-preorder-wrapper">
@@ -589,14 +652,14 @@
                   <div 
                     class="product-recommend-item-img-catalog product-recommend-item-img-catalog--first lazyload"
                     style="background-image: url('./images/dest/img/thumbnail_catalog.jpeg');"
-                    data-src="./images/dest/img/frame-image2.jpg"
-                    data-srcset="./images/dest/img/frame-image2.jpg 1x, ./images/dest/img/frame-image2@2x.jpg 2x">
+                    data-bg="./images/dest/img/frame-image2.jpg"
+                    data-bg-hidpi="./images/dest/img/frame-image2@2x.jpg 2x">
                   </div>
                   <div 
                     class="product-recommend-item-img-catalog product-recommend-item-img-catalog-second lazyload" 
                     style="background-image: url('./images/dest/img/thumbnail_catalog.jpeg');"
-                    data-src="./images/dest/img/recommend-img2.jpg"
-                    data-srcset="./images/dest/img/recommend-img2.jpg 1x, ./images/dest/img/recommend-img2@2x.jpg 2x">
+                    data-bg="./images/dest/img/recommend-img2.jpg"
+                    data-bg-hidpi="./images/dest/img/recommend-img2@2x.jpg 2x">
                   </div>
                 </div>
                 <div class="product-recommend-item-preorder-wrapper">
@@ -641,14 +704,14 @@
                   <div 
                     class="product-recommend-item-img-catalog product-recommend-item-img-catalog--first lazyload"
                     style="background-image: url('./images/dest/img/thumbnail_catalog.jpeg');"
-                    data-src="./images/dest/img/frame-image2.jpg"
-                    data-srcset="./images/dest/img/frame-image2.jpg 1x, ./images/dest/img/frame-image2@2x.jpg 2x">
+                    data-bg="./images/dest/img/frame-image2.jpg"
+                    data-bg-hidpi="./images/dest/img/frame-image2@2x.jpg 2x">
                   </div>
                   <div 
                     class="product-recommend-item-img-catalog product-recommend-item-img-catalog-second lazyload" 
                     style="background-image: url('./images/dest/img/thumbnail_catalog.jpeg');"
-                    data-src="./images/dest/img/recommend-img2.jpg"
-                    data-srcset="./images/dest/img/recommend-img2.jpg 1x, ./images/dest/img/recommend-img2@2x.jpg 2x">
+                    data-bg="./images/dest/img/recommend-img2.jpg"
+                    data-bg-hidpi="./images/dest/img/recommend-img2@2x.jpg 2x">
                   </div>
                 </div>
                 <div class="product-recommend-item-preorder-wrapper">
@@ -693,66 +756,14 @@
                   <div 
                     class="product-recommend-item-img-catalog product-recommend-item-img-catalog--first lazyload"
                     style="background-image: url('./images/dest/img/thumbnail_catalog.jpeg');"
-                    data-src="./images/dest/img/frame-image2.jpg"
-                    data-srcset="./images/dest/img/frame-image2.jpg 1x, ./images/dest/img/frame-image2@2x.jpg 2x">
+                    data-bg="./images/dest/img/frame-image2.jpg"
+                    data-bg-hidpi="./images/dest/img/frame-image2@2x.jpg 2x">
                   </div>
                   <div 
                     class="product-recommend-item-img-catalog product-recommend-item-img-catalog-second lazyload" 
                     style="background-image: url('./images/dest/img/thumbnail_catalog.jpeg');"
-                    data-src="./images/dest/img/recommend-img2.jpg"
-                    data-srcset="./images/dest/img/recommend-img2.jpg 1x, ./images/dest/img/recommend-img2@2x.jpg 2x">
-                  </div>
-                </div>
-                <div class="product-recommend-item-preorder-wrapper">
-                  <p class="product-recommend-item-preorder">Предзаказ</p>
-                </div>
-                <h4 class="product-recommend-item-title product-recommend-item-title--catalog">
-                  <strong>Кофта</strong> с объёмными пл
-                </h4>
-                <div class="product-recommend-item-price product-recommend-item-price--catalog">
-                  <span class="price-item">10 000 <i class="fa fa-rub" aria-hidden="true"></i></span>
-                </div>
-                <div class="product-recommend-item-color product-recommend-item-color--catalog">
-                  <div
-                    class="color-item product-recommend-color-item"
-                    style="background-color: #000000;"
-                  ></div>
-                  <div
-                    class="color-item product-recommend-color-item"
-                    style="background-color: #8c8c8c;"
-                  ></div>
-                  <div
-                    class="color-item color-item--border product-recommend-color-item"
-                    style="background-color: #ffffff; border-color: #000000;"
-                  ></div>
-                </div>
-              </a>
-              <button
-                class="btn-heart btn-heart--big product-recommend-btn-heart"
-                onclick="onAddLike(this)"
-              >
-              <svg class="svg-icon btn-heart-icon-reccomend">
-                <use
-                  xlink:href="./images/sprites/svg/sprite.symbol.svg#heart"
-                ></use>
-              </svg>
-              <span class="visually-hidden">понравилось</span>
-              </button>
-            </div>
-            <div class="catalog-gal-column">
-              <a class="product-recommend-item product-recommend-item--catalog" href="#">
-                <div class="product-recommend-item-img product-recommend-item-img--catalog">
-                  <div 
-                    class="product-recommend-item-img-catalog product-recommend-item-img-catalog--first lazyload"
-                    style="background-image: url('./images/dest/img/thumbnail_catalog.jpeg');"
-                    data-src="./images/dest/img/frame-image2.jpg"
-                    data-srcset="./images/dest/img/frame-image2.jpg 1x, ./images/dest/img/frame-image2@2x.jpg 2x">
-                  </div>
-                  <div 
-                    class="product-recommend-item-img-catalog product-recommend-item-img-catalog-second lazyload" 
-                    style="background-image: url('./images/dest/img/thumbnail_catalog.jpeg');"
-                    data-src="./images/dest/img/recommend-img2.jpg"
-                    data-srcset="./images/dest/img/recommend-img2.jpg 1x, ./images/dest/img/recommend-img2@2x.jpg 2x">
+                    data-bg="./images/dest/img/recommend-img2.jpg"
+                    data-bg-hidpi="./images/dest/img/recommend-img2@2x.jpg 2x">
                   </div>
                 </div>
                 <div class="product-recommend-item-preorder-wrapper">
@@ -883,6 +894,11 @@
       </div>
     </footer>
     <script src="js/app.min.js"></script>
-    <script>lazyload();</script>
+    <script>
+      var lazyLoadInstance = new LazyLoad({
+          elements_selector: ".lazyload"
+          // ... more custom settings?
+      });
+    </script>
   </body>
 </html>

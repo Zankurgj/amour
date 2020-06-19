@@ -106,6 +106,7 @@
   width: 100%;
   position: relative;
   padding-top: 132%;
+  overflow: hidden;
   &:hover {
     .product-recommend-item-img-catalog-second {
       opacity: 1;
@@ -124,11 +125,22 @@
 }
 .product-recommend-item-img-catalog--first {
   z-index: 1;
+  &.product-recommend-item--video {
+    z-index: 3;
+  }
 }
 .product-recommend-item-img-catalog-second {
   z-index: 2;
   opacity: 0;
   transition: opacity $base-timing $base-duration;
+}
+.product-recommend-item-img-catalog-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
 }
 
 .catalog-nav-wrapper {

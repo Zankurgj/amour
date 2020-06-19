@@ -594,3 +594,11 @@ const initFancyBoxClickHandler = () => {
       }
     });
 };
+
+const mouseStartVideo = (evt) => {
+  evt.target.querySelector('.product-recommend-item-img-catalog-video').play();
+};
+
+const mousePauseVideo = (evt) => {
+  evt.target.querySelector('.product-recommend-item-img-catalog-video').pause();
+};

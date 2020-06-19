@@ -51,7 +51,7 @@ function scripts() {
     'node_modules/intl-tel-input/build/js/intlTelInput.js',
     'node_modules/intl-tel-input/build/js/utils.js',
     'node_modules/jquery.maskedinput/src/jquery.maskedinput.js',
-    'node_modules/lazyload/lazyload.min.js',
+    'node_modules/vanilla-lazyload/dist/lazyload.min.js',
     'node_modules/jquery-ui-dist/jquery-ui.min.js',
     'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
     'app/js/app.js', // app.js. Always at the end
