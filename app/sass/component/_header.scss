@@ -354,7 +354,10 @@
 }
 
 .header-link-item {
-  margin-right: 24px;
+  margin-right: 14px;
+  @media screen and (min-width: $tablet-bp) {
+    margin-right: 24px;
+  }
   &:last-child {
     margin-right: 0;
   }

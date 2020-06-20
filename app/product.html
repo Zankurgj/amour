@@ -119,6 +119,18 @@
 
         <a
           href="#"
+          class="btn btn-lk main-header-btn-lk header-link-item"
+        >
+          <svg class="svg-icon btn-lk-icon">
+            <use
+              xlink:href="./images/sprites/svg/sprite.symbol.svg#lk-icon"
+            ></use>
+          </svg>
+          <span class="visually-hidden">личный кабинет</span>
+        </a>
+
+        <a
+          href="#"
           class="btn btn-basket main-header-btn-basket btn-basket--full header-link-item"
         >
           <svg class="svg-icon btn-basket-icon">
@@ -717,7 +729,7 @@
           />
           <div class="subscribe-nda-text">
             <label class="custom-checkbox-wrapper custom-checkbox-wrapper--catalog-nav">
-              <input type="checkbox" class="custom-checkbox" onchange="onSetFilter('value')">
+              <input type="checkbox" class="custom-checkbox" onchange="">
   
               <span class="custom-checkbox-check"></span>
               <span class="custom-checkbox-text custom-checkbox-text--footer">Я соглашаюсь на обработку моих персональных данных
@@ -866,15 +878,19 @@
               <form onsubmit="submitPopupSizeForm(this);return false">
                 <label class="base-input-wrapper base-input-wrapper--size-from">
                   <span class="popup-size-form-input-text">Объем груди</span>
-                  <input type="text" class="base-input base-input--size-from" id="sizeChest" placeholder="см">
+                  <input type="text" class="base-input base-input--size-from" id="sizeChest" placeholder="см" required onkeyup="onCkechEmptyValid()">
                 </label>
                 <label class="base-input-wrapper base-input-wrapper--size-from">
                   <span class="popup-size-form-input-text">Обхват талии</span>
-                  <input type="text" class="base-input base-input--size-from" id="sizeWaist" placeholder="см">
+                  <input type="text" class="base-input base-input--size-from" id="sizeWaist" placeholder="см" required onkeyup="onCkechEmptyValid()">
                 </label>
                 <label class="base-input-wrapper base-input-wrapper--size-from">
                   <span class="popup-size-form-input-text">Объем бедер</span>
-                  <input type="text" class="base-input base-input--size-from" id="sizaHisp" placeholder="см">
+                  <input type="text" class="base-input base-input--size-from" id="sizaHisp" placeholder="см" required onkeyup="onCkechEmptyValid()">
+                </label>
+                <label class="base-input-wrapper base-input-wrapper--size-from">
+                  <span class="popup-size-form-input-text">Рост</span>
+                  <input type="text" class="base-input base-input--size-from" id="sizaHeight" placeholder="см" required onkeyup="onCkechEmptyValid()">
                 </label>
                 <div class="popup-size-form-inner">
                   <h4 class="popup-size-form-inner-title">Как снимать мерки?</h4>
@@ -886,7 +902,7 @@
                   </ol>
                   <p class="popup-size-form-inner-text">Мы можем помочь вам с выбором размера в <a href="https://api.whatsapp.com/send?phone=79685669977" target="_blank">WhatsApp</a></p>
                 </div>
-                <button class="btn-primary btn-primary--popup-size-form" type="submit">Продолжить</button>
+                <button id="submitSizeBtn" class="btn-primary btn-primary--popup-size-form" type="submit" disabled>Продолжить</button>
               </form>
             </div>
           </div>
@@ -953,6 +969,9 @@
       initProductSlider();
       initFancyBoxClickHandler();
       fancyBoxInit();
+      $(".base-input--size-from").each(function() {
+        $(this).mask("9?99", {placeholder:""});
+      });
     </script>
    </div>
   </body>

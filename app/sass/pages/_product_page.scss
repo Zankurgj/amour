@@ -996,17 +996,23 @@
   width: 100%;
   padding: 8px 20px;
 }
+
 .popup-size-tab-recomend {
   font-size: 20px;
   line-height: 1.6;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  max-width: 320px;
+}
+.popup-size-tab-text {
+  white-space: nowrap;
 }
 .popup-size-tab-size {
   font-weight: bold;
   font-size: 32px;
+  margin-left: 32px;
+}
+.popup-size-tab-size--small {
+  font-size: 20px;
 }
 .table-inner-wrapper--popup-size {
   .table-inner th {

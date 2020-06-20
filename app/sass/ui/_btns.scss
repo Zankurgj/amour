@@ -78,7 +78,25 @@ input[type='submit'] {
   width: 16px;
   height: 16px;
 }
-
+.btn-lk {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  color: $black;
+  &:hover,
+  &:active {
+    color: $gray;
+  }
+  &:focus {
+    color: $black;
+  }
+}
+.btn-lk-icon {
+  width: 21px;
+  height: 20px;
+}
 .btn-basket {
   position: relative;
   display: flex;
