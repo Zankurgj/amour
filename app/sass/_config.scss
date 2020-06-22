@@ -42,7 +42,7 @@ $laptop-bg: 1366px;
 @include font('lato', bold, 700, '../fonts/Lato-Bold');
 @include font('lato', normal, 400, '../fonts/Lato-Regular');
 @include font('lato', semibold, 600, '../fonts/Lato-Semibold');
-@include font('lato', thin, 200, '../fonts/Lato-Thin');
+@include font('lato', thin, 200, '../fonts/Lato-Light');
 
 @include font('orchidea', bold, 700, '../fonts/OrchideaPro-Bold');
 @include font('orchidea', semibold, 600, '../fonts/OrchideaPro-SemiBold');
@@ -100,4 +100,8 @@ $laptop-bg: 1366px;
   .iti__flag {
     background-image: url('../images/dest/img/flags@2x.png');
   }
+}
+
+.tablebodytext {
+  display: none;
 }

@@ -48,6 +48,8 @@
   max-width: 284px;
 }
 .catalog-header {
+  display: table;
+  width: 100%;
   @media screen and (min-width: $tablet-bp) {
     position: relative;
     z-index: 3;
