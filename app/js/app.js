@@ -505,7 +505,7 @@ function SizeGuide($params) {
 const fancyBoxInit = () => {
   $('.fancybox-item').fancybox({
     selector: '.fancybox-item',
-    buttons: ['zoom', 'slideShow', 'close'],
+    buttons: ['zoom', 'close'],
     video: {
       autoStart: true,
     },
@@ -519,6 +519,13 @@ const fancyBoxInit = () => {
   });
   $(document).on('afterClose.fb', function () {
     videoPlay('.slider-video');
+  });
+  $(document).on('afterLoad.fb', function (instance, current) {
+    const pixelRatio = window.devicePixelRatio || 1;
+    if (pixelRatio > 1.5) {
+      current.width = current.width / pixelRatio;
+      current.height = current.height / pixelRatio;
+    }
   });
 
   document.querySelectorAll('.popup-video').forEach((video) => {
