@@ -577,6 +577,7 @@ const initProductSlider = () => {
     infinite: false,
     arrows: false,
     dots: true,
+    speed: 200,
     customPaging: function (slider, i) {
       const thumb = $(slider.$slides[i]).data('image');
       return `<div style="background-image: url('${thumb}');" class="product-gallery-slider-pagin"></div>`;
@@ -591,6 +592,8 @@ const initProductSlider = () => {
           infinite: false,
           arrows: false,
           dots: true,
+          centerMode: false,
+          speed: 200,
           customPaging: function (slider, i) {
             return `<div class="product-gallery-slider-pagin--mobile"></div>`;
           },
