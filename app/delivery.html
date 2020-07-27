@@ -310,69 +310,81 @@
     </footer>
     <script src="js/app.min.js"></script>
     <script>
-      var inputPhone = document.querySelector('#phone');
-      window.intlTelInput(inputPhone, {
-        initialCountry: "ru",
-        preferredCountries: ['ru', 'kz', 'ua', 'by'],
-        separateDialCode: true
-      });
+     
+      $(document).ready(function() {
+        var inputPhone = document.querySelector('#phone');
+        window.intlTelInput(inputPhone, {
+          initialCountry: "ru",
+          preferredCountries: ['ru', 'kz', 'ua', 'by'],
+          separateDialCode: true
+        });
 
-      var maskPhone = $("#phone").attr('placeholder').replace(/[0-9]/g, 9);      
-      $('#phone').mask(maskPhone);
+        var maskPhone = $("#phone").attr('placeholder').replace(/[0-9]/g, 9);      
+        $('#phone').mask(maskPhone);
 
-      $("#phone").on("countrychange", function (e, countryData) {
-          $("#phone").val('');
-          var maskPhone = $("#phone").attr('placeholder').replace(/[0-9]/g, 9);
-          $('#phone').mask(maskPhone);
+        $("#phone").on("countrychange", function (e, countryData) {
+            $("#phone").val('');
+            var maskPhone = $("#phone").attr('placeholder').replace(/[0-9]/g, 9);
+            $('#phone').mask(maskPhone);
+        });
+        $.datepicker.regional['ru'] = {
+          prevText: '',
+          nextText: '',
+          monthNames: [
+            'Январь',
+            'Февраль',
+            'Март',
+            'Апрель',
+            'Май',
+            'Июнь',
+            'Июль',
+            'Август',
+            'Сентябрь',
+            'Октябрь',
+            'Ноябрь',
+            'Декабрь',
+          ],
+          monthNamesShort: [
+            'Янв',
+            'Фев',
+            'Мар',
+            'Апр',
+            'Май',
+            'Июн',
+            'Июл',
+            'Авг',
+            'Сен',
+            'Окт',
+            'Ноя',
+            'Дек',
+          ],
+          dayNames: [
+            'воскресенье',
+            'понедельник',
+            'вторник',
+            'среда',
+            'четверг',
+            'пятница',
+            'суббота',
+          ],
+          dayNamesShort: ['вск', 'пнд', 'втр', 'срд', 'чтв', 'птн', 'сбт'],
+          dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+          dateFormat: 'dd-mm-yy',
+          showButtonPanel: true,
+          closeText: '',
+        };
+        $.datepicker.setDefaults($.datepicker.regional['ru']);
+        $('#date').datepicker({
+          beforeShow: function (input, inst) {
+            setTimeout(function () {
+                inst.dpDiv.css({
+                    top: document.querySelector('#date').getBoundingClientRect().top - 278,
+                    left: document.querySelector('#date').getBoundingClientRect().left
+                });
+            }, 0);
+          }
+        }).datepicker('setDate', new Date());
       });
-      $.datepicker.regional['ru'] = {
-        prevText: '',
-        nextText: '',
-        monthNames: [
-          'Январь',
-          'Февраль',
-          'Март',
-          'Апрель',
-          'Май',
-          'Июнь',
-          'Июль',
-          'Август',
-          'Сентябрь',
-          'Октябрь',
-          'Ноябрь',
-          'Декабрь',
-        ],
-        monthNamesShort: [
-          'Янв',
-          'Фев',
-          'Мар',
-          'Апр',
-          'Май',
-          'Июн',
-          'Июл',
-          'Авг',
-          'Сен',
-          'Окт',
-          'Ноя',
-          'Дек',
-        ],
-        dayNames: [
-          'воскресенье',
-          'понедельник',
-          'вторник',
-          'среда',
-          'четверг',
-          'пятница',
-          'суббота',
-        ],
-        dayNamesShort: ['вск', 'пнд', 'втр', 'срд', 'чтв', 'птн', 'сбт'],
-        dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
-        dateFormat: 'dd-mm-yy',
-        showButtonPanel: true,
-        closeText: '',
-      };
-      $.datepicker.setDefaults($.datepicker.regional['ru']);
-      $('#date').datepicker().datepicker('setDate', new Date());
     </script>
     
   </body>
