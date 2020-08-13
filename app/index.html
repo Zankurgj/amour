@@ -34,10 +34,18 @@
           <img src="./images/dest/icons/header-logo.svg" alt="лого" />
         </a>
         <nav class="main-header-nav">
+          <div class="main-header-nav-option">
           <div class="main-header-nav-wrapper" >
           <ul class="main-header-nav-item-wrapper">
             <li class="main-header-nav-item">
-              <a href="#">Каталог</a>
+              <button class="btn-menu-spoiler" onclick="onToggleCatalogFilter(this)">
+                Каталог
+                <svg class="svg-icon btn-menu-spoiler-icon">
+                  <use
+                    xlink:href="./images/sprites/svg/sprite.symbol.svg#spoiler-arrow"
+                  ></use>
+                </svg>
+              </button>
             </li>
             <li class="main-header-nav-item">
               <a href="#">О бренде</a>
@@ -69,6 +77,222 @@
             <li class="main-header-nav-lang-item"><a href="#">en</a></li>
           </ul>
         </div>
+        <div class="main-header-filter-container">
+          <div class="main-header-filter-container-head">
+            <button class="btn-catalog-nav-head btn-catalog-nav-head--header" onclick="onToggleCatalogFilter()">
+              Меню
+            </button>
+          </div>
+          <ul class="catalog-nav-filter-block catalog-nav-filter-block--header">
+            <li>
+              <button class="btn-spoiler-catalog" onclick="spoilerToogle(this)">
+                Сортировать по
+                <svg class="svg-icon btn-spoiler-catalog-icon">
+                  <use
+                    xlink:href="./images/sprites/svg/sprite.symbol.svg#spoiler-arrow"
+                  ></use>
+                </svg>
+              </button>
+              <ul class="spoiler-content">
+                <li>
+                  <label class="custom-checkbox-wrapper custom-checkbox-wrapper--catalog-nav">
+                    <input type="checkbox" class="custom-checkbox" onchange="onSetFilterHeader('value')">
+                    <span class="custom-checkbox-check"></span>
+                    <span class="custom-checkbox-text">В наличии</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="custom-checkbox-wrapper custom-checkbox-wrapper--catalog-nav">
+                    <input type="checkbox" class="custom-checkbox" onchange="onSetFilterHeader('value')">
+                    <span class="custom-checkbox-check"></span>
+                    <span class="custom-checkbox-text">В наличии</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="custom-checkbox-wrapper custom-checkbox-wrapper--catalog-nav">
+                    <input type="checkbox" class="custom-checkbox" onchange="onSetFilterHeader('value')">
+                    <span class="custom-checkbox-check"></span>
+                    <span class="custom-checkbox-text">В наличии</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="custom-checkbox-wrapper custom-checkbox-wrapper--catalog-nav">
+                    <input type="checkbox" class="custom-checkbox" onchange="onSetFilterHeader('value')">
+                    <span class="custom-checkbox-check"></span>
+                    <span class="custom-checkbox-text">В наличии</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="custom-checkbox-wrapper custom-checkbox-wrapper--catalog-nav">
+                    <input type="checkbox" class="custom-checkbox" onchange="onSetFilterHeader('value')">
+                    <span class="custom-checkbox-check"></span>
+                    <span class="custom-checkbox-text">В наличии</span>
+                  </label>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <button class="btn-spoiler-catalog" onclick="spoilerToogle(this)">
+                Сортировать по
+                <svg class="svg-icon btn-spoiler-catalog-icon">
+                  <use
+                    xlink:href="./images/sprites/svg/sprite.symbol.svg#spoiler-arrow"
+                  ></use>
+                </svg>
+              </button>
+              <ul class="spoiler-content">
+                <li>
+                  <label class="custom-checkbox-wrapper custom-checkbox-wrapper--catalog-nav">
+                    <input type="checkbox" class="custom-checkbox" onchange="onSetFilterHeader('value')">
+                    <span class="custom-checkbox-check"></span>
+                    <span class="custom-checkbox-text">В наличии</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="custom-checkbox-wrapper custom-checkbox-wrapper--catalog-nav">
+                    <input type="checkbox" class="custom-checkbox" onchange="onSetFilterHeader('value')">
+                    <span class="custom-checkbox-check"></span>
+                    <span class="custom-checkbox-text">В наличии</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="custom-checkbox-wrapper custom-checkbox-wrapper--catalog-nav">
+                    <input type="checkbox" class="custom-checkbox" onchange="onSetFilterHeader('value')">
+                    <span class="custom-checkbox-check"></span>
+                    <span class="custom-checkbox-text">В наличии</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="custom-checkbox-wrapper custom-checkbox-wrapper--catalog-nav">
+                    <input type="checkbox" class="custom-checkbox" onchange="onSetFilterHeader('value')">
+                    <span class="custom-checkbox-check"></span>
+                    <span class="custom-checkbox-text">В наличии</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="custom-checkbox-wrapper custom-checkbox-wrapper--catalog-nav">
+                    <input type="checkbox" class="custom-checkbox" onchange="onSetFilterHeader('value')">
+                    <span class="custom-checkbox-check"></span>
+                    <span class="custom-checkbox-text">В наличии</span>
+                  </label>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <button class="btn-spoiler-catalog" onclick="spoilerToogle(this)">
+                Сортировать по
+                <svg class="svg-icon btn-spoiler-catalog-icon">
+                  <use
+                    xlink:href="./images/sprites/svg/sprite.symbol.svg#spoiler-arrow"
+                  ></use>
+                </svg>
+              </button>
+              <ul class="spoiler-content">
+                <li>
+                  <label class="custom-checkbox-wrapper custom-checkbox-wrapper--catalog-nav">
+                    <input type="checkbox" class="custom-checkbox" onchange="onSetFilterHeader('value')">
+                    <span class="custom-checkbox-check"></span>
+                    <span class="custom-checkbox-text">В наличии</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="custom-checkbox-wrapper custom-checkbox-wrapper--catalog-nav">
+                    <input type="checkbox" class="custom-checkbox" onchange="onSetFilterHeader('value')">
+                    <span class="custom-checkbox-check"></span>
+                    <span class="custom-checkbox-text">В наличии</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="custom-checkbox-wrapper custom-checkbox-wrapper--catalog-nav">
+                    <input type="checkbox" class="custom-checkbox" onchange="onSetFilterHeader('value')">
+                    <span class="custom-checkbox-check"></span>
+                    <span class="custom-checkbox-text">В наличии</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="custom-checkbox-wrapper custom-checkbox-wrapper--catalog-nav">
+                    <input type="checkbox" class="custom-checkbox" onchange="onSetFilterHeader('value')">
+                    <span class="custom-checkbox-check"></span>
+                    <span class="custom-checkbox-text">В наличии</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="custom-checkbox-wrapper custom-checkbox-wrapper--catalog-nav">
+                    <input type="checkbox" class="custom-checkbox" onchange="onSetFilterHeader('value')">
+                    <span class="custom-checkbox-check"></span>
+                    <span class="custom-checkbox-text">В наличии</span>
+                  </label>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <button class="btn-spoiler-catalog" onclick="spoilerToogle(this)">
+                Сортировать по
+                <svg class="svg-icon btn-spoiler-catalog-icon">
+                  <use
+                    xlink:href="./images/sprites/svg/sprite.symbol.svg#spoiler-arrow"
+                  ></use>
+                </svg>
+              </button>
+              <ul class="spoiler-content">
+                <li>
+                  <label class="custom-checkbox-wrapper custom-checkbox-wrapper--catalog-nav">
+                    <input type="checkbox" class="custom-checkbox" onchange="onSetFilterHeader('value')">
+                    <span class="custom-checkbox-check"></span>
+                    <span class="custom-checkbox-text">В наличии</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="custom-checkbox-wrapper custom-checkbox-wrapper--catalog-nav">
+                    <input type="checkbox" class="custom-checkbox" onchange="onSetFilterHeader('value')">
+                    <span class="custom-checkbox-check"></span>
+                    <span class="custom-checkbox-text">В наличии</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="custom-checkbox-wrapper custom-checkbox-wrapper--catalog-nav">
+                    <input type="checkbox" class="custom-checkbox" onchange="onSetFilterHeader('value')">
+                    <span class="custom-checkbox-check"></span>
+                    <span class="custom-checkbox-text">В наличии</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="custom-checkbox-wrapper custom-checkbox-wrapper--catalog-nav">
+                    <input type="checkbox" class="custom-checkbox" onchange="onSetFilterHeader('value')">
+                    <span class="custom-checkbox-check"></span>
+                    <span class="custom-checkbox-text">В наличии</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="custom-checkbox-wrapper custom-checkbox-wrapper--catalog-nav">
+                    <input type="checkbox" class="custom-checkbox" onchange="onSetFilterHeader('value')">
+                    <span class="custom-checkbox-check"></span>
+                    <span class="custom-checkbox-text">В наличии</span>
+                  </label>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <label class="custom-checkbox-wrapper custom-checkbox-wrapper--catalog-nav">
+                <input type="checkbox" class="custom-checkbox" onchange="onSetFilterHeader('value')">
+                <span class="custom-checkbox-check"></span>
+                <span class="custom-checkbox-text">В наличии</span>
+              </label>
+            </li>
+            <li>
+              <button class="btn-text-underline">Очистить фильтр</button>
+            </li>
+          </ul>
+          <div class="catalog-nav-footer catalog-nav-footer--header">
+            <button class="btn-primary btn-primary--catalog-nav-header" disabled onclick="onGoTyCatalog()">
+              <span class="catalog-nav-footer-btn-text">Выберите  фильтр</span>
+            </button>
+            <div class="catalog-nav-footer-text-field"></div>
+          </div>
+        </div>
+      </div>
         </nav>
       
       <div class="main-header-link-block">

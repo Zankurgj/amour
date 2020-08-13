@@ -149,17 +149,26 @@ const onTogglePopUpSize = () => {
 // фильтр
 const onSetFilter = (valueFilter) => {
   const btnfilter = document.querySelector('.btn-primary--catalog-nav-footer');
-  btnfilter.disabled = false;
+  setBtnFilter(btnfilter);
+};
+const onSetFilterHeader = (valueFilter) => {
+  const btnfilter = document.querySelector('.btn-primary--catalog-nav-header');
+  setBtnFilter(btnfilter);
+};
+const setBtnFilter = (el) => {
+  el.disabled = false;
   const textFild1 = document.querySelector('.catalog-nav-footer-btn-text');
   const textFild2 = document.querySelector('.catalog-nav-footer-text-field');
   const itemQuantity = 23;
   const textTeplate1 = `Показать ${itemQuantity} товаров`;
   const textTeplate2 = `показано товаров ${itemQuantity}`;
-  btnfilter.classList.add('have-item');
+  el.classList.add('have-item');
   textFild1.innerHTML = textTeplate1;
   textFild2.innerHTML = textTeplate2;
 };
-
+const onGoTyCatalog = () => {
+  window.location.href = '/catalog.html';
+};
 const onToggleCatalogMenu = () => {
   document
     .querySelector('.catalog-nav-wrapper')
@@ -639,4 +648,11 @@ const onCkechEmptyValid = () => {
     }
   }
   btn.disabled = false;
+};
+
+const onToggleCatalogFilter = (el) => {
+  const parent = document.querySelector('.main-header-nav-wrapper');
+  const filter = document.querySelector('.main-header-filter-container');
+  parent.classList.toggle('hide');
+  filter.classList.toggle('show');
 };
