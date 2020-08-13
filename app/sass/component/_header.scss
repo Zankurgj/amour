@@ -105,68 +105,8 @@
   flex-grow: 1;
   overflow-y: scroll;
   flex-direction: column;
-  transition-property: transform, opacity, visibility;
-  transition-duration: $base-duration, 0s, 0s;
-  @media screen and (min-width: $tablet-bp) {
-    overflow: visible;
-  }
-  &.hide {
-    transform: translateX(-100%);
-    opacity: 0;
-    visibility: hidden;
-    transition-delay: 0s, $base-duration, $base-duration;
-    transition-duration: $base-duration, 0s, 0s;
-    @media screen and (min-width: $tablet-bp) {
-      transform: translateX(0);
-      opacity: 1;
-      visibility: visible;
-    }
-  }
 }
-.main-header-nav-option {
-  position: relative;
-  overflow: hidden;
-  flex-grow: 1;
-  min-height: 0;
-}
-.main-header-filter-container {
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  overflow-y: auto;
-  transform: translateX(100%);
-  visibility: hidden;
-  opacity: 0;
-  transition-property: transform, opacity, visibility;
-  transition-duration: $base-duration, 0s, 0s;
-  transition-delay: 0s, $base-duration, $base-duration;
-  &.show {
-    transform: translateX(0);
-    opacity: 1;
-    visibility: visible;
-    transition-duration: $base-duration, 0s, 0s;
-    transition-delay: 0s, 0s, 0s;
-  }
-  @media screen and (min-width: $tablet-bp) {
-    display: none;
-  }
-}
-.catalog-nav-filter-block.catalog-nav-filter-block--header {
-  padding: 0 0 0 22px;
-  .btn-spoiler-catalog {
-    font-family: $mainfamily;
-  }
-}
-.catalog-nav-footer.catalog-nav-footer--header {
-  padding: 16px 16px 0 16px;
-}
-.btn-catalog-nav-head.btn-catalog-nav-head--header {
-  font-family: $mainfamily;
-}
+
 .main-header-nav-item-wrapper {
   display: flex;
   flex-direction: column;
@@ -187,8 +127,7 @@
   @media screen and (min-width: $laptop-bg) {
     margin-right: 40px;
   }
-  a,
-  .btn-menu-spoiler {
+  a {
     position: relative;
     font-size: 24px;
     color: $black;
@@ -211,10 +150,8 @@
       opacity: 0;
       transition: opacity $base-duration $base-timing;
     }
-    @media (hover: hover) {
-      &:hover {
-        color: $gray;
-      }
+    &:hover {
+      color: $gray;
     }
     &:active,
     &.active {
@@ -222,15 +159,6 @@
         opacity: 1;
       }
     }
-  }
-}
-.btn-menu-spoiler-icon {
-  width: 8px;
-  height: 16px;
-  transition: transform $base-duration $base-timing;
-  margin-left: 8px;
-  @media screen and (min-width: $tablet-bp) {
-    transform: rotate(90deg);
   }
 }
 .main-header-nav-location {
