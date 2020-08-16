@@ -159,7 +159,30 @@ const onSetFilter = (valueFilter) => {
   textFild1.innerHTML = textTeplate1;
   textFild2.innerHTML = textTeplate2;
 };
-
+const onSetFilterHeader = (valueFilter) => {
+  const allCheckBox = document.querySelectorAll('[data-header-checkbox]');
+  const btnfilter = document.querySelector('#headerDropDownBtn');
+  for (let checkBox of allCheckBox) {
+    if (checkBox.checked === true) {
+      btnfilter.disabled = false;
+      return;
+    }
+    btnfilter.disabled = true;
+  }
+};
+const onSetFilterHeaderAll = (el) => {
+  const allCheckBox = document.querySelectorAll('[data-header-checkbox]');
+  for (let checkBox of allCheckBox) {
+    if (el.checked === true) {
+      checkBox.checked = true;
+    } else {
+      checkBox.checked = false;
+    }
+  }
+};
+const onGoToCatalog = () => {
+  window.location.href = '/catalog.html';
+};
 const onToggleCatalogMenu = () => {
   document
     .querySelector('.catalog-nav-wrapper')

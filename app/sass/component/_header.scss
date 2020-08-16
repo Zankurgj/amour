@@ -78,6 +78,7 @@
   z-index: 1;
   width: 100%;
   height: 100%;
+  min-height: 0;
   padding: 112px 24px 24px 24px;
   background-color: $white;
   transform: translateX(-100%);
@@ -103,7 +104,9 @@
 .main-header-nav-wrapper {
   display: flex;
   flex-grow: 1;
-  overflow-y: scroll;
+  flex-basis: 100%;
+  max-height: 100%;
+  overflow-y: auto;
   flex-direction: column;
 }
 
@@ -111,6 +114,7 @@
   display: flex;
   flex-direction: column;
   margin-bottom: auto;
+  flex: 0 0 auto;
   @media screen and (min-width: $tablet-bp) {
     flex-direction: row;
   }
@@ -127,12 +131,15 @@
   @media screen and (min-width: $laptop-bg) {
     margin-right: 40px;
   }
-  a {
+  a,
+  .btn-spoiler-catalog {
     position: relative;
     font-size: 24px;
     color: $black;
     white-space: nowrap;
+    font-family: $mainfamily;
     transition: color $base-duration $base-timing;
+    font-weight: normal;
     @media screen and (min-width: $tablet-bp) {
       font-size: 16px;
     }
@@ -150,10 +157,18 @@
       opacity: 0;
       transition: opacity $base-duration $base-timing;
     }
-    &:hover {
-      color: $gray;
+    @media (hover: hover) {
+      &:hover {
+        color: $gray;
+      }
     }
-    &:active,
+    &.spoiler--opened {
+      &::after {
+        @media screen and (min-width: $tablet-bp) {
+          opacity: 0;
+        }
+      }
+    }
     &.active {
       &::after {
         opacity: 1;
@@ -387,5 +402,27 @@
   }
 }
 
-.scroll {
+.catalog-header-dropdown {
+  &.spoiler--opened:hover {
+    color: #c93;
+  }
+}
+.custom-checkbox-text--header {
+  font-family: $mainfamily;
+}
+.custom-checkbox-wrapper--main {
+  padding: 16px 0;
+}
+
+.spoiler-content--header {
+  padding-left: 20px;
+  li {
+    line-height: 2.3;
+    a {
+      font-size: 20px;
+      @media screen and (min-width: $tablet-bp) {
+        font-size: 16px;
+      }
+    }
+  }
 }
