@@ -365,9 +365,7 @@ const onChangeSizeBasket = () => {};
 $(document).on('click', function (e) {
   const parent = $('.spoiler-content--opened').parent('li');
   if ($(e.target).closest(parent).length) return;
-  $('.spoiler-content--opened').slideToggle(200);
-  $('.spoiler-content--opened').removeClass('spoiler-content--opened');
-  $('.spoiler--opened').removeClass('spoiler--opened');
+  closeSpoiler();
 });
 
 const spoilerToogle = (el) => {
@@ -387,6 +385,30 @@ const spoilerToogle = (el) => {
   }
 };
 
+const onHoverSpoiler = () => {
+  if (!checkMobile()) {
+    spoilerToogle('.btn-spoiler-catalog');
+  }
+};
+
+const onLeaveSpoiler = () => {
+  if (!checkMobile()) {
+    closeSpoiler();
+  }
+};
+const checkMobile = () => {
+  const mobileBp = 1024;
+  if (window.innerWidth <= mobileBp) {
+    return true;
+  }
+  return false;
+};
+
+const closeSpoiler = () => {
+  $('.spoiler-content--opened').slideToggle(200);
+  $('.spoiler-content--opened').removeClass('spoiler-content--opened');
+  $('.spoiler--opened').removeClass('spoiler--opened');
+};
 const onToggleSearch = () => {
   const searchSelector = document.querySelector('.main-header-search-inner');
   searchSelector.classList.toggle('main-header-search-inner--show');
