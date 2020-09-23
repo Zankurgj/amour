@@ -385,9 +385,10 @@ const spoilerToogle = (el) => {
   }
 };
 
-const onHoverSpoiler = () => {
+const onHoverSpoiler = (el) => {
+  const spoilerBtn = $(el).children('.btn-spoiler-catalog');
   if (!checkMobile()) {
-    spoilerToogle('.btn-spoiler-catalog');
+    spoilerToogle(spoilerBtn);
   }
 };
 
