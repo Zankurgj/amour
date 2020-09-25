@@ -608,12 +608,12 @@ const videoPause = (videoClass) => {
 };
 
 const initProductSlider = () => {
-  $('.product-gallery-slider').on('init', () => {
-    videoPlay('.slider-video');
-  });
-  $('.product-gallery-slider').on('reInit', function (slick) {
-    videoPlay('.slider-video');
-  });
+  // $('.product-gallery-slider').on('init', () => {
+  //   videoPlay('.slider-video');
+  // });
+  // $('.product-gallery-slider').on('reInit', function (slick) {
+  //   videoPlay('.slider-video');
+  // });
 
   $('.product-gallery-slider').slick({
     slidesToShow: 1,
