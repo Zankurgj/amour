@@ -185,11 +185,12 @@
                 <a href="#myVideo" class="product-gallery-slider-item-img fancybox-item">
                   <!-- Превью -->
                   <video 
-                    class="slider-video"
+                    class="slider-video lazyload"
                     preload="auto"
                     autoplay="autoplay"
                     loop="loop"
                     muted="muted"
+                    data-src="./video/productVideo.mp4"
                     playsinline>
                     <source src="./video/productVideo.mp4" type="video/mp4">
                     Your browser doesn't support HTML5 video tag.
@@ -197,13 +198,14 @@
                   <!-- Оригинал -->
                   <video 
                     id="myVideo"
-                    class="popup-video"
+                    class="popup-video lazyload"
                     loop="loop"
                     preload="auto"
                     muted="muted"
                     playsinline
                     width = "575"
                     height= "659"
+                    data-src="./video/productVideo.mp4"
                     style="display: none;">
                     <source src="./video/productVideo.mp4" type="video/mp4">
                     Your browser doesn't support HTML5 video tag.
@@ -973,6 +975,9 @@
       fancyBoxInit();
       $(".base-input--size-from").each(function() {
         $(this).mask("9?99", {placeholder:""});
+      });
+      var lazyLoadInstance = new LazyLoad({
+          elements_selector: ".lazyload"
       });
     </script>
    </div>
