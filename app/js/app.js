@@ -685,3 +685,7 @@ const onCkechEmptyValid = () => {
   }
   btn.disabled = false;
 };
+
+const onToggleSubrcribePopup = () => {
+  document.querySelector('#popupSubscribe').classList.toggle('show');
+};
