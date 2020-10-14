@@ -514,6 +514,41 @@
         </div>
       </div>
     </footer>
+    <div class="popup-subscribe show" id="popupSubscribe">
+      <div class="container container--popup-subscribe">
+        <button
+            class="btn-close popup-subscribe-btn-close"
+            onclick="onToggleSubrcribePopup()"
+          >
+            <svg class="svg-icon btn-close-popup-subscribe-icon">
+              <use
+                xlink:href="./images/sprites/svg/sprite.symbol.svg#close"
+              ></use>
+            </svg>
+            <span class="visually-hidden">закрыть</span>
+          </button>
+        <div class="popup-subscribe-text-inner">
+          <h3 class="popup-subscribe-title">Подпишись на новинки!</h3>
+          <p class="popup-subscribe-text">Подпишись на рассылку Amour и первой узнавай о новинках и <span>специальных</span> <span>предложениях.</span></p>
+        </div>
+        <div class="popup-subscribe-form-inner">
+          <form class="popup-subscribe-form">
+            <input
+              type="text"
+              placeholder="E-mail"
+              class="base-input popup-subscribe-input"
+              required
+            />
+            <button class="btn-primary popup-subscribe-btn" type="submit">
+              Подписаться
+            </button>
+            <p class="popup-subscribe-form-text">
+              Нажав на “Подписаться”, вы соглашаетесь с уловиями публичной оферты
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
     <script src="js/app.min.js"></script>
   </body>
 </html>
