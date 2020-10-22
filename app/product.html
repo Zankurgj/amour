@@ -187,7 +187,6 @@
                   <video 
                     class="slider-video lazyload"
                     preload="auto"
-                    autoplay="autoplay"
                     loop="loop"
                     muted="muted"
                     data-src="./video/productVideo.mp4"
@@ -973,10 +972,17 @@
       initProductSlider();
       initFancyBoxClickHandler();
       fancyBoxInit();
+
       $(".base-input--size-from").each(function() {
         $(this).mask("9?99", {placeholder:""});
       });
+      var callback_loaded = function (element) {
+        if (element.tagName==="VIDEO" && element.paused) {
+          element.play();
+        }
+      };
       var lazyLoadInstance = new LazyLoad({
+          callback_loaded: callback_loaded,
           elements_selector: ".lazyload"
       });
     </script>
