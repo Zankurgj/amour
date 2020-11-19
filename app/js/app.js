@@ -397,6 +397,7 @@ const onLeaveSpoiler = () => {
     closeSpoiler();
   }
 };
+
 const checkMobile = () => {
   const mobileBp = 1024;
   if (window.innerWidth <= mobileBp) {
