@@ -50,9 +50,9 @@
 .catalog-header {
   display: table;
   width: 100%;
+  z-index: 4;
   @media screen and (min-width: $tablet-bp) {
     position: relative;
-    z-index: 3;
   }
 }
 .catalog-header-btn-block {
