@@ -36,8 +36,8 @@
         <nav class="main-header-nav">
           <div class="main-header-nav-wrapper" >
           <ul class="main-header-nav-item-wrapper">
-            <li class="main-header-nav-item" onmouseenter="onHoverSpoiler()" onmouseleave="onLeaveSpoiler()">
-              <button class="catalog-header-dropdown btn-spoiler-catalog" onclick="spoilerToogle(this)">
+            <li class="main-header-nav-item" onmouseenter="onHoverSpoiler(this)" onmouseleave="onLeaveSpoiler()">
+              <button class="catalog-header-dropdown btn-spoiler-catalog catalog-header-dropdown--btn" onclick="spoilerToogle(this)">
                 Каталог
                 <svg class="svg-icon btn-spoiler-catalog-icon">
                   <use
@@ -45,6 +45,14 @@
                   ></use>
                 </svg>
               </button>
+              <a href="#" class="catalog-header-dropdown btn-spoiler-catalog catalog-header-dropdown--link">
+                Каталог
+                <svg class="svg-icon btn-spoiler-catalog-icon">
+                  <use
+                    xlink:href="./images/sprites/svg/sprite.symbol.svg#spoiler-arrow"
+                  ></use>
+                </svg>
+              </a>
               <ul class="spoiler-content spoiler-content--header">
                 <li>
                   <a href="#">Посмотреть всё</a>

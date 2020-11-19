@@ -413,7 +413,17 @@
 .custom-checkbox-wrapper--main {
   padding: 16px 0;
 }
-
+.catalog-header-dropdown--link {
+  display: none;
+  @media screen and (min-width: $tablet-bp) {
+    display: inline-block;
+  }
+}
+.catalog-header-dropdown--btn {
+  @media screen and (min-width: $tablet-bp) {
+    display: none;
+  }
+}
 .spoiler-content--header {
   padding-left: 20px;
   li {
