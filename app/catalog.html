@@ -33,43 +33,76 @@
         <a class="main-header-logo" href="/">
           <img src="./images/dest/icons/header-logo.svg" alt="лого" />
         </a>
-      <nav class="main-header-nav">
-        <div class="main-header-nav-wrapper" >
-        <ul class="main-header-nav-item-wrapper">
-          <li class="main-header-nav-item">
-            <a href="#">Каталог</a>
-          </li>
-          <li class="main-header-nav-item">
-            <a href="#">О бренде</a>
-          </li>
-          <li class="main-header-nav-item">
-            <a href="#" class="active">Таблица размеров</a>
-          </li>
-          <li class="main-header-nav-item">
-            <a href="#">Доставка и возврат</a>
-          </li>
-          <li class="main-header-nav-item">
-            <a href="#">Контакты</a>
-          </li>
-        </ul>
-        <ul class="main-header-nav-location">
-          <li class="main-header-nav-location-item">
-            <svg class="svg-icon main-header-nav-location-item-icon">
-              <use
-                xlink:href="./images/sprites/svg/sprite.symbol.svg#location"
-              ></use>
-            </svg>
-            <span class="active">Москва</span>
-          </li>
-        </ul>
-        <ul class="main-header-nav-lang">
-          <li class="main-header-nav-lang-item">
-            <a href="#" class="active">ru</a>
-          </li>
-          <li class="main-header-nav-lang-item"><a href="#">en</a></li>
-        </ul>
-      </div>
-      </nav>
+        <nav class="main-header-nav">
+          <div class="main-header-nav-wrapper" >
+          <ul class="main-header-nav-item-wrapper">
+            <li class="main-header-nav-item" onmouseenter="onHoverSpoiler(this)" onmouseleave="onLeaveSpoiler()">
+              <button class="catalog-header-dropdown btn-spoiler-catalog" onclick="spoilerToogle(this)">
+                Каталог
+                <svg class="svg-icon btn-spoiler-catalog-icon">
+                  <use
+                    xlink:href="./images/sprites/svg/sprite.symbol.svg#spoiler-arrow"
+                  ></use>
+                </svg>
+              </button>
+              <ul class="spoiler-content spoiler-content--header">
+                <li>
+                  <a href="#">Посмотреть всё</a>
+                </li>
+                <li>
+                  <a href="#">Option1</a>
+                </li>
+                <li>
+                  <a href="#">Option2</a>
+                </li>
+                <li>
+                  <a href="#">Option3</a>
+                </li>
+                <li>
+                  <a href="#">Option4</a>
+                </li>
+                <li>
+                  <a href="#">Option5</a>
+                </li>
+                <li>
+                  <a href="#">Option6</a>
+                </li>
+                <li>
+                  <a href="#">Option7</a>
+                </li>
+              </ul>
+            </li>
+            <li class="main-header-nav-item">
+              <a href="#">О бренде</a>
+            </li>
+            <li class="main-header-nav-item">
+              <a href="#" class="active">Таблица размеров</a>
+            </li>
+            <li class="main-header-nav-item">
+              <a href="#">Доставка и возврат</a>
+            </li>
+            <li class="main-header-nav-item">
+              <a href="#">Контакты</a>
+            </li>
+          </ul>
+          <ul class="main-header-nav-location">
+            <li class="main-header-nav-location-item">
+              <svg class="svg-icon main-header-nav-location-item-icon">
+                <use
+                  xlink:href="./images/sprites/svg/sprite.symbol.svg#location"
+                ></use>
+              </svg>
+              <span class="active">Москва</span>
+            </li>
+          </ul>
+          <ul class="main-header-nav-lang">
+            <li class="main-header-nav-lang-item">
+              <a href="#" class="active">ru</a>
+            </li>
+            <li class="main-header-nav-lang-item"><a href="#">en</a></li>
+          </ul>
+        </div>
+        </nav>
       
       <div class="main-header-link-block">
         <div class="main-header-search-inner">
@@ -127,7 +160,7 @@
           </svg>
           <span class="visually-hidden">личный кабинет</span>
         </a>
-        
+
         <a
           href="#"
           class="btn btn-basket main-header-btn-basket btn-basket--full header-link-item"
@@ -137,6 +170,7 @@
               xlink:href="./images/sprites/svg/sprite.symbol.svg#basket"
             ></use>
           </svg>
+          <span class="btn-basket-counter">3</span>
           <span class="visually-hidden">корзина</span>
         </a>
       </div>
