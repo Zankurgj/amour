@@ -425,6 +425,63 @@
             </div>
           </div>
         </div>
+
+        <section class="сountdown-wrapper сountdown-wrapper--catalog">
+          <div class="countdown-item">
+            <div class="countdown-number">
+              <span id="dayDec"></span>
+            </div>
+            <div class="countdown-number">
+              <span id="day"></span>
+            </div>
+            <div class="countdown-text">
+              <span>дни</span>
+            </div>
+          </div>
+
+          <div class="countdown-item-sep">:</div>
+
+          <div class="countdown-item">
+            <div class="countdown-number">
+              <span id="hoursDec"></span>
+            </div>
+            <div class="countdown-number">
+              <span id="hours"></span>
+            </div>
+            <div class="countdown-text">
+              <span>часы</span>
+            </div>
+          </div>
+
+          <div class="countdown-item-sep">:</div>
+          
+          <div class="countdown-item">
+            <div class="countdown-number">
+              <span id="minutesDec"></span>
+            </div>
+            <div class="countdown-number">
+              <span id="minutes"></span>
+            </div>
+            <div class="countdown-text">
+              <span>минуты</span>
+            </div>
+          </div>
+
+          <div class="countdown-item-sep">:</div>
+          
+          <div class="countdown-item">
+            <div class="countdown-number">
+              <span id="secondsDec"></span>
+            </div>
+            <div class="countdown-number">
+              <span id="seconds"></span>
+            </div>
+            <div class="countdown-text">
+              <span>секунды</span>
+            </div>
+          </div>
+        </section>
+
         <section class="catalog-gal">
           <div class="catalog-gal-row">
             <div class="catalog-gal-column">
@@ -951,6 +1008,7 @@
     </footer>
     <script src="js/app.min.js"></script>
     <script>
+      setCountdown();
       var lazyLoadInstance = new LazyLoad({
           elements_selector: ".lazyload"
       });

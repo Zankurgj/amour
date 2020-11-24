@@ -203,14 +203,67 @@
             </div>
 
             <div class="mp-page-column">
-              <div class="frame-item" data-rjs="2" style="background-image: url('./images/dest/img/frame-image2.jpg');">
-                <div class="frame-item-mark">
-                  <span>TOPFIVE</span>
-                </div>
+              <div class="frame-item frame-item--promo" data-rjs="2" style="background-image: url('./images/dest/img/prodcut_promo.png');">
                 <div class="frame-item-inner">
-                  <h2 class="frame-item-title">ТОП 5  Деним</h2>
-                  <p class="frame-item-text">подборка редакторов Vogue Russia</p>
-                  <a href="#" class="btn btn-white frame-item-btn-white">Смотреть подборку</a>
+                  <div class="frame-item-promo-text">
+                    <p><strong>BLACK FRIDAY</strong></p>
+                    <p>up to -50%</p>
+                  </div>
+                  <div class="сountdown-wrapper сountdown-wrapper--promo">
+                    <div class="countdown-item">
+                      <div class="countdown-number">
+                        <span id="dayDec"></span>
+                      </div>
+                      <div class="countdown-number">
+                        <span id="day"></span>
+                      </div>
+                      <div class="countdown-text">
+                        <span>дни</span>
+                      </div>
+                    </div>
+
+                    <div class="countdown-item-sep">:</div>
+
+                    <div class="countdown-item">
+                      <div class="countdown-number">
+                        <span id="hoursDec"></span>
+                      </div>
+                      <div class="countdown-number">
+                        <span id="hours"></span>
+                      </div>
+                      <div class="countdown-text">
+                        <span>часы</span>
+                      </div>
+                    </div>
+
+                    <div class="countdown-item-sep">:</div>
+                    
+                    <div class="countdown-item">
+                      <div class="countdown-number">
+                        <span id="minutesDec"></span>
+                      </div>
+                      <div class="countdown-number">
+                        <span id="minutes"></span>
+                      </div>
+                      <div class="countdown-text">
+                        <span>минуты</span>
+                      </div>
+                    </div>
+
+                    <div class="countdown-item-sep">:</div>
+                    
+                    <div class="countdown-item">
+                      <div class="countdown-number">
+                        <span id="secondsDec"></span>
+                      </div>
+                      <div class="countdown-number">
+                        <span id="seconds"></span>
+                      </div>
+                      <div class="countdown-text">
+                        <span>секунды</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -558,5 +611,8 @@
       </div>
     </div>
     <script src="js/app.min.js"></script>
+    <script>
+      setCountdown();
+    </script>
   </body>
 </html>

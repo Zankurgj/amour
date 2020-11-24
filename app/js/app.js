@@ -684,3 +684,81 @@ const onCkechEmptyValid = () => {
 const onToggleSubrcribePopup = () => {
   document.querySelector('#popupSubscribe').classList.toggle('show');
 };
+
+function setCountdown() {
+  const second = 1000;
+  const minute = second * 60;
+  const hour = minute * 60;
+  const day = hour * 24;
+  const data = 'Dec 1 , 2020 01:12:00';
+  const countDown = new Date(data).getTime();
+
+  x = setInterval(function () {
+    const now = new Date().getTime();
+    const distance = countDown - now;
+    if (distance / day >= 10) {
+      document.getElementById('dayDec').innerText =
+        Math.floor(distance / day)
+          .toString()
+          .slice(0, 1) || '0';
+    } else {
+      document.getElementById('dayDec').innerText = 0;
+    }
+    if (distance / day >= 10) {
+      document.getElementById('day').innerText =
+        Math.floor(distance / day)
+          .toString()
+          .slice(1) || '0';
+    } else {
+      document.getElementById('day').innerText =
+        Math.floor(distance / day)
+          .toString()
+          .slice(0) || '0';
+    }
+    document.getElementById('hoursDec').innerText =
+      Math.floor((distance % day) / hour)
+        .toString()
+        .slice(0, 1) || '0';
+    document.getElementById('hours').innerText = getDate(distance, day, hour);
+    document.getElementById('minutesDec').innerText =
+      Math.floor((distance % hour) / minute)
+        .toString()
+        .slice(0, 1) || '0';
+    document.getElementById('minutes').innerText = getDate(
+      distance,
+      hour,
+      minute
+    );
+    document.getElementById('secondsDec').innerText = getDecDate(
+      distance,
+      minute,
+      second
+    );
+    document.getElementById('seconds').innerText = getDate(
+      distance,
+      minute,
+      second
+    );
+    if (distance < 0) {
+      clearInterval(x);
+    }
+  }, 1000);
+}
+
+function getDecDate(distance, prevDate, date) {
+  const sepDate = Math.floor((distance % prevDate) / date);
+  if (sepDate >= 10) {
+    return sepDate.toString().slice(0, 1) || 0;
+  } else {
+    return 0;
+  }
+}
+
+function getDate(distance, prevDate, date) {
+  const sepDate = Math.floor((distance % prevDate) / date);
+  if (sepDate >= 10) {
+    return sepDate.toString().slice(1) || 0;
+  } else {
+    return sepDate.toString().slice(0) || 0;
+  }
+}
