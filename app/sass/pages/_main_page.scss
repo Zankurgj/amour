@@ -249,9 +249,7 @@ html,
 .сountdown-wrapper--promo {
   margin: 0 auto 20px auto;
 }
-.сountdown-wrapper--catalog {
-  margin: 40px auto 20px auto;
-}
+
 .countdown-item {
   white-space: nowrap;
   text-align: center;
@@ -285,6 +283,12 @@ html,
     height: 1px;
     background-color: #000;
   }
+  @media screen and (min-width: 400px) {
+    font-size: 30px;
+    min-width: 30px;
+    min-height: 40px;
+    padding: 4px 8px;
+  }
   @media screen and (min-width: $tablet-bp) {
     font-size: 16px;
     min-width: 21px;
@@ -292,9 +296,9 @@ html,
     padding: 6px;
   }
   @media screen and (min-width: 1200px) {
-    font-size: 24px;
-    min-width: 29px;
-    min-height: 32px;
+    font-size: 30px;
+    min-width: 30px;
+    min-height: 42px;
     padding: 4px 8px;
   }
 }
@@ -308,10 +312,22 @@ html,
   line-height: 1.3;
   text-align: center;
   margin-bottom: 30px;
+  @media screen and (min-width: 400px) {
+    font-size: 32px;
+  }
+  @media screen and (min-width: $tablet-bp) {
+    font-size: 30px;
+  }
   strong {
     font-weight: normal;
     font-size: 42px;
     color: #000;
+    @media screen and (min-width: 400px) {
+      font-size: 50px;
+    }
+    @media screen and (min-width: $tablet-bp) {
+      font-size: 42px;
+    }
   }
 }
 .btn-white--promo {
