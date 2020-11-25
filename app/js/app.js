@@ -690,7 +690,7 @@ function setCountdown() {
   const minute = second * 60;
   const hour = minute * 60;
   const day = hour * 24;
-  const data = 'Dec 1 , 2020 01:12:00';
+  const data = 'Nov 27 , 2020 00:00:00';
   const countDown = new Date(data).getTime();
 
   x = setInterval(function () {
@@ -715,15 +715,19 @@ function setCountdown() {
           .toString()
           .slice(0) || '0';
     }
-    document.getElementById('hoursDec').innerText =
-      Math.floor((distance % day) / hour)
-        .toString()
-        .slice(0, 1) || '0';
+
+    document.getElementById('hoursDec').innerText = getDecDate(
+      distance,
+      day,
+      hour
+    );
     document.getElementById('hours').innerText = getDate(distance, day, hour);
-    document.getElementById('minutesDec').innerText =
-      Math.floor((distance % hour) / minute)
-        .toString()
-        .slice(0, 1) || '0';
+
+    document.getElementById('minutesDec').innerText = getDecDate(
+      distance,
+      hour,
+      minute
+    );
     document.getElementById('minutes').innerText = getDate(
       distance,
       hour,
